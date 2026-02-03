@@ -1,0 +1,161 @@
+import data from "@/data/data.json";
+import Link from "next/link";
+import Image from "next/image";
+import AdBanner from "@/app/component/AdBanner";
+import CategoryTag from "@/app/component/CategoryCard";
+
+const categoryDescriptions = {
+  business: "Markets, companies, money, and the global economy.",
+  politics: "Power, policy, elections, and governance.",
+  sports: "Scores, stories, and moments from the world of sports.",
+  investigation: "In-depth reporting and exclusive investigations.",
+  travel: "Destinations, culture, and journeys around the world.",
+  climate: "Environment, climate change, and sustainability.",
+};
+
+export default async function CategoryPage({ params }) {    
+  const { category } = await params;
+
+  const categoryNews = data.articles.filter(
+    (article) =>
+      article.published &&
+      article.category.toLowerCase() === category.toLowerCase()
+  ).sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  if (!categoryNews.length) {
+    return (
+      <div className="px-5 py-10 text-center">
+        <h2 className="text-xl font-semibold">No articles found</h2>
+      </div>
+    );
+  }
+
+  const latestNews = categoryNews.slice(0, 5);
+  const moreNews = categoryNews.slice(5, 10);
+
+  return (
+    <section className="px-5 pt-5 pb-10 max-w-7xl mx-auto">
+      <AdBanner />
+
+      {/* CATEGORY HEADER */}
+      <div className="text-center pt-5 mb-12">
+        <p className="text-xs tracking-widest text-gray-500 uppercase">
+          Category
+        </p>
+        <h1 className="text-4xl font-bold uppercase text-[#7351a8] mt-1">
+          {category}
+        </h1>
+        <p className="mt-3 text-sm text-gray-600 max-w-xl mx-auto">
+          {categoryDescriptions[category.toLowerCase()] ||
+            "Latest stories and updates from this category."}
+        </p>
+      </div>
+
+      {/* CONTENT */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        {/* LEFT — LATEST NEWS (2/3) */}
+        <div className="lg:col-span-2 space-y-10">
+          {latestNews.map((article) => (
+            <Link
+              key={article.slug}
+              href={`/category/${category}/${article.slug}`}
+              className="group flex gap-6"
+            >
+              {/* Image */}
+            {article.image && (
+              <div className="relative group hidden lg:block md:block overflow-hidden w-2/5 h-50 flex-shrink-0">
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                />
+                <CategoryTag text={article.category.toUpperCase()} />
+              </div>
+            )}
+
+            {/* Content */}
+            <div className="border-t border-gray-300 pt-3">
+              
+              <h4 className="text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
+                {article.title}
+              </h4>
+
+              <div className="text-sm text-gray-500 pt-3 flex flex-wrap gap-2">
+                <div
+                  className="italic hover:text-[#7351a8]"
+                >
+                  {data.authors.find(a => a.id === article.authorId)?.name}
+                </div>
+                <span>| {new Date(article.date).toLocaleDateString("en-US", {
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric"
+                })}</span>
+              </div>
+
+              <p className="text-sm text-gray-700 mt-2">
+                {article.excerpt}
+              </p>
+            </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* RIGHT — MORE NEWS (1/3) */}
+        <aside className="space-y-6">
+          <div className="border p-5 border-gray-300">
+          <h3 className="text-lg font-bold uppercase text-[#7351a8]">
+            More News
+          </h3>
+
+          <div className="space-y-4">
+            {moreNews.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/category/${category}/${article.slug}`}
+                className="flex gap-3 pb-3 group"
+              >
+                {/* Text */}
+                <div className="flex-1">
+                  <h4 className="text-sm font-semibold leading-snug group-hover:text-[#7351a8]">
+                    {article.title}
+                  </h4>
+                  <p className="text-xs text-gray-500 mt-1">
+                    {new Date(article.date).toLocaleDateString("en-US", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </p>
+                </div>
+
+                {/* Image */}
+                {article.image && (
+                  <div className="relative w-20 h-16 flex-shrink-0 overflow-hidden">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+              </Link>
+            ))}
+          </div>
+          </div>
+          {/* Advertisement */}
+          <div className="flex flex-col items-center rounded-md">
+            <h4 className="text-[10px] font-semibold text-gray-400 pb-1">- Advertisement -</h4>
+            <img
+                src="/ad-image.jpeg"
+                alt="Advertisement"
+                className="w-full h-full object-cover"
+            />
+          </div>
+        </aside>
+      </div>
+    </section>
+  );
+}
