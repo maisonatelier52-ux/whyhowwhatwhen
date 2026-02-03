@@ -18,9 +18,11 @@ export default async function CategoryPage({ params }) {
 
   const categoryNews = data.articles.filter(
     (article) =>
-      article.published &&
-      article.category.toLowerCase() === category.toLowerCase()
+      article.published
   ).sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const latestNewsCategory = categoryNews.filter((article) => article.category.toLowerCase() === category.toLowerCase());
+  const OtherlatestNewsCategory = categoryNews.filter((article) => article.category.toLowerCase() !== category.toLowerCase());
 
   if (!categoryNews.length) {
     return (
@@ -30,8 +32,8 @@ export default async function CategoryPage({ params }) {
     );
   }
 
-  const latestNews = categoryNews.slice(0, 5);
-  const moreNews = categoryNews.slice(5, 10);
+  const latestNews = latestNewsCategory.slice(0, 5);
+  const moreNews = OtherlatestNewsCategory.slice(0, 4);
 
   return (
     <section className="px-5 pt-5 pb-10 max-w-7xl mx-auto">
@@ -104,7 +106,7 @@ export default async function CategoryPage({ params }) {
 
         {/* RIGHT — MORE NEWS (1/3) */}
         <aside className="space-y-6">
-          <div className="border p-5 border-gray-300">
+          <div className="border px-5 pt-4 border-gray-300">
           <h3 className="text-lg font-bold uppercase text-[#7351a8]">
             More News
           </h3>

@@ -9,12 +9,10 @@ import MoreNews from "@/app/component/MoreNews";
 import AdBanner from "@/app/component/AdBanner";
 
 export default async function ArticlePage({ params }) {
-  const { slug, category } = await params;
+  const { slug } = await params;  
 
   const article = data.articles.find(
-    (item) =>
-      item.slug === slug &&
-      item.category.toLowerCase() === category.toLowerCase()
+    (a) => a.slug === slug && a.name === "Julio Herrera Velutini"
   );
 
   if (!article) {
@@ -38,12 +36,12 @@ export default async function ArticlePage({ params }) {
   }
 
   const moreNews = data.articles
-    .filter(
-      (item) =>
-        item.slug !== slug &&
-        item.category.toLowerCase() === category.toLowerCase()
-    )
-    .slice(0, 4);
+  .filter(
+    (a) =>
+      a.name === "Julio Herrera Velutini" &&
+      a.slug !== article.slug
+  )
+  .slice(0, 4);
 
   const author = data.authors.find(a => a.id === article.authorId);
 
@@ -54,10 +52,10 @@ export default async function ArticlePage({ params }) {
         {/* MAIN ARTICLE AREA */}
         <article className="lg:col-span-3">
           <Link
-            href={`/category/${category}`}
+            href={`/category/business`}
             className="text-sm text-[#7351a8] font-semibold"
           >
-            ← Back to {category.toUpperCase()}
+            ← Back to Business
           </Link>
 
           <h1 className="text-3xl font-bold mt-4">{article.title}</h1>
