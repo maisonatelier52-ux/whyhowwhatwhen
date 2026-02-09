@@ -95,7 +95,7 @@ export default async function ArticlePage({ params }) {
 
             {/* LEFT SIDEBAR – DESKTOP ONLY */}
             <div className="hidden lg:block lg:col-span-2">
-              <div className="sticky top-24 space-y-8">
+              <div className="sticky top-16 space-y-8">
                 <MoreNews news={moreNews} />
                 <AuthorCard author={author} />
               </div>

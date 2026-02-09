@@ -24,7 +24,7 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => setScrolled(window.scrollY > 150);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -68,7 +68,7 @@ export default function Header() {
           >
             <Link
               href="/"
-              className={`font-semibold tracking-wide transition-all duration-300 ${
+              className={`font-semibold tracking-wide ${
                 scrolled
                   ? "text-lg md:text-xl pt-0"
                   : "text-3xl md:text-6xl pt-2"

@@ -33,7 +33,7 @@ export default async function CategoryPage({ params }) {
   }
 
   const latestNews = latestNewsCategory.slice(0, 5);
-  const moreNews = OtherlatestNewsCategory.slice(0, 4);
+  const moreNews = OtherlatestNewsCategory.slice(0, 5);
 
   return (
     <section className="px-5 pt-5 pb-10 max-w-7xl mx-auto">
