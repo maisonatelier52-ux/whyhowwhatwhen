@@ -80,7 +80,7 @@ export default async function ArticlePage({ params }) {
 
           {/* IMAGE */}
           {article.image && (
-            <div className="relative h-[400px] my-6">
+            <div className="relative h-[600px] my-6">
               <Image
                 src={article.image}
                 alt={article.title}
