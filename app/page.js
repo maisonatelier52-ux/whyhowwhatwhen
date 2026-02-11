@@ -3,6 +3,7 @@ import Featured from "./component/Featured";
 import MustRead from "./component/MustRead";
 import NewsUtilities from "./component/NewsUtilities";
 import ThreeColumnNews from "./component/ThreeCategoryNews";
+import TravelNewsRow from "./component/TravelNews";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     <ThreeColumnNews />
     <AdBanner />
     <MustRead />
+    <TravelNewsRow />
     </>
   );
 }

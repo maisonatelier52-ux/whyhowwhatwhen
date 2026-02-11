@@ -130,7 +130,7 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="py-4 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} PULSES PRO. All rights reserved.
+        © {new Date().getFullYear()} WhyHowWhatWhen. All rights reserved.
       </div>
     </footer>
   );
