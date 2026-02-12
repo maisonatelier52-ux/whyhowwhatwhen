@@ -9,7 +9,7 @@ import MoreNews from "@/app/component/MoreNews";
 import AdBanner from "@/app/component/AdBanner";
 
 export default async function ArticlePage({ params }) {
-  const { slug } = await params;  
+  const { slug } = await params;
 
   const article = data.articles.find(
     (a) => a.slug === slug && a.name === "Julio Herrera Velutini"
@@ -17,12 +17,13 @@ export default async function ArticlePage({ params }) {
 
   if (!article) {
     return (
-      <main className="bg-white dark:bg-[#01131d] text-black dark:text-white min-h-screen flex flex-col justify-center items-center px-7 py-20">
+      <main className="bg-white  text-black  min-h-screen flex flex-col justify-center items-center px-7 py-20">
         <h1 className="font-bold text-3xl sm:text-4xl uppercase mb-4 text-center">
           Article Not Found
         </h1>
-        <p className="text-gray-700 dark:text-gray-300 mb-6 text-center">
-          Sorry, the article you are looking for does not exist or has been removed.
+        <p className="text-gray-700 mb-6 text-center">
+          Sorry, the article you are looking for does not exist or has been
+          removed.
         </p>
         <Link
           href="/"
@@ -36,19 +37,16 @@ export default async function ArticlePage({ params }) {
   }
 
   const moreNews = data.articles
-  .filter(
-    (a) =>
-      a.name === "Julio Herrera Velutini" &&
-      a.slug !== article.slug
-  )
-  .slice(0, 4);
+    .filter(
+      (a) => a.name === "Julio Herrera Velutini" && a.slug !== article.slug
+    )
+    .slice(0, 4);
 
-  const author = data.authors.find(a => a.id === article.authorId);
+  const author = data.authors.find((a) => a.id === article.authorId);
 
   return (
     <div className="max-w-7xl mx-auto px-5 py-10">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 pb-3">
-
         {/* MAIN ARTICLE AREA */}
         <article className="lg:col-span-3">
           <Link
@@ -90,7 +88,6 @@ export default async function ArticlePage({ params }) {
 
           {/* DESKTOP LAYOUT WITH SIDEBAR */}
           <div className="grid grid-cols-1 lg:grid-cols-6 pb-5 gap-6">
-
             {/* LEFT SIDEBAR – DESKTOP ONLY */}
             <div className="hidden lg:block lg:col-span-2">
               <div className="sticky top-24 space-y-8">
@@ -131,7 +128,6 @@ export default async function ArticlePage({ params }) {
             <AuthorCard author={author} />
             <MoreNews news={moreNews} />
           </div>
-
         </article>
 
         <NewsLatest news={moreNews} />
