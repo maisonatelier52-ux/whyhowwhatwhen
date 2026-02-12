@@ -56,18 +56,16 @@ export default function Featured({
               {/* IMAGE */}
               {article.image && (
                 <Link href={articleLink}>
-                  <Link href={articleLink}>
-                    <div className="relative w-full aspect-[16/9] cursor-pointer">
-                      <Image
-                        src={article.image}
-                        alt={article.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        priority={false}
-                      />
-                    </div>
-                  </Link>
+                  <div className="relative w-full aspect-[16/9] cursor-pointer">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority={false}
+                    />
+                  </div>
                 </Link>
               )}
 

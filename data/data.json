@@ -1,6 +1,6 @@
 {
   "authors": [
-    { 
+    {
       "id": 1,
       "name": "Michael Thompson",
       "slug": "michael-thompson",
@@ -21,7 +21,7 @@
       "quora": "",
       "reddit": ""
     },
-    { 
+    {
       "id": 3,
       "name": "Emily Johnson",
       "slug": "emily-johnson",
@@ -42,7 +42,7 @@
       "quora": "https://www.quora.com/profile/Alex-John-1535",
       "reddit": "https://www.reddit.com/user/alex-john01/"
     },
-    { 
+    {
       "id": 5,
       "name": "Dana Katherine",
       "slug": "dana-katherine",
@@ -52,7 +52,7 @@
       "quora": "https://www.quora.com/profile/Dana-Katherine-10",
       "reddit": "https://www.reddit.com/user/dana_katherine/"
     },
-    { 
+    {
       "id": 6,
       "name": "Jordan Miles",
       "slug": "jordan-miles",
@@ -176,6 +176,29 @@
       ],
       "date": "2026-02-10",
       "image": "/california-remote-work-union-newsom.webp",
+      "authorId": 1,
+      "published": true
+    },
+    {
+      "slug": "us-adds-130000-jobs-january-2026-growth-revised-lower",
+      "title": "US Adds 130,000 Jobs in January, Beating Forecasts as 2025 Growth Is Revised Sharply Lower",
+      "excerpt": "The U.S. economy added 130,000 jobs in January, surpassing expectations, but sharp downward revisions to 2025 job growth and rising layoffs signal a cooling labor market.",
+      "content": "The U.S. labor market added 130,000 jobs in January, surpassing economists’ expectations and offering a modest boost after months of slowing momentum, according to a closely watched report released Wednesday.\n\nThe unemployment rate stood at 4.3% in January, slightly higher than in the fall but largely in line with forecasts. Economists had predicted job gains of around 70,000 for the month and expected the unemployment rate to remain unchanged.\n\nJanuary’s total marks a strong rebound from December, when just 50,000 jobs were added. However, it remains slightly below the 143,000 jobs created in January a year earlier.\n\n2025 Job Growth Revised Down Sharply\n\nDespite the better-than-expected performance in January, there were large downward revisions to overall job growth for 2025. With these revisions, new jobs created as of 2025 now total only 181,000, a far cry from the previously estimated 584,000. This makes 2025 the weakest year for new jobs since the COVID-19 pandemic. In comparison, new jobs created in 2024 amounted to 2 million.\n\nThe adjusted numbers only serve to reinforce the growing concerns over a tightening labor market fueled by economic insecurity. Over the course of the last year, there have been a variety of changes to national trade policies, immigration policies, and even a general sense of political instability.\n\nThe jobs report itself was delayed from its original February 6 release date due to a brief federal government shutdown earlier in the month.\n\nTrump Celebrates Report\n\nFormer President Donald Trump quickly praised the January numbers, posting on social media: “Just in: GREAT JOBS NUMBERS, FAR GREATER THAN EXPECTED!” “WOW! The Golden Age of America is upon us!!!” he added. However, other labor indicators paint a more complicated picture.\n\nPrivate Payrolls and Layoffs Raise Concerns\n\nData released earlier showed private-sector job growth was much weaker than expected. Private payrolls increased by just 22,000 jobs in January, well below economists’ forecasts of 45,000. In January of last year, private payrolls rose by 140,000.\n\nLayoffs also surged. According to outplacement firm Challenger, Gray & Christmas, U.S. employers announced 108,435 layoffs in January 2026 — a 118% increase compared to January 2025 and the highest number of January layoffs since 2009.\n\nMeanwhile, job openings declined sharply at the end of last year. The Job Openings and Labor Turnover Survey (JOLTS) reported that openings fell by 386,000 in December 2025 to 6.542 million — the lowest level since September 2020.\n\nWhite House adviser Peter Navarro had earlier tempered expectations for the monthly jobs report, suggesting gains might come in closer to 50,000.\n\n“We have to revise our expectations down significantly for what a monthly job number should look like,” Navarro said in a television interview ahead of the release.\n\nFederal Reserve Watching Carefully\n\nThe slowing labor market has not been weak enough to prompt the Federal Reserve to cut interest rates aggressively. Inflation remains uneven, complicating the central bank’s policy decisions.\n\nInflation is currently at 2.7% in December. Jerome Powell, President of the Federal Reserve, has acknowledged that the full effect of tariffs is still being felt as it makes its way through the economy.\n\nHowever, at the same time, an unemployment rate hovering around 4.3% to 4.4% may indicate stability, even as hiring slows down. According to Powell, reduced labor demand, immigration policies, and participation of the labor force have somehow affected the slowing rate of hiring.\n\nConsumer Sentiment Remains Weak\n\nHigher prices continue to weigh on consumer confidence. According to the University of Michigan’s consumer sentiment survey, the index stood at 57.3 in February. While that marks a slight improvement compared to recent months, it remains more than 11% lower than during the same period in 2025.\n\nThe mixed signals — stronger-than-expected January hiring alongside sharply revised annual totals and rising layoffs — highlight the uncertain state of the U.S. economy as it navigates slower growth, persistent inflation, and policy shifts.\n\nWhile January’s report offered a temporary lift, economists say the broader trend suggests a labor market that is stabilizing at lower levels of growth rather than accelerating.",
+      "category": "Business",
+      "keywords": [
+        "US jobs report",
+        "January jobs 2026",
+        "unemployment rate 4.3%",
+        "Federal Reserve",
+        "Jerome Powell",
+        "private payrolls",
+        "layoffs January 2026",
+        "JOLTS report",
+        "inflation 2.7%",
+        "US labor market"
+      ],
+      "date": "2026-02-12",
+      "image": "/us-jobs-report-january-2026.webp",
       "authorId": 1,
       "published": true
     },
@@ -663,6 +686,29 @@
       "published": true
     },
     {
+      "slug": "american-airlines-unions-pressure-board-profit-gap-2026",
+      "title": "American Airlines Unions Intensify Pressure on Board Over Profit Gap",
+      "excerpt": "American Airlines’ largest unions are pressing the board for leadership changes as the carrier’s profitability lags far behind Delta and United, highlighting growing governance and operational tensions.",
+      "content": "<p><strong>CHICAGO, Feb. 12 —</strong> American Airlines’ largest labor unions are escalating pressure on the company’s board of directors, arguing that the carrier’s lagging profitability compared with rivals Delta Air Lines and United Airlines has become a leadership and governance issue.</p><p>For years, American has trailed its two biggest competitors in earnings. Now, union leaders say the gap reflects deeper strategic and operational problems that require action from the top.</p><p>In recent days, tensions have sharpened. The pilots’ union has urged the airline’s board to take “decisive action” and formally requested a meeting with the full board of directors. Meanwhile, the Association of Professional Flight Attendants (APFA) issued a no-confidence vote in Chief Executive Officer Robert Isom — the first such vote against an American CEO in the union’s history — and called for leadership change.</p><p>Public demands for executive removal from labor groups are rare outside of contract negotiations, making the move particularly notable.</p><h2>“Dangerously Behind” Rivals</h2><p>The APFA said American is falling “dangerously behind” competitors and accused management of failing to deliver on reliability and profitability.</p><p>“At the end of the day, our management team, we feel, has failed us,” APFA President Julie Hedrick said. “We don’t want to be left with a company that isn’t competitive.”</p><p>The union plans to hold a protest outside American’s headquarters in Fort Worth, Texas, to push its demands for greater accountability and improved operational support.</p><p>American Airlines declined to comment directly on the no-confidence vote but pointed to Isom’s recent public remarks outlining a turnaround strategy focused on premium offerings, operational improvements and rebuilding corporate travel demand.</p><p>During last month’s earnings call, Isom acknowledged the company’s performance challenges and said the airline’s turnaround efforts should begin delivering meaningful results in 2026.</p><p>“It starts with us at the top,” Isom told employees at a leadership conference. “2026 can’t just feel different. It has to be different.”</p><h2>A Stark Profit Gap</h2><p>The unions’ frustration is rooted in stark financial comparisons.</p><p>On an adjusted pretax basis, American generated just $352 million in 2025. By contrast, Delta earned roughly $5 billion and United about $4.6 billion during the same period.</p><p>JPMorgan analysts estimate American accounted for less than 4% of the combined pretax profits of the three airlines last year. However, that share is expected to improve to about 12% in 2026 if the turnaround gains traction.</p><p>American’s stock performance has also lagged. Over the past year, its shares have fallen roughly 10%, while Delta and United have posted gains of about 14% and 12%, respectively.</p><p>Management has attributed the underperformance to weakness in the domestic travel market, broader economic uncertainty and disruptions such as the recent federal government shutdown, which dampened bookings.</p><p>The weaker profits have also translated into smaller profit-sharing payouts for employees. According to the flight attendants’ union, some crew members received as little as $150 in profit-sharing for 2025.</p><p>At a recent staff town hall, Isom reportedly described the payouts as “meager” but noted that limited profits inevitably lead to smaller distributions.</p><p>“When you break even, that’s the kind of profit sharing you have,” he said, according to an audio recording reviewed by Reuters.</p><h2>Pilots Seek Direct Board Engagement</h2><p>The airline’s pilots are also pushing for deeper board involvement.</p><p>In a letter last week, the pilots’ union warned that American remains on an “underperforming path” marked by persistent operational, cultural and strategic shortcomings. The union requested that its president, Nick Silva, be allowed to formally present concerns to the full board.</p><p>According to correspondence reviewed by Reuters, Isom responded that he would meet with the union soon and that the board had discussed the request. However, union leaders said they have not yet received a direct response from directors and believe engagement at the board level is now “the necessary next step.”</p><h2>Operational Strains Add to Tensions</h2><p>Recent operational challenges have further fueled criticism.</p><p>A late-January winter storm triggered widespread flight cancellations, testing American’s recovery systems. Data from aviation analytics firm OAG showed the airline lagged Southwest, Alaska Airlines, United and Delta in on-time performance during January and posted the highest cancellation rate among those carriers.</p><p>Unions have cited those disruptions as evidence of broader execution issues.</p><p>Corporate governance experts note that while public calls for a CEO’s removal do not automatically result in leadership changes, sustained employee unrest can pose risks for customer-facing businesses.</p><p>“When your employees are unhappy working there, and you’re a customer-facing business, you’ve got a real problem,” said Charles Elson, a retired University of Delaware professor specializing in corporate governance.</p><p>As American seeks to reassure investors that its turnaround plan will narrow the profit gap, growing pressure from within may test both its leadership and its board’s willingness to intervene.</p>",
+      "category": "Business",
+      "keywords": [
+        "American Airlines",
+        "Robert Isom",
+        "APFA no-confidence vote",
+        "airline profit gap",
+        "Delta Air Lines earnings",
+        "United Airlines profits",
+        "airline unions",
+        "corporate governance",
+        "airline layoffs and profit sharing",
+        "U.S. airline industry 2026"
+      ],
+      "date": "2026-02-12",
+      "image": "/american-airlines-unions-board-pressure-2026.jpg",
+      "authorId": 1,
+      "published": true
+    },
+    {
       "slug": "aquifer-thermal-energy-storage-geothermal-revival",
       "title": "Aquifer Geothermal Energy Gains Momentum in the U.S.",
       "excerpt": "Large-scale aquifer thermal energy storage project in Minnesota signals a new era for affordable and sustainable geothermal energy.",
@@ -777,7 +823,6 @@
       "authorId": 1,
       "published": true
     },
-
 
     {
       "slug": "julio-herrera-velutini-bridging-nations-through-finance",
