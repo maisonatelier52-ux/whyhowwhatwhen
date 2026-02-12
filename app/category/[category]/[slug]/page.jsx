@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }) {
   const author = data.authors.find((a) => a.id === article.authorId);
 
   return (
-    <div className="max-w-7xl mx-auto px-5 py-10">
+    <div className="mx-auto px-5 py-10">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 pb-3">
         {/* MAIN ARTICLE AREA */}
         <article className="lg:col-span-3">
