@@ -33,8 +33,8 @@ export default function Header() {
     { name: "HOME", path: "/" },
     { name: "BUSINESS", path: "/category/business" },
     { name: "POLITICS", path: "/category/politics" },
-    { name: "SPORTS", path: "/category/sports" },
     { name: "INVESTIGATION", path: "/category/investigation" },
+    { name: "SPORTS", path: "/category/sports" },
     { name: "TRAVEL", path: "/category/travel" },
     { name: "CLIMATE", path: "/category/climate" },
   ];

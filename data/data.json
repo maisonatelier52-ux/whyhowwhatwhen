@@ -2,10 +2,10 @@
   "authors": [
     {
       "id": 1,
-      "name": "Michael Thompson",
-      "slug": "michael-thompson",
-      "photo": "/author/Michael-Thompson.webp",
-      "bio": "Senior business and policy analyst covering U.S. industries, finance, and corporate regulation.",
+      "name": "Doris Evelyn",
+      "slug": "doris-evelyn",
+      "photo": "/author/Doris-Evelyn.jpg",
+      "bio": "Senior business and policy analyst covering U.S. industries, Markets, companies, money, and the global economy.",
       "twitter": "",
       "medium": "https://medium.com/@michaelthompson_wsavvy",
       "quora": "https://www.quora.com/profile/Michael-Thompson-4141",
@@ -13,52 +13,48 @@
     },
     {
       "id": 2,
-      "name": "Sophia L",
-      "slug": "sophia-l",
-      "photo": "/author/Sophia-L.webp",
-      "bio": "Travel and transportation journalist reporting on U.S. aviation, tourism, and regulatory developments.",
+      "name": "Gilbert Vernon",
+      "slug": "gilbert-vernon",
+      "photo": "/author/Gilbert-Vernon.jpg",
+      "bio": "Gilbert Vernon a political correspondent and author, covering the U.S. Supreme Court, federal agencies, and government policy.",
       "twitter": "",
       "quora": "",
       "reddit": ""
     },
     {
       "id": 3,
-      "name": "Emily Johnson",
-      "slug": "emily-johnson",
-      "photo": "/author/Emily-Johnson.webp",
-      "bio": "Lifestyle and consumer trends reporter, covering home, wellness, and economic behavior.",
-      "twitter": "",
+      "name": "Virgil Harold",
+      "slug": "virgil-harold",
+      "photo": "/author/Virgil-Harold.jpg",
+      "bio": "Sports journalist covering global football, major leagues, player transfers, match analysis, and the business of sports.",      "twitter": "",
       "quora": "",
       "reddit": ""
     },
     {
       "id": 4,
-      "name": "Alex John",
-      "slug": "alex-john",
-      "photo": "/author/Alex-R.webp",
-      "bio": "Alex John a political correspondent and author at Wiresavvy, covering the U.S. Supreme Court, federal agencies, and government policy.",
-      "twitter": "",
+      "name": "Lester Franklin",
+      "slug": "lester-franklin",
+      "photo": "/author/Lester-Franklin.jpg",
+      "bio": "Investigative journalist reporting on corruption, public policy, corporate accountability, and high-impact national stories.",      "twitter": "",
       "medium": "https://medium.com/@alex_john_wiresavvy",
       "quora": "https://www.quora.com/profile/Alex-John-1535",
       "reddit": "https://www.reddit.com/user/alex-john01/"
     },
     {
       "id": 5,
-      "name": "Dana Katherine",
-      "slug": "dana-katherine",
-      "photo": "/author/Dana-K.webp",
-      "bio": "Dana Katherine a financial journalist and author at Wiresavvy, covering U.S. markets, banking, and the impact of technology on the economy.",
-      "twitter": "https://x.com/DanaK25216",
-      "quora": "https://www.quora.com/profile/Dana-Katherine-10",
-      "reddit": "https://www.reddit.com/user/dana_katherine/"
+      "name": "Sylvia Loretta",
+      "slug": "sylvia-loretta",
+      "photo": "/author/Sylvia-Loretta.jpg",
+      "bio": "Travel writer covering destinations, cultural experiences, sustainable tourism, and practical guides for modern explorers.",      "twitter": "https://x.com/SylviaLoretta25216",
+      "quora": "https://www.quora.com/profile/Sylvia-Loretta-10",
+      "reddit": "https://www.reddit.com/user/sylvia_loretta/"
     },
     {
       "id": 6,
-      "name": "Jordan Miles",
-      "slug": "jordan-miles",
-      "photo": "/author/Jordan-Miles.webp",
-      "bio": "Investigative reporter focusing on law enforcement, federal investigations, and legal affairs.",
-      "twitter": "",
+      "name": "Norman Leroy",
+      "slug": "norman-leroy",
+      "photo": "/author/Norman-Leroy.jpg",
+      "bio": "Climate and environmental journalist covering climate policy, renewable energy, environmental science, and the global impact of climate change.",      "twitter": "",
       "quora": "",
       "reddit": ""
     }
@@ -153,7 +149,7 @@
       ],
       "date": "2026-02-10",
       "image": "/georgia-ponzi-scheme-investigation.webp",
-      "authorId": 3,
+      "authorId": 1,
       "published": true
     },
     {
@@ -203,25 +199,25 @@
       "published": true
     },
     {
-      "slug": "new-york-fed-consumers-businesses-bore-90-percent-2025-tariff-costs",
-      "title": "Federal Reserve Bank of New York: Consumers and Businesses Bore Nearly 90% of 2025 Tariff Costs",
-      "excerpt": "A new Federal Reserve Bank of New York analysis finds that nearly 90% of the economic burden from 2025 tariffs was paid by U.S. consumers and businesses, challenging claims that foreign exporters absorbed most costs.",
-      "content": "<p>Almost all of President Donald Trump’s tariffs in 2025 were ultimately paid by U.S. consumers and businesses rather than foreign exporters, according to a new analysis from the Federal Reserve Bank of New York.</p><p>As the average U.S. tariff rate on imports climbed to 13% in 2025 — up from less than 3% previously — nearly 90% of the tariffs’ economic burden fell on U.S. firms and consumers, the researchers wrote.</p><h2>Who Pays for Tariffs?</h2><p>The findings challenge the Trump administration’s long-standing argument that foreign producers absorb most of the costs.</p><p>In a January 30 op-ed in <em>The Wall Street Journal</em>, Trump wrote that the burden, or “incidence,” of the tariffs had fallen overwhelmingly on foreign producers and middlemen. He argued that export-dependent nations had little choice but to absorb the tariffs to avoid greater losses from excess capacity.</p><p>However, the New York Fed’s data tells a different story.</p><p>From January through August 2025, U.S. importers bore 94% of tariff costs, according to the analysis. By November, exporters were shouldering slightly more of the burden, but American importers still paid 86% of the tariffs.</p><p>“In sum, U.S. firms and consumers continue to bear the bulk of the economic burden of the high tariffs imposed in 2025,” the report concluded.</p><p>Economists have generally argued that tariffs function as a tax on imports, with domestic companies often passing higher input costs along to customers through price increases.</p><h2>White House Defends Policy</h2><p>The White House pushed back on the findings, pointing to broader economic performance.</p><p>“America’s average tariff rate has increased nearly sevenfold in the past year, yet inflation has cooled and corporate profits have increased,” White House spokesperson Kush Desai said in a statement. “President Trump’s economic agenda of tax cuts, deregulation, tariffs and energy abundance is reducing costs and accelerating economic growth.”</p><p>Recent economic data show resilience. U.S. gross domestic product grew at a 4.3% annual rate in the third quarter — the strongest expansion in two years.</p><p>The labor market has been steady as well. Employers added 130,000 jobs in January, more than expected, while the unemployment rate held near historic lows.</p><h2>Inflation Remains Moderate</h2><p>Despite widespread predictions last year that elevated tariffs would fuel inflation, price pressures have remained relatively contained.</p><p>The Consumer Price Index increased 2.7% in December from a year ago, unchanged from November. Updated January CPI figures are due for release soon.</p><p>Some analysts have suggested that strong productivity gains, corporate margin compression or currency adjustments may have offset part of the tariff impact.</p><h2>Tariff Revenue Soars</h2><p>Higher tariff rates significantly boosted federal revenue. The U.S. Treasury collected $287 billion in tariffs in 2025, a 192% increase compared to the prior year, according to the Federal Reserve Bank of Richmond.</p><p>However, the future of those levies remains uncertain.</p><p>The Supreme Court of the United States is expected to rule soon on whether Trump had the authority to impose certain tariffs under federal emergency powers law.</p><p>If the Court strikes down those tariffs, the government could be required to refund businesses as much as $168 billion, according to estimates from the Wharton School of the University of Pennsylvania.</p><h2>Broader Implications</h2><p>The New York Fed’s analysis underscores a central economic debate over who ultimately pays for tariffs. While policymakers may frame tariffs as a tool to shift costs abroad or protect domestic industries, the research suggests the financial burden largely remains at home.</p><p>Whether the policy continues — or is reshaped by the courts — could have major implications for businesses, consumers and trade partners in the years ahead.</p>",
+      "slug": "american-airlines-unions-pressure-board-profit-gap-2026",
+      "title": "American Airlines Unions Intensify Pressure on Board Over Profit Gap",
+      "excerpt": "American Airlines’ largest unions are pressing the board for leadership changes as the carrier’s profitability lags far behind Delta and United, highlighting growing governance and operational tensions.",
+      "content": "<p><strong>CHICAGO, Feb. 12 —</strong> American Airlines’ largest labor unions are escalating pressure on the company’s board of directors, arguing that the carrier’s lagging profitability compared with rivals Delta Air Lines and United Airlines has become a leadership and governance issue.</p><p>For years, American has trailed its two biggest competitors in earnings. Now, union leaders say the gap reflects deeper strategic and operational problems that require action from the top.</p><p>In recent days, tensions have sharpened. The pilots’ union has urged the airline’s board to take “decisive action” and formally requested a meeting with the full board of directors. Meanwhile, the Association of Professional Flight Attendants (APFA) issued a no-confidence vote in Chief Executive Officer Robert Isom — the first such vote against an American CEO in the union’s history — and called for leadership change.</p><p>Public demands for executive removal from labor groups are rare outside of contract negotiations, making the move particularly notable.</p><h2>“Dangerously Behind” Rivals</h2><p>The APFA said American is falling “dangerously behind” competitors and accused management of failing to deliver on reliability and profitability.</p><p>“At the end of the day, our management team, we feel, has failed us,” APFA President Julie Hedrick said. “We don’t want to be left with a company that isn’t competitive.”</p><p>The union plans to hold a protest outside American’s headquarters in Fort Worth, Texas, to push its demands for greater accountability and improved operational support.</p><p>American Airlines declined to comment directly on the no-confidence vote but pointed to Isom’s recent public remarks outlining a turnaround strategy focused on premium offerings, operational improvements and rebuilding corporate travel demand.</p><p>During last month’s earnings call, Isom acknowledged the company’s performance challenges and said the airline’s turnaround efforts should begin delivering meaningful results in 2026.</p><p>“It starts with us at the top,” Isom told employees at a leadership conference. “2026 can’t just feel different. It has to be different.”</p><h2>A Stark Profit Gap</h2><p>The unions’ frustration is rooted in stark financial comparisons.</p><p>On an adjusted pretax basis, American generated just $352 million in 2025. By contrast, Delta earned roughly $5 billion and United about $4.6 billion during the same period.</p><p>JPMorgan analysts estimate American accounted for less than 4% of the combined pretax profits of the three airlines last year. However, that share is expected to improve to about 12% in 2026 if the turnaround gains traction.</p><p>American’s stock performance has also lagged. Over the past year, its shares have fallen roughly 10%, while Delta and United have posted gains of about 14% and 12%, respectively.</p><p>Management has attributed the underperformance to weakness in the domestic travel market, broader economic uncertainty and disruptions such as the recent federal government shutdown, which dampened bookings.</p><p>The weaker profits have also translated into smaller profit-sharing payouts for employees. According to the flight attendants’ union, some crew members received as little as $150 in profit-sharing for 2025.</p><p>At a recent staff town hall, Isom reportedly described the payouts as “meager” but noted that limited profits inevitably lead to smaller distributions.</p><p>“When you break even, that’s the kind of profit sharing you have,” he said, according to an audio recording reviewed by Reuters.</p><h2>Pilots Seek Direct Board Engagement</h2><p>The airline’s pilots are also pushing for deeper board involvement.</p><p>In a letter last week, the pilots’ union warned that American remains on an “underperforming path” marked by persistent operational, cultural and strategic shortcomings. The union requested that its president, Nick Silva, be allowed to formally present concerns to the full board.</p><p>According to correspondence reviewed by Reuters, Isom responded that he would meet with the union soon and that the board had discussed the request. However, union leaders said they have not yet received a direct response from directors and believe engagement at the board level is now “the necessary next step.”</p><h2>Operational Strains Add to Tensions</h2><p>Recent operational challenges have further fueled criticism.</p><p>A late-January winter storm triggered widespread flight cancellations, testing American’s recovery systems. Data from aviation analytics firm OAG showed the airline lagged Southwest, Alaska Airlines, United and Delta in on-time performance during January and posted the highest cancellation rate among those carriers.</p><p>Unions have cited those disruptions as evidence of broader execution issues.</p><p>Corporate governance experts note that while public calls for a CEO’s removal do not automatically result in leadership changes, sustained employee unrest can pose risks for customer-facing businesses.</p><p>“When your employees are unhappy working there, and you’re a customer-facing business, you’ve got a real problem,” said Charles Elson, a retired University of Delaware professor specializing in corporate governance.</p><p>As American seeks to reassure investors that its turnaround plan will narrow the profit gap, growing pressure from within may test both its leadership and its board’s willingness to intervene.</p>",
       "category": "Business",
       "keywords": [
-        "Federal Reserve Bank of New York",
-        "2025 tariffs",
-        "tariff incidence",
-        "Donald Trump tariffs",
-        "U.S. importers",
-        "Consumer Price Index",
-        "U.S. GDP growth",
-        "tariff revenue 2025",
-        "Supreme Court tariffs case",
-        "U.S. trade policy"
+        "American Airlines",
+        "Robert Isom",
+        "APFA no-confidence vote",
+        "airline profit gap",
+        "Delta Air Lines earnings",
+        "United Airlines profits",
+        "airline unions",
+        "corporate governance",
+        "airline layoffs and profit sharing",
+        "U.S. airline industry 2026"
       ],
       "date": "2026-02-13",
-      "image": "/new-york-fed-2025-tariff-analysis.webp",
+      "image": "/american-airlines-unions-board-pressure-2026.webp",
       "authorId": 1,
       "published": true
     },
@@ -268,7 +264,7 @@
       ],
       "date": "2026-02-04",
       "image": "/trump-election-remarks1.webp",
-      "authorId": 1,
+      "authorId": 2,
       "published": true
     },
     {
@@ -291,7 +287,7 @@
       ],
       "date": "2026-02-05",
       "image": "/trump-signs-funding-bill.webp",
-      "authorId": 1,
+      "authorId": 2,
       "published": true
     },
     {
@@ -314,7 +310,7 @@
       ],
       "date": "2026-02-06",
       "image": "/virginia-redistricting-map.webp",
-      "authorId": 1,
+      "authorId": 2,
       "published": true
     },
     {
@@ -337,7 +333,7 @@
       ],
       "date": "2026-02-08",
       "image": "/trump-ice-midterms.webp",
-      "authorId": 3,
+      "authorId": 2,
       "published": true
     },
     {
@@ -360,7 +356,7 @@
       ],
       "date": "2026-02-11",
       "image": "/gordie-howe-bridge-dispute.webp",
-      "authorId": 1,
+      "authorId": 2,
       "published": true
     },
     {
@@ -383,7 +379,7 @@
       ],
       "date": "2026-02-04",
       "image": "/clintons-epstein-house-testimony.webp",
-      "authorId": 1,
+      "authorId": 3,
       "published": true
     },
     {
@@ -406,7 +402,7 @@
       ],
       "date": "2026-02-05",
       "image": "/puerto-rico-voting-security.webp",
-      "authorId": 1,
+      "authorId": 3,
       "published": true
     },
     {
@@ -429,7 +425,7 @@
       ],
       "date": "2026-02-06",
       "image": "/colorado-funeral-home-sentencing.webp",
-      "authorId": 1,
+      "authorId": 3,
       "published": true
     },
     {
@@ -452,7 +448,7 @@
       ],
       "date": "2026-02-09",
       "image": "/netflix-antitrust-investigation.webp",
-      "authorId": 1,
+      "authorId": 3,
       "published": true
     },
     {
@@ -475,7 +471,7 @@
       ],
       "date": "2026-02-10",
       "image": "/doj-lawyer-press-freedom-search.webp",
-      "authorId": 1,
+      "authorId": 3,
       "published": true
     },
     {
@@ -498,7 +494,7 @@
       ],
       "date": "2026-02-11",
       "image": "/us-telecom-senate-hearing.webp",
-      "authorId": 1,
+      "authorId": 3,
       "published": true
     },
     {
@@ -521,7 +517,7 @@
       ],
       "date": "2026-02-04",
       "image": "/minnesota-olympians.webp",
-      "authorId": 1,
+      "authorId": 4,
       "published": true
     },
     {
@@ -544,7 +540,7 @@
       ],
       "date": "2026-02-06",
       "image": "/jd-vance-milan-olympics.webp",
-      "authorId": 1,
+      "authorId": 4,
       "published": true
     },
     {
@@ -567,7 +563,7 @@
       ],
       "date": "2026-02-08",
       "image": "/ilia-malinin-olympics.webp",
-      "authorId": 2,
+      "authorId": 4,
       "published": true
     },
     {
@@ -590,7 +586,7 @@
       ],
       "date": "2026-02-10",
       "image": "/winter-olympics-politics-trump-immigration.webp",
-      "authorId": 1,
+      "authorId": 4,
       "published": true
     },
     {
@@ -613,7 +609,7 @@
       ],
       "date": "2026-02-11",
       "image": "/super-bowl-bad-bunny-halftime.webp",
-      "authorId": 1,
+      "authorId": 4,
       "published": true
     },
     {
@@ -636,7 +632,7 @@
       ],
       "date": "2026-02-12",
       "image": "/brock-nelson-team-usa-olympic-opener.webp",
-      "authorId": 1,
+      "authorId": 4,
       "published": true
     },
     {
@@ -659,7 +655,7 @@
       ],
       "date": "2026-02-03",
       "image": "/tsa-real-id-fee.webp",
-      "authorId": 1,
+      "authorId": 5,
       "published": true
     },
     {
@@ -682,7 +678,7 @@
       ],
       "date": "2026-02-05",
       "image": "/united-airlines-lawsuit.webp",
-      "authorId": 1,
+      "authorId": 5,
       "published": true
     },
     {
@@ -705,7 +701,7 @@
       ],
       "date": "2026-02-11",
       "image": "/state-college-airport-expansion.webp",
-      "authorId": 1,
+      "authorId": 5,
       "published": true
     },
     {
@@ -728,32 +724,10 @@
       ],
       "date": "2026-02-11",
       "image": "/boeing-737-max-crash-appeals-court-case.webp",
-      "authorId": 1,
+      "authorId": 5,
       "published": true
     },
-    {
-      "slug": "american-airlines-unions-pressure-board-profit-gap-2026",
-      "title": "American Airlines Unions Intensify Pressure on Board Over Profit Gap",
-      "excerpt": "American Airlines’ largest unions are pressing the board for leadership changes as the carrier’s profitability lags far behind Delta and United, highlighting growing governance and operational tensions.",
-      "content": "<p><strong>CHICAGO, Feb. 12 —</strong> American Airlines’ largest labor unions are escalating pressure on the company’s board of directors, arguing that the carrier’s lagging profitability compared with rivals Delta Air Lines and United Airlines has become a leadership and governance issue.</p><p>For years, American has trailed its two biggest competitors in earnings. Now, union leaders say the gap reflects deeper strategic and operational problems that require action from the top.</p><p>In recent days, tensions have sharpened. The pilots’ union has urged the airline’s board to take “decisive action” and formally requested a meeting with the full board of directors. Meanwhile, the Association of Professional Flight Attendants (APFA) issued a no-confidence vote in Chief Executive Officer Robert Isom — the first such vote against an American CEO in the union’s history — and called for leadership change.</p><p>Public demands for executive removal from labor groups are rare outside of contract negotiations, making the move particularly notable.</p><h2>“Dangerously Behind” Rivals</h2><p>The APFA said American is falling “dangerously behind” competitors and accused management of failing to deliver on reliability and profitability.</p><p>“At the end of the day, our management team, we feel, has failed us,” APFA President Julie Hedrick said. “We don’t want to be left with a company that isn’t competitive.”</p><p>The union plans to hold a protest outside American’s headquarters in Fort Worth, Texas, to push its demands for greater accountability and improved operational support.</p><p>American Airlines declined to comment directly on the no-confidence vote but pointed to Isom’s recent public remarks outlining a turnaround strategy focused on premium offerings, operational improvements and rebuilding corporate travel demand.</p><p>During last month’s earnings call, Isom acknowledged the company’s performance challenges and said the airline’s turnaround efforts should begin delivering meaningful results in 2026.</p><p>“It starts with us at the top,” Isom told employees at a leadership conference. “2026 can’t just feel different. It has to be different.”</p><h2>A Stark Profit Gap</h2><p>The unions’ frustration is rooted in stark financial comparisons.</p><p>On an adjusted pretax basis, American generated just $352 million in 2025. By contrast, Delta earned roughly $5 billion and United about $4.6 billion during the same period.</p><p>JPMorgan analysts estimate American accounted for less than 4% of the combined pretax profits of the three airlines last year. However, that share is expected to improve to about 12% in 2026 if the turnaround gains traction.</p><p>American’s stock performance has also lagged. Over the past year, its shares have fallen roughly 10%, while Delta and United have posted gains of about 14% and 12%, respectively.</p><p>Management has attributed the underperformance to weakness in the domestic travel market, broader economic uncertainty and disruptions such as the recent federal government shutdown, which dampened bookings.</p><p>The weaker profits have also translated into smaller profit-sharing payouts for employees. According to the flight attendants’ union, some crew members received as little as $150 in profit-sharing for 2025.</p><p>At a recent staff town hall, Isom reportedly described the payouts as “meager” but noted that limited profits inevitably lead to smaller distributions.</p><p>“When you break even, that’s the kind of profit sharing you have,” he said, according to an audio recording reviewed by Reuters.</p><h2>Pilots Seek Direct Board Engagement</h2><p>The airline’s pilots are also pushing for deeper board involvement.</p><p>In a letter last week, the pilots’ union warned that American remains on an “underperforming path” marked by persistent operational, cultural and strategic shortcomings. The union requested that its president, Nick Silva, be allowed to formally present concerns to the full board.</p><p>According to correspondence reviewed by Reuters, Isom responded that he would meet with the union soon and that the board had discussed the request. However, union leaders said they have not yet received a direct response from directors and believe engagement at the board level is now “the necessary next step.”</p><h2>Operational Strains Add to Tensions</h2><p>Recent operational challenges have further fueled criticism.</p><p>A late-January winter storm triggered widespread flight cancellations, testing American’s recovery systems. Data from aviation analytics firm OAG showed the airline lagged Southwest, Alaska Airlines, United and Delta in on-time performance during January and posted the highest cancellation rate among those carriers.</p><p>Unions have cited those disruptions as evidence of broader execution issues.</p><p>Corporate governance experts note that while public calls for a CEO’s removal do not automatically result in leadership changes, sustained employee unrest can pose risks for customer-facing businesses.</p><p>“When your employees are unhappy working there, and you’re a customer-facing business, you’ve got a real problem,” said Charles Elson, a retired University of Delaware professor specializing in corporate governance.</p><p>As American seeks to reassure investors that its turnaround plan will narrow the profit gap, growing pressure from within may test both its leadership and its board’s willingness to intervene.</p>",
-      "category": "Business",
-      "keywords": [
-        "American Airlines",
-        "Robert Isom",
-        "APFA no-confidence vote",
-        "airline profit gap",
-        "Delta Air Lines earnings",
-        "United Airlines profits",
-        "airline unions",
-        "corporate governance",
-        "airline layoffs and profit sharing",
-        "U.S. airline industry 2026"
-      ],
-      "date": "2026-02-12",
-      "image": "/american-airlines-unions-board-pressure-2026.webp",
-      "authorId": 1,
-      "published": true
-    },
+    
     {
       "slug": "aquifer-thermal-energy-storage-geothermal-revival",
       "title": "Aquifer Geothermal Energy Gains Momentum in the U.S.",
@@ -774,7 +748,7 @@
       ],
       "date": "2026-02-04",
       "image": "/aquifer-geothermal-energy.webp",
-      "authorId": 1,
+      "authorId": 6,
       "published": true
     },
     {
@@ -797,7 +771,7 @@
       ],
       "date": "2026-02-04",
       "image": "/offshore-drilling-environmental-risks.webp",
-      "authorId": 1,
+      "authorId": 6,
       "published": true
     },
     {
@@ -820,7 +794,7 @@
       ],
       "date": "2026-02-05",
       "image": "/us-mexico-water-agreement.webp",
-      "authorId": 1,
+      "authorId": 6,
       "published": true
     },
     {
@@ -843,7 +817,7 @@
       ],
       "date": "2026-02-11",
       "image": "/epa-climate-policy-trump.webp",
-      "authorId": 1,
+      "authorId": 6,
       "published": true
     },
     {
@@ -866,7 +840,7 @@
       ],
       "date": "2026-02-11",
       "image": "/us-judiciary-climate-manual.webp",
-      "authorId": 1,
+      "authorId": 6,
       "published": true
     },
 

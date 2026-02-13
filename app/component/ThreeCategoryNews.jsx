@@ -121,7 +121,7 @@ export default function ThreeCategoryNews({
 
               <div className="text-xs md:text-sm text-gray-500 flex flex-wrap gap-2">
                 <Link
-                  href={`/author/${article.authorId}`}
+                  href={`/author/${authors.find(a => a.id === article.authorId)?.slug}`}
                   className="italic hover:text-[#7351a8]"
                 >
                   {authors.find(a => a.id === article.authorId)?.name}

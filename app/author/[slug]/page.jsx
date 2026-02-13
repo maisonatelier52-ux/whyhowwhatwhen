@@ -164,12 +164,6 @@ export default async function AuthorPage({ params }) {
           {author.name}
         </h1>
 
-        {author.bio && (
-          <p className="mt-3 text-sm text-gray-600 max-w-xl mx-auto">
-            {author.bio}
-          </p>
-        )}
-
         {author.photo && (
           <div className="flex justify-center mt-6">
             <div className="relative w-32 h-32 rounded-full overflow-hidden border">
@@ -181,6 +175,12 @@ export default async function AuthorPage({ params }) {
               />
             </div>
           </div>
+        )}
+
+        {author.bio && (
+          <p className="mt-3 text-sm text-gray-600 max-w-xl mx-auto">
+            {author.bio}
+          </p>
         )}
       </div>
 

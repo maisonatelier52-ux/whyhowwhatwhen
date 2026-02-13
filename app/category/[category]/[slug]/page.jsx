@@ -188,7 +188,12 @@ export default async function ArticlePage({ params }) {
           <h1 className="text-3xl font-bold mt-4">{article.title}</h1>
 
           <div className="text-sm text-gray-500 mt-2 flex flex-wrap items-center gap-3">
-            <span>{author?.name}</span>
+            <Link
+                  href={`/author/${author?.slug}`}
+                  className="italic hover:text-[#7351a8]"
+                >
+                  {author?.name}
+            </Link>
             <span>|</span>
             <span>
               {new Date(article.date).toLocaleDateString("en-US", {
