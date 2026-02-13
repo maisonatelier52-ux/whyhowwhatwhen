@@ -1,6 +1,13 @@
 "use client";
 
-import { Check, Instagram, Link, LucideRabbit, Share, Twitter } from "lucide-react";
+import {
+  Check,
+  Instagram,
+  Link,
+  LucideRabbit,
+  Share,
+  Twitter,
+} from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ShareArticle({ title, description }) {
@@ -31,7 +38,6 @@ export default function ShareArticle({ title, description }) {
   return (
     <>
       <section className="flex items-center justify-between border-t-2 border-b-2 border-dashed border-gray-300 dark:border-gray-800 py-4 px-3">
-
         {/* LEFT */}
         <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 uppercase tracking-wide">
           <Share className="text-xl sm:text-2xl" />
@@ -40,7 +46,6 @@ export default function ShareArticle({ title, description }) {
 
         {/* RIGHT */}
         <div className="flex items-center gap-3 group">
-
           {/* REDDIT */}
           <a
             href={`https://www.reddit.com/submit?url=${shareUrl}&title=${encodedTitle}`}
@@ -98,7 +103,6 @@ export default function ShareArticle({ title, description }) {
               </IconBox>
             </IconWrap>
           </button>
-
         </div>
       </section>
 

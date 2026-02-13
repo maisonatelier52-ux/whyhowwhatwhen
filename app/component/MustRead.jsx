@@ -1,98 +1,138 @@
-import data from "@/data/data.json";
 import Image from "next/image";
 import Link from "next/link";
 import CategoryTag from "./CategoryCard";
 
-export default function MustRead() {
-  const publishedNews = data.articles.filter(
-    (article) =>
-      article.category === "Travel" ||
-      article.category === "Climate"
-  ).sort((a,b) => new Date(b.date) - new Date(a.date));
+export default function ClimateNews({ climateNews, authors }) {
+  const publishedNews = climateNews;
 
   const topNews = publishedNews[0];
   const remaining = publishedNews.slice(1, 5);
+
+  const formatDate = (date) =>
+    new Date(date).toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
 
   return (
     <section className="px-5 pb-5">
       {/* HEADER */}
       <div className="relative bg-[#7351a8] text-white p-6 pb-16 mb-8">
-        <h2 className="text-4xl font-extrabold">Must Read</h2>
+        <h2 className="text-4xl font-extrabold">Climate</h2>
         <p className="mt-2">
-          Everything you need to know about the re-reboot of your favourite
-          childhood flick.
+          Latest updates and in-depth coverage on climate and environmental
+          issues.
         </p>
       </div>
 
       {/* CONTENT GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
-        {/* LEFT — TOP NEWS (WIDER) */}
-        {topNews && (
-          <div className="lg:col-span-2 -mt-20 relative z-10 space-y-4">
-            {topNews.image && (
-              <div className="relative w-full h-100 overflow-hidden shadow-xl">
-                <Image
-                  src={topNews.image}
-                  alt={topNews.title}
-                  fill
-                  className="object-cover"
-                />
-                <CategoryTag text={topNews.category.toUpperCase()} />
-              </div>
-            )}
+        {/* LEFT — TOP NEWS */}
+        {topNews &&
+          (() => {
+            const author = authors.find((a) => a.id === topNews.authorId);
+            const articleLink = `/category/${topNews.category}/${topNews.slug}`;
 
-            <h3 className="text-2xl font-semibold hover:text-[#7351a8] cursor-pointer">
-              {topNews.title}
-            </h3>
-            <div className="text-sm text-gray-500 flex flex-wrap gap-2">
-              <Link
-                href={`/author/${topNews.authorId}`}
-                className="italic hover:text-[#7351a8]"
-              >
-                {data.authors.find(a => a.id === topNews.authorId)?.name}
-              </Link>
-              <span>| {new Date(topNews.date).toLocaleDateString("en-US", {
-                month: "long",
-                day: "numeric",
-                year: "numeric"
-              })}</span>
-            </div>
-          </div>
-        )}
+            return (
+              <div className="lg:col-span-2 -mt-20 relative z-10 space-y-4">
+                {/* IMAGE */}
+                {topNews.image && (
+                  <Link href={articleLink}>
+                    <div className="relative w-full h-[400px] overflow-hidden shadow-xl cursor-pointer">
+                      <Image
+                        src={topNews.image}
+                        alt={topNews.title}
+                        fill
+                        className="object-cover hover:scale-[1.02] transition-transform duration-300"
+                      />
+                      <CategoryTag text={topNews.category.toUpperCase()} />
+                    </div>
+                  </Link>
+                )}
+
+                {/* TITLE */}
+                <Link href={articleLink}>
+                  <h3 className="text-3xl font-semibold hover:text-[#7351a8] cursor-pointer">
+                    {topNews.title}
+                  </h3>
+                </Link>
+
+                {/* DESCRIPTION */}
+                <Link href={articleLink}>
+                  <p className="text-sm text-gray-700 line-clamp-3 hover:text-gray-900 cursor-pointer">
+                    {topNews.excerpt}
+                  </p>
+                </Link>
+
+                {/* AUTHOR + DATE */}
+                <div className="text-sm text-gray-500 flex flex-wrap gap-2">
+                  {author && (
+                    <Link
+                      href={`/author/${author.slug}`}
+                      className="italic hover:text-[#7351a8]"
+                    >
+                      {author.name}
+                    </Link>
+                  )}
+                  <span>| {formatDate(topNews.date)}</span>
+                </div>
+              </div>
+            );
+          })()}
 
         {/* RIGHT — 2x2 GRID */}
         <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {remaining.map((article) => (
-            <div key={article.slug} className="space-y-2">
-              {article.image && (
-                <div className="relative w-full h-40 overflow-hidden">
-                  <Image
-                    src={article.image}
-                    alt={article.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <CategoryTag text={article.category.toUpperCase()} />
-                </div>
-              )}
-              <h4 className="text-sm font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
-                {article.title}
-              </h4>
-              <div className="text-sm text-gray-500 flex flex-wrap gap-2">
-                <Link
-                    href={`/author/${article.authorId}`}
-                    className="italic hover:text-[#7351a8]"
-                >
-                    {data.authors.find(a => a.id === article.authorId)?.name}
+          {remaining.map((article) => {
+            const author = authors.find((a) => a.id === article.authorId);
+            const articleLink = `/category/${article.category}/${article.slug}`;
+
+            return (
+              <div key={article.slug} className="space-y-2">
+                {/* IMAGE */}
+                {article.image && (
+                  <Link href={articleLink}>
+                    <div className="relative w-full h-40 overflow-hidden cursor-pointer">
+                      <Image
+                        src={article.image}
+                        alt={article.title}
+                        fill
+                        className="object-cover hover:scale-[1.03] transition-transform duration-300"
+                      />
+                      <CategoryTag text={article.category.toUpperCase()} />
+                    </div>
+                  </Link>
+                )}
+
+                {/* TITLE */}
+                <Link href={articleLink}>
+                  <h4 className="text-sm font-semibold leading-snug hover:text-[#7351a8] pt-2 cursor-pointer">
+                    {article.title}
+                  </h4>
                 </Link>
-                <span>| {new Date(article.date).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric"
-                })}</span>
+
+                {/* DESCRIPTION */}
+                <Link href={articleLink}>
+                  <p className="text-sm text-gray-700 line-clamp-3 hover:text-gray-900 cursor-pointer">
+                    {article.excerpt}
+                  </p>
+                </Link>
+
+                {/* AUTHOR + DATE */}
+                <div className="text-sm text-gray-500 flex flex-wrap gap-2">
+                  {author && (
+                    <Link
+                      href={`/author/${author.slug}`}
+                      className="italic hover:text-[#7351a8]"
+                    >
+                      {author.name}
+                    </Link>
+                  )}
+                  <span>| {formatDate(article.date)}</span>
                 </div>
-            </div>
-          ))}
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
