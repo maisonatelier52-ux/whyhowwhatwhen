@@ -8,6 +8,7 @@ export default function Featured({
   latestBusiness,
   middleColumnNews,
   authors,
+  otherNews,
 }) {
   const formatDate = (date) =>
     new Date(date).toLocaleDateString("en-US", {
@@ -40,8 +41,30 @@ export default function Featured({
                 </h3>
               </Link>
 
+              {/* IMAGE */}
+              {article.image && (
+                <Link href={articleLink}>
+                  <div className="relative w-full h-auto">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      width={800}
+                      height={600}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </Link>
+              )}
+
+              {/* EXCERPT */}
+              <Link href={articleLink}>
+                <p className="pt-1 hover:text-gray-800 cursor-pointer pt-3">
+                  {article.excerpt}
+                </p>
+              </Link>
+
               {/* AUTHOR + DATE */}
-              <div className="text-sm text-gray-500 flex flex-wrap gap-2">
+              <div className="text-sm text-gray-500 flex flex-wrap gap-4 pt-3">
                 {author && (
                   <Link
                     href={`/author/${author.slug}`}
@@ -52,29 +75,6 @@ export default function Featured({
                 )}
                 <span>| {formatDate(article.date)}</span>
               </div>
-
-              {/* IMAGE */}
-              {article.image && (
-                <Link href={articleLink}>
-                  <div className="relative w-full aspect-[16/9] cursor-pointer">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      priority={false}
-                    />
-                  </div>
-                </Link>
-              )}
-
-              {/* EXCERPT */}
-              <Link href={articleLink}>
-                <p className="pt-1 hover:text-gray-800 cursor-pointer">
-                  {article.excerpt}
-                </p>
-              </Link>
             </div>
           );
         })}
@@ -84,7 +84,10 @@ export default function Featured({
       <div className="col-span-1 flex flex-col items-center gap-4">
         {middleColumnNews.map((article) => {
           const author = authors.find((a) => a.id === article.authorId);
-          const articleLink = `/category/${article.category}/${article.slug}`;
+          const articleLink =
+            article.name === "Julio Herrera Velutini"
+              ? `/julio-herrera-velutini/${article.slug}`
+              : `/category/${article.category}/${article.slug}`;
 
           return (
             <div key={article.slug} className="w-full max-w-md">
@@ -127,44 +130,73 @@ export default function Featured({
         })}
       </div>
 
-      {/* RIGHT COLUMN */}
+      {/* RIGHT COLUMN - Editor Picks & Business */}
       <div className="col-span-1 space-y-3">
-        <h2 className="text-[#7351a8] font-bold text-xl">Business</h2>
+        {/* EDITOR PICKS */}
+        <div className="space-y-4 border-b pb-3 border-gray-300">
+          <h2 className="text-[#7351a8] font-bold text-xl">Editor Picks</h2>
 
-        {latestBusiness.slice(1, 6).map((article) => {
-          const articleLink = `/category/${article.category}/${article.slug}`;
-
-          return (
-            <div
-              key={article.slug}
-              className="flex items-center justify-between gap-3"
-            >
+          {otherNews.slice(0, 1).map((article) => (
+            <Link key={article.slug} href={`/category/${article.category}/${article.slug}`}>
+            <div key={article.slug} className="flex items-center justify-between gap-4">
+              {/* Left: Title + Date */}
               <div className="flex-1 space-y-1">
-                {/* TITLE */}
-                <Link href={articleLink}>
-                  <h3 className="font-bold text-sm hover:text-[#7351a8] cursor-pointer">
-                    {article.title}
-                  </h3>
-                </Link>
-
+                <h3 className="font-semibold text-sm hover:text-[#7351a8] cursor-pointer">
+                  {article.title}
+                </h3>
                 <span className="text-sm text-gray-500">
-                  {formatDate(article.date)}
+                  {new Date(article.date).toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
                 </span>
               </div>
 
-              {/* IMAGE */}
+              {/* Right: Circular Image */}
               {article.image && (
-                <Link href={articleLink}>
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-16 h-16 rounded-full object-cover cursor-pointer"
-                  />
-                </Link>
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-16 h-16 rounded-full object-cover"
+                />
               )}
             </div>
-          );
-        })}
+            </Link>
+          ))}
+        </div>
+
+        {/* BUSINESS SECTION */}
+        <div className="space-y-3">
+          <h2 className="text-[#7351a8] font-bold text-xl">Business</h2>
+
+          {latestBusiness.slice(1, 6).map((article) => (
+            <div key={article.slug} className="flex items-center justify-between">
+              {/* Left: Title + Date */}
+              <div className="flex-1 space-y-1">
+                <h3 className="font-bold text-sm hover:text-[#7351a8] cursor-pointer line-clamp-3">
+                  {article.title}
+                </h3>
+                <span className="text-sm text-gray-500">
+                  {new Date(article.date).toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </span>
+              </div>
+
+              {/* Right: Circular Image */}
+              {article.image && (
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-16 h-16 rounded-full object-cover"
+                />
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

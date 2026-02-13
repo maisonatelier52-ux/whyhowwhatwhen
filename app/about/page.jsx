@@ -1,89 +1,90 @@
 import Image from "next/image";
 
-// const SITE_URL = "https://www.timeschronicle.org";
+const SITE_URL = "https://www.whyhowwhatwhen.com";
 
-// export const metadata = {
-//   title: "About Times Chronicle — Independent US Digital News Platform",
-//   description:
-//     "Learn about Times Chronicle, an independent US digital news platform delivering factual reporting across national, politics, business, technology, health and world news.",
-//   alternates: {
-//     canonical: `${SITE_URL}/about`,
-//   },
-//   keywords: [
-//     "truthful reporting",
-//     "foundation of an informed society",
-//     "independent journalism",
-//     "factual reporting",
-//     "Times Chronicle",
-//     "US digital news platform"
-//   ],
-//   openGraph: {
-//     title: "About Times Chronicle — Independent US Digital News Platform",
-//     description:
-//       "Discover the mission and vision behind Times Chronicle — an independent US digital news platform.",
-//     url: `${SITE_URL}/about`,
-//     type: "website",
-//     siteName: "Times Chronicle",
-//     images: [
-//       {
-//         url: `${SITE_URL}/logo/Times-Chronicle-White-Text.png`,
-//         width: 1200,
-//         height: 630,
-//         alt: "About Times Chronicle",
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "About Times Chronicle",
-//     description:
-//       "Learn who we are and what drives our mission to deliver factual US news.",
-//     images: [`${SITE_URL}/logo/Times-Chronicle-White-Text.png`],
-//   },
-// };
+export const metadata = {
+  title: "About WhyHowWhatWhen — Independent US Digital News Platform",
+  description:
+    "Learn about WhyHowWhatWhen, an independent US digital news platform delivering factual reporting across business, politics, sports, investigation, travel and climate news.",
+  alternates: {
+    canonical: `${SITE_URL}/about`,
+  },
+  keywords: [
+    "truthful reporting",
+    "foundation of an informed society",
+    "independent journalism",
+    "factual reporting",
+    "WhyHowWhatWhen",
+    "US digital news platform"
+  ],
+  openGraph: {
+    title: "About WhyHowWhatWhen — Independent US Digital News Platform",
+    description:
+      "Discover the mission and vision behind WhyHowWhatWhen — an independent US digital news platform.",
+    url: `${SITE_URL}/about`,
+    type: "website",
+    siteName: "WhyHowWhatWhen",
+    images: [
+      {
+        url: `${SITE_URL}/logo/Times-Chronicle-White-Text.png`,
+        width: 1200,
+        height: 630,
+        alt: "About WhyHowWhatWhen",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About WhyHowWhatWhen — Independent US Digital News Platform",
+    description:
+      "Learn who we are and what drives our mission to deliver factual US news.",
+    images: [`${SITE_URL}/logo/Times-Chronicle-White-Text.png`],
+  },
+};
 
 export default function AboutPage() {
-  //   const webPageJsonLd = {
-  //     "@context": "https://schema.org",
-  //     "@type": "WebPage",
-  //     "@id": `${SITE_URL}/about#webpage`,
-  //     "url": `${SITE_URL}/about`,
-  //     "name": "About Times Chronicle",
-  //     "description": metadata.description,
-  //     "isPartOf": {
-  //       "@type": "WebSite",
-  //       "name": "Times Chronicle",
-  //       "url": SITE_URL
-  //     },
-  //     "about": {
-  //       "@type": "NewsMediaOrganization",
-  //       "name": "Times Chronicle"
-  //     }
-  //   };
 
-  //   const breadcrumbJsonLd = {
-  //     "@context": "https://schema.org",
-  //     "@type": "BreadcrumbList",
-  //     "itemListElement": [
-  //       {
-  //         "@type": "ListItem",
-  //         "position": 1,
-  //         "name": "Home",
-  //         "item": SITE_URL
-  //       },
-  //       {
-  //         "@type": "ListItem",
-  //         "position": 2,
-  //         "name": "About",
-  //         "item": `${SITE_URL}/about`
-  //       }
-  //     ]
-  //   };
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/about#webpage`,
+    "url": `${SITE_URL}/about`,
+    "name": "About WhatHowWhatWhen — Independent US Digital News Platform",
+    "description": metadata.description,
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "WhyHowWhatWhen",
+      "url": SITE_URL
+    },
+    "about": {
+      "@type": "NewsMediaOrganization",
+      "name": "WhyHowWhatWhen"
+    }
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_URL
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": `${SITE_URL}/about`
+      }
+    ]
+  };
 
   return (
     <>
       {/* JSON-LD STRUCTURED DATA */}
-      {/* <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
@@ -91,7 +92,7 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      /> */}
+      />
       <div className="min-h-screen bg-white text-gray-900  transition-colors duration-300">
         {/* HERO */}
         <section className="relative w-full h-svh overflow-hidden shadow-md">

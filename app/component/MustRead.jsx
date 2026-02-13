@@ -53,20 +53,20 @@ export default function ClimateNews({ climateNews, authors }) {
 
                 {/* TITLE */}
                 <Link href={articleLink}>
-                  <h3 className="text-3xl font-semibold hover:text-[#7351a8] cursor-pointer">
+                  <h3 className="text-3xl font-semibold hover:text-[#7351a8] cursor-pointer pt-3">
                     {topNews.title}
                   </h3>
                 </Link>
 
                 {/* DESCRIPTION */}
                 <Link href={articleLink}>
-                  <p className="text-sm text-gray-700 line-clamp-3 hover:text-gray-900 cursor-pointer">
+                  <p className="text-sm pt-3 text-gray-700 line-clamp-3 hover:text-gray-900 cursor-pointer">
                     {topNews.excerpt}
                   </p>
                 </Link>
 
                 {/* AUTHOR + DATE */}
-                <div className="text-sm text-gray-500 flex flex-wrap gap-2">
+                <div className="text-sm text-gray-500 flex flex-wrap gap-2 pt-2">
                   {author && (
                     <Link
                       href={`/author/${author.slug}`}

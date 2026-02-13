@@ -73,74 +73,79 @@ export default function ThreeCategoryNews({
         </div>
       </aside>
 
-      {/* ================= MIDDLE COLUMN – POLITICS ================= */}
+        {/* ================= MIDDLE COLUMN – POLITICS ================= */}
       <div className="lg:col-span-6 space-y-6 px-3 pt-2">
         <div className="relative pl-3 pb-3 mb-2">
+          {/* Background text */}
           <span className="absolute left-0 top-1/2 -translate-y-1/2 text-7xl font-extrabold tracking-widest text-gray-200/70 select-none pointer-events-none">
             LATEST
           </span>
 
+          {/* Foreground heading */}
           <h3 className="relative text-xl pt-5 pb-1 font-bold text-[#7351a8]">
             POLITICS
           </h3>
         </div>
 
-        {politicsNews.slice(0, 5).map((article) => {
-          const author = authors.find((a) => a.id === article.authorId);
-          const articleLink = `/category/${article.category}/${article.slug}`;
-
-          return (
-            <div
-              key={article.slug}
-              className="flex flex-row-reverse lg:flex-row gap-4 pb-4"
-            >
-              {/* Image */}
-              {article.image && (
-                <Link href={articleLink}>
-                  <div className="relative group overflow-hidden w-2/5 h-32 md:h-40 flex-shrink-0 cursor-pointer">
-                    <Image
-                      src={article.image}
-                      alt={article.title}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                    />
-                    <CategoryTag text={article.category.toUpperCase()} />
-                  </div>
-                </Link>
-              )}
-
-              {/* Content */}
-              <div className="border-t border-gray-300 pt-3 flex-1">
-                <Link href={articleLink}>
-                  <h4 className="text-base md:text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
-                    {article.title}
-                  </h4>
-                </Link>
-
-                <div className="text-xs md:text-sm text-gray-500 flex flex-wrap gap-2">
-                  {author && (
-                    <Link
-                      href={`/author/${author.slug}`}
-                      className="italic hover:text-[#7351a8]"
-                    >
-                      {author.name}
-                    </Link>
-                  )}
-                  <span>| {formatDate(article.date)}</span>
-                </div>
-
-                <Link href={articleLink}>
-                  <p className="text-xs md:text-sm text-gray-700 mt-2 hover:text-gray-900 cursor-pointer">
-                    {article.excerpt}
-                  </p>
+        {politicsNews.slice(0, 5).map((article) => (
+          <div
+            key={article.slug}
+            className="flex flex-row-reverse lg:flex-row gap-4 pb-4"
+          >
+            {/* Image */}
+            {article.image && (
+              <div className="
+                relative group overflow-hidden
+                w-2/5 h-32 md:h-40
+                flex-shrink-0
+              ">
+                <Link href={`/category/${article.category}/${article.slug}`}>
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  />
+                  <CategoryTag text={article.category.toUpperCase()} />
                 </Link>
               </div>
+            )}
+
+            {/* Content */}
+            <div className="border-t border-gray-300 pt-3 flex-1">
+              <Link href={`/category/${article.category}/${article.slug}`}>
+                <h4 className="text-base md:text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
+                  {article.title}
+                </h4>
+              </Link>
+
+              <div className="text-xs md:text-sm text-gray-500 flex flex-wrap gap-2">
+                <Link
+                  href={`/author/${article.authorId}`}
+                  className="italic hover:text-[#7351a8]"
+                >
+                  {authors.find(a => a.id === article.authorId)?.name}
+                </Link>
+                <span>
+                  | {new Date(article.date).toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric"
+                  })}
+                </span>
+              </div>
+
+              <Link href={`/category/${article.category}/${article.slug}`}>
+                <p className="text-xs md:text-sm text-gray-700 mt-2">
+                  {article.excerpt}
+                </p>
+              </Link>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
 
-      {/* ================= LEFT COLUMN – INVESTIGATION ================= */}
+      {/* ================= RIGHT COLUMN – INVESTIGATION ================= */}
       <div className="lg:col-span-3 sticky top-20 self-start mr-5 p-6 border border-gray-300">
         <h3 className="text-xl font-bold uppercase text-[#7351a8] mb-4">
           Investigation

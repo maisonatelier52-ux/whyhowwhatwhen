@@ -4,6 +4,57 @@ import Image from "next/image";
 import AdBanner from "@/app/component/AdBanner";
 import CategoryTag from "@/app/component/CategoryCard";
 
+const SITE_URL = "https://www.whyhowwhatwhen.com";
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+
+  const author = data.authors.find(a => a.slug === slug);
+
+  if (!author) {
+    return {
+      title: "Author Not Found — WhyHowWhatWhen",
+      description: "This author profile does not exist on WhyHowWhatWhen.",
+    };
+  }
+  
+  const imageUrl = `${SITE_URL}${author.photo}`;
+
+  return {
+    title: `${author.name} — Author at WhyHowWhatWhen`,
+    description:
+      `Read articles and investigative reports written by ${author.name} on WhyHowWhatWhen.`,
+    alternates: {
+      canonical: `${SITE_URL}/author/${author.slug}`,
+      languages: {
+        "en": `${SITE_URL}/author/${author.slug}`,
+        "en-US": `${SITE_URL}/author/${author.slug}`,
+      },
+    },
+    openGraph: {
+      title: `${author.name} — WhyHowWhatWhen Staff`,
+      description: author.bio,
+      url: `${SITE_URL}/author/${author.slug}`,
+      type: "profile",
+      siteName: "WhyHowWhatWhen",
+      images: [
+        {
+          url: imageUrl,
+          width: 600,
+          height: 600,
+          alt: author.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${author.name} — WhyHowWhatWhen Staff`,
+      description: author.bio,
+      images: [imageUrl],
+    },
+  };
+}
+
 export default async function AuthorPage({ params }) {
   const { slug } = await params;
 
@@ -40,8 +91,67 @@ export default async function AuthorPage({ params }) {
   const latestNews = authorArticles.slice(0, 5);
   const moreNews = authorArticles.slice(5, 10);
 
+  /* ---------- JSON-LD ---------- */
+
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": author.name,
+    "url": `${SITE_URL}/author/${author.slug}`,
+    "description": author.bio,
+    "jobTitle": "Journalist",
+    "worksFor": {
+      "@type": "NewsMediaOrganization",
+      "name": "WhyHowWhatWhen",
+      "url": SITE_URL,
+    },
+    "sameAs": [
+      author.twitter,
+      author.quora,
+      author.reddit
+    ].filter(Boolean),
+  };
+
+  const breadcrumbJsonLd = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+          {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": SITE_URL,
+          },
+          {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Authors",
+          "item": `${SITE_URL}/author`,
+          },
+          {
+          "@type": "ListItem",
+          "position": 3,
+          "name": author.name,
+          "item": `${SITE_URL}/author/${author.slug}`,
+          },
+      ],
+  };
+
   return (
     <section className="px-5 pt-5 pb-10 max-w-7xl mx-auto">
+      {/* Structured Data */}
+      <script
+        id="author-person-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+
+      <script
+        id="author-breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       <AdBanner />
 
       {/* AUTHOR HEADER */}

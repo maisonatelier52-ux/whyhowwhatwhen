@@ -12,9 +12,11 @@ export default function TravelNewsRow({ travelNews, authors }) {
 
   return (
     <section className="mx-auto px-6 py-10">
-      <h2 className="text-[#7351a8] font-bold text-xl uppercase mb-6">
-        Travel
-      </h2>
+      <Link href="/category/Travel">
+        <h2 className="text-[#7351a8] font-bold text-xl uppercase mb-6">
+          Travel
+        </h2>
+      </Link>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-gray-300 divide-y md:divide-y-0 md:divide-x divide-gray-300">
         {travelNews.slice(0, 4).map((article) => {

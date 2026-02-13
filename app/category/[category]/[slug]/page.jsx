@@ -8,6 +8,60 @@ import AuthorCard from "@/app/component/AuthorCard";
 import MoreNews from "@/app/component/MoreNews";
 import AdBanner from "@/app/component/AdBanner";
 
+const SITE_URL = "https://www.whyhowwhatwhen.com";
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const article = data.articles.find(a => a.slug === slug);
+
+  // BLOCK JULIO ARTICLES FROM /articles/[slug]
+  if (article?.name === "Julio Herrera Velutini") {
+    return {
+      title: "Page not found | Times Chronicle",
+      robots: "noindex, nofollow",
+    };
+  }
+
+  if (!article) {
+    return {
+      title: "Article not found | Times Chronicle",
+      description: "This article does not exist.",
+      robots: "noindex",
+    };
+  }
+
+  const imageUrl = `${SITE_URL}/${article.image}`;
+
+  return {
+    title: `${article.title}`,
+    description: article.excerpt,
+    alternates: {
+      canonical: `${SITE_URL}/news/${slug}`,
+    },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      url: `${SITE_URL}/news/${slug}`,
+      type: "article",
+      siteName: "Times Chronicle",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: [imageUrl],
+    },
+  };
+}
+
 export default async function ArticlePage({ params }) {
   const { slug, category } = await params;
 
@@ -48,8 +102,79 @@ export default async function ArticlePage({ params }) {
 
   const author = data.authors.find((a) => a.id === article.authorId);
 
+  /* ---------- JSON-LD ---------- */
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/news/${article.slug}`,
+    },
+    "headline": article.title,
+    "description": article.excerpt,
+    "articleSection": article.category,
+    "keywords": article.keywords,
+    "image": [`${SITE_URL}/${article.image}`],
+    "datePublished": new Date(article.date).toISOString(),
+    "dateModified": new Date(article.date).toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": author?.name || "Times Chronicle Staff",
+      "url": author
+        ? `${SITE_URL}/author/${author.id}`
+        : undefined,
+    },
+    "publisher": {
+      "@type": "NewsMediaOrganization",
+      "name": "Times Chronicle",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${SITE_URL}/logo/Times-Chronicle-Black-Text.png`,
+      },
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": article.category,
+        "item": `${SITE_URL}/category/${article.category}`,
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": article.title,
+        "item": `${SITE_URL}/news/${article.slug}`,
+      },
+    ],
+  };
+
   return (
     <div className="mx-auto px-5 py-10">
+      <script
+        id="article-json-ld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, '\\u003c') }}
+      />
+
+      <script
+        id="breadcrumb-json-ld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, '\\u003c') }}
+      />
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 pb-3">
         {/* MAIN ARTICLE AREA */}
         <article className="lg:col-span-3">

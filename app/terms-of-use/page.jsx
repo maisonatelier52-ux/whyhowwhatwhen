@@ -1,27 +1,27 @@
-// const SITE_URL = "https://www.timeschronicle.org";
+const SITE_URL = "https://www.whyhowwhatwhen.com";
 
-// export const metadata = {
-//   title: "Terms of Use — Times Chronicle",
-//   description:
-//     "Read Times Chronicle's Terms of Use outlining acceptable website usage, intellectual property rights, disclaimers, and legal guidelines.",
-//   alternates: {
-//     canonical: `${SITE_URL}/terms-of-use`,
-//   },
-//   openGraph: {
-//     title: "Terms of Use — Times Chronicle",
-//     description:
-//       "Review the terms and conditions governing use of the Times Chronicle website and services.",
-//     url: `${SITE_URL}/terms-of-use`,
-//     type: "website",
-//     siteName: "Times Chronicle",
-//   },
-//   twitter: {
-//     card: "summary",
-//     title: "Terms of Use — Times Chronicle",
-//     description:
-//       "Understand the rules, rights, and responsibilities when using Times Chronicle.",
-//   },
-// };
+export const metadata = {
+  title: "Terms of Use — WhyHowWhatWhen",
+  description:
+    "Read WhyHowWhatWhen's Terms of Use outlining acceptable website usage, intellectual property rights, disclaimers, and legal guidelines.",
+  alternates: {
+    canonical: `${SITE_URL}/terms-of-use`,
+  },
+  openGraph: {
+    title: "Terms of Use — WhyHowWhatWhen",
+    description:
+      "Review the terms and conditions governing use of the WhyHowWhatWhen website and services.",
+    url: `${SITE_URL}/terms-of-use`,
+    type: "website",
+    siteName: "WhyHowWhatWhen",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms of Use — WhyHowWhatWhen",
+    description:
+      "Understand the rules, rights, and responsibilities when using WhyHowWhatWhen.",
+  },
+};
 
 export default function TermsOfUse() {
   return (
@@ -218,7 +218,7 @@ export default function TermsOfUse() {
         </article>
       </div>
       {/* ===== JSON-LD STRUCTURED DATA ===== */}
-      {/* <script
+      <script
         id="terms-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -226,11 +226,11 @@ export default function TermsOfUse() {
             "@context": "https://schema.org",
             "@type": "TermsOfService",
             "name": "WhyHowWhatWhen Terms of Use",
-            "url": "https://www.whyhowwhatwhen.com/terms-of-use",
+            "url": `${SITE_URL}/terms-of-use`,
             "publisher": {
               "@type": "Organization",
               "name": "WhyHowWhatWhen",
-              "url": "https://www.whyhowwhatwhen.com"
+              "url": `${SITE_URL}`
             }
           }),
         }}
@@ -248,18 +248,18 @@ export default function TermsOfUse() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.whyhowwhatwhen.com"
+                "item": `${SITE_URL}/`
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Terms of Use",
-                "item": "https://www.whyhowwhatwhen.com/terms-of-use"
+                "item": `${SITE_URL}/terms-of-use`
               }
             ]
           }),
         }}
-      /> */}
+      />
     </>
   );
 }

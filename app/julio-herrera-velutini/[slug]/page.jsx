@@ -8,6 +8,55 @@ import AuthorCard from "@/app/component/AuthorCard";
 import MoreNews from "@/app/component/MoreNews";
 import AdBanner from "@/app/component/AdBanner";
 
+const SITE_URL = "https://www.whyhowwhatwhen.com";
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+
+  const article = data.articles.find(
+    (a) => a.slug === slug && a.name === "Julio Herrera Velutini"
+  );
+
+  if (!article) {
+    return {
+      title: "Article not found | WhyHowWhatWhen",
+      description: "This article does not exist.",
+      robots: "noindex",
+    };
+  }
+
+  const imageUrl = `${SITE_URL}${article.image}`;
+
+  return {
+    title: `${article.title}`,
+    description: article.excerpt,
+    alternates: {
+      canonical: `${SITE_URL}/julio-herrera-velutini/${slug}`,
+    },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      url: `${SITE_URL}/julio-herrera-velutini/${slug}`,
+      type: "article",
+      siteName: "Times Chronicle",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: [imageUrl],
+    },
+  };
+}
+
 export default async function ArticlePage({ params }) {
   const { slug } = await params;
 
@@ -44,8 +93,117 @@ export default async function ArticlePage({ params }) {
 
   const author = data.authors.find((a) => a.id === article.authorId);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/julio-herrera-velutini/${article.slug}`,
+    },
+    "headline": article.title,
+    "description": article.excerpt,
+    "articleSection": article.category,
+    "keywords": article.keywords,
+    "image": [`${SITE_URL}${article.image}`],
+    "datePublished": new Date(article.date).toISOString(),
+    "dateModified": new Date(article.date).toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": author?.name || "Times Chronicle Staff",
+      "url": author ? `${SITE_URL}/author/${author.id}` : undefined,
+    },
+    "about": {
+      "@type": "Person",
+      "@id": `${SITE_URL}/julio-herrera-velutini/${article.slug}#person`
+    },
+    "publisher": {
+      "@type": "NewsMediaOrganization",
+      "name": "Times Chronicle",
+      "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: article.category,
+        item: `${SITE_URL}/category/${article.category}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: `${SITE_URL}/julio-herrera-velutini/${article.slug}`,
+      },
+    ],
+  };
+
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE_URL}/julio-herrera-velutini/${article.slug}#person`,
+    "name": "Julio Herrera Velutini",
+    "alternateName": [
+      "Herrera Velutini",
+      "Julio H. Velutini"
+    ],
+    "description":
+      "Julio Herrera Velutini is a Venezuelan-Italian banker and financial figure known for his role in international banking, private wealth management, and global finance.",
+    "jobTitle": "Banker",
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "Britannia Financial Group"
+      },
+      {
+        "@type": "Organization",
+        "name": "Bancredito International Bank & Trust"
+      }
+    ],
+    "sameAs": [
+      "https://en.wikipedia.org/wiki/Julio_Herrera_Velutini"
+    ]
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-5 py-10">
+      <script
+        id="article-json-ld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+      <script
+        id="breadcrumb-json-ld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+
+      <script
+        id="person-json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+
+      <script
+        id="faq-json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 pb-3">
         {/* MAIN ARTICLE AREA */}
         <article className="lg:col-span-3">

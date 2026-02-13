@@ -4,6 +4,45 @@ import Image from "next/image";
 import AdBanner from "@/app/component/AdBanner";
 import CategoryTag from "@/app/component/CategoryCard";
 
+const SITE_URL = "https://www.whyhowwhatwhen.com";
+
+export async function generateMetadata({ params }) {
+  const { category } = await params;
+  const categoryName = decodeURIComponent(category);
+
+  const formattedCategory =
+    categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
+
+  return {
+    title: `${formattedCategory} News — WhyHowWhatWhen`,
+    description: `Read the latest ${formattedCategory.toLowerCase()} news, analysis and investigative stories from across the United States. Updated daily by WhyHowWhatWhen reporters.`,
+    alternates: {
+      canonical: `${SITE_URL}/categories/${categoryName}`,
+    },
+    openGraph: {
+      title: `${formattedCategory} News — WhyHowWhatWhen`,
+      description: `Latest U.S. ${formattedCategory.toLowerCase()} news, reports and analysis.`,
+      url: `${SITE_URL}/categories/${categoryName}`,
+      type: "website",
+      siteName: "WhyHowWhatWhen",
+      images: [
+        {
+          url: `${SITE_URL}/wiresavvy.webp`,
+          width: 1200,
+          height: 630,
+          alt: `${formattedCategory} News`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${formattedCategory} News — WhyHowWhatWhen`,
+      description: `Latest U.S. ${formattedCategory.toLowerCase()} news and analysis.`,
+      images: [`${SITE_URL}/wiresavvy.webp`],
+    },
+  };
+}
+
 const categoryDescriptions = {
   business: "Markets, companies, money, and the global economy.",
   politics: "Power, policy, elections, and governance.",
@@ -35,8 +74,81 @@ export default async function CategoryPage({ params }) {
   const latestNews = latestNewsCategory.slice(0, 5);
   const moreNews = OtherlatestNewsCategory.slice(0, 5);
 
+    const formattedCategory =
+    category.charAt(0).toUpperCase() + category.slice(1);
+
+  const categoryUrl = `${SITE_URL}/categories/${category}`;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Categories",
+        item: `${SITE_URL}/categories`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: formattedCategory,
+        item: categoryUrl,
+      },
+    ],
+  };
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: latestNews.map((article, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${SITE_URL}/category/${category}/${article.slug}`,
+      name: article.title,
+    })),
+  };
+
+  const webpageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `${formattedCategory} News`,
+    url: categoryUrl,
+    description:
+      categoryDescriptions[category.toLowerCase()] ||
+      "Latest stories and updates from this category.",
+  };
+
   return (
     <section className="px-5 pt-5 pb-10 max-w-7xl mx-auto">
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJsonLd),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(itemListJsonLd),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webpageJsonLd),
+        }}
+      />
+
       <AdBanner />
 
       {/* CATEGORY HEADER */}

@@ -1,53 +1,53 @@
-// const SITE_URL = "https://www.timeschronicle.org";
+const SITE_URL = "https://www.whyhowwhatwhen.com";
 
-// export const metadata = {
-//   title: "Privacy Policy — Times Chronicle",
-//   description:
-//     "Read Times Chronicle's Privacy Policy to understand how we collect, use, protect, and handle your information while you browse our U.S.-focused news platform.",
-//   alternates: {
-//     canonical: `${SITE_URL}/privacy-policy`,
-//   },
-//   openGraph: {
-//     title: "Times Chronicle Privacy Policy",
-//     description:
-//       "Learn how Times Chronicle protects your privacy and manages information including cookies, analytics, and data usage.",
-//     url: `${SITE_URL}/privacy-policy`,
-//     type: "website",
-//     siteName: "Times Chronicle",
-//     images: [
-//       {
-//         url: `${SITE_URL}/timeschronicle.webp`,
-//         width: 1200,
-//         height: 630,
-//         alt: "Privacy Policy - Times Chronicle",
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "Times Chronicle Privacy Policy",
-//     description:
-//       "Understand how Times Chronicle collects, uses, and safeguards user information across our platform.",
-//     images: [`${SITE_URL}/timeschronicle.webp`],
-//   },
-// };
+export const metadata = {
+  title: "Privacy Policy — WhyHowWhatWhen",
+  description:
+    "Read WhyHowWhatWhen's Privacy Policy to understand how we collect, use, protect, and handle your information while you browse our U.S.-focused news platform.",
+  alternates: {
+    canonical: `${SITE_URL}/privacy-policy`,
+  },
+  openGraph: {
+    title: "WhyHowWhatWhen Privacy Policy",
+    description:
+      "Learn how WhyHowWhatWhen protects your privacy and manages information including cookies, analytics, and data usage.",
+    url: `${SITE_URL}/privacy-policy`,
+    type: "website",
+    siteName: "WhyHowWhatWhen",
+    images: [
+      {
+        url: `${SITE_URL}/whyhowwhatwhen.webp`,
+        width: 1200,
+        height: 630,
+        alt: "Privacy Policy - WhyHowWhatWhen",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WhyHowWhatWhen Privacy Policy",
+    description:
+      "Understand how WhyHowWhatWhen collects, uses, and safeguards user information across our platform.",
+    images: [`${SITE_URL}/whyhowwhatwhen.webp`],
+  },
+};
 
 export default function PrivacyPolicy() {
   return (
     <>
-      {/* <script
+      <script
         id="privacy-policy-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "PrivacyPolicy",
-            "name": "Times Chronicle Privacy Policy",
-            "url": "https://www.timeschronicle.org/privacy-policy",
+            "name": "WhyHowWhatWhen Privacy Policy",
+            "url": `${SITE_URL}/privacy-policy`,
             "publisher": {
               "@type": "Organization",
-              "name": "Times Chronicle",
-              "url": "https://www.timeschronicle.org"
+              "name": "WhyHowWhatWhen",
+              "url": `${SITE_URL}`
             }
           }),
         }}
@@ -65,18 +65,18 @@ export default function PrivacyPolicy() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.timeschronicle.org"
+                "item": `${SITE_URL}`
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Privacy Policy",
-                "item": "https://www.timeschronicle.org/privacy-policy"
+                "item": `${SITE_URL}/privacy-policy`
               }
             ]
           }),
         }}
-      /> */}
+      />
       <div className="bg-white text-gray-900">
         <article className="prose max-w-4xl mx-auto py-16 px-6 md:px-10 leading-relaxed">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
