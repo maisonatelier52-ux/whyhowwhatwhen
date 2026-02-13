@@ -7,6 +7,44 @@ import ThreeCategoryNews from "./component/ThreeCategoryNews";
 import data from "@/data/data.json";
 import TravelNewsRow from "./component/TravelNews";
 
+const SITE_URL = "https://www.whyhowwhatwhen.com";
+
+export const metadata = {
+  title: "Whyhowwhatwhen — Independent U.S. News, Business & Politics",
+  description:
+    "Whyhowwhatwhen delivers fast, factual U.S. news across business, politics, sports, investigation, travel, and climate. Breaking headlines and trusted analysis.",
+  alternates: {
+    canonical: SITE_URL,
+    languages: {
+      "en": SITE_URL,
+      "en-US": SITE_URL,
+    },
+  },
+  openGraph: {
+    title: "Whyhowwhatwhen — Latest U.S. News & Investigations",
+    description:
+      "Breaking U.S. news, in-depth investigations, and expert reporting across business, politics, sports, investigation, travel, and climate.",
+    url: SITE_URL,
+    type: "website",
+    siteName: "Whyhowwhatwhen",
+    images: [
+      {
+        url: `${SITE_URL}/logo/Times-Chronicle-White-Text.png`,
+        width: 1200,
+        height: 630,
+        alt: "Whyhowwhatwhen U.S. News",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Whyhowwhatwhen — Latest U.S. News",
+    description:
+      "Fast, factual U.S. news with in-depth reporting and investigations.",
+    images: [`${SITE_URL}/logo/Times-Chronicle-White-Text.png`],
+  },
+};
+
 export default function Home() {
   const publishedArticles = data.articles
     .filter((article) => article.published)
@@ -55,8 +93,65 @@ export default function Home() {
     (article) => article.category === "Climate"
   );
 
+  /* ---------- JSON-LD (Homepage) ---------- */
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Times Chronicle",
+    "url": SITE_URL,
+    "publisher": {
+      "@type": "NewsMediaOrganization",
+      "name": "Times Chronicle",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${SITE_URL}/logo.png`,
+      },
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${SITE_URL}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const homepageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/#homepage`,
+    "url": SITE_URL,
+    "name": "Times Chronicle — Independent U.S. News, Business & Politics",
+    "description":
+      "Independent U.S. news covering politics, business, technology, health, and world affairs.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": SITE_URL,
+      "name": "Times Chronicle",
+    },
+    "publisher": {
+      "@type": "NewsMediaOrganization",
+      "name": "Times Chronicle",
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${SITE_URL}/logo/Times-Chronicle-White-Text.png`,
+      },
+    },
+  };
+
   return (
     <>
+      <script
+        id="website-json-ld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd).replace(/</g, '\\u003c') }}
+      />
+      <script
+        id="homepage-json-ld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd).replace(/</g, '\\u003c') }}
+      />
       <Featured
         latestBusiness={latestBusiness}
         otherNews={filteredOtherNews}
