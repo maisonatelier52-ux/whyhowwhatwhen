@@ -191,6 +191,7 @@ export default async function AuthorPage({ params }) {
           {latestNews.map((article) => (
             <Link
               key={article.slug}
+              title={article.title}
               href={`/category/${article.category}/${article.slug}`}
               className="group flex gap-6"
             >
@@ -246,6 +247,7 @@ export default async function AuthorPage({ params }) {
               {moreNews.map((article) => (
                 <Link
                   key={article.slug}
+                  title={article.title}
                   href={`/category/${article.category}/${article.slug}`}
                   className="flex gap-3 pb-3 group"
                 >

@@ -12,7 +12,7 @@ export default function TravelNewsRow({ travelNews, authors }) {
 
   return (
     <section className="mx-auto px-6 py-10">
-      <Link href="/category/Travel">
+      <Link href="/category/Travel" title="View Travel category">
         <h2 className="text-[#7351a8] font-bold text-xl uppercase mb-6">
           Travel
         </h2>
@@ -26,7 +26,7 @@ export default function TravelNewsRow({ travelNews, authors }) {
           return (
             <div key={article.slug} className="p-4 space-y-3">
               {/* IMAGE WITH CATEGORY */}
-              <Link href={articleLink}>
+              <Link href={articleLink} title={`View ${article.title}`}>
                 <div className="relative group aspect-16/10 w-full overflow-hidden cursor-pointer">
                   {article.image && (
                     <Image
@@ -41,14 +41,14 @@ export default function TravelNewsRow({ travelNews, authors }) {
               </Link>
 
               {/* TITLE */}
-              <Link href={articleLink}>
+              <Link href={articleLink} title={`View ${article.title}`}>
                 <h3 className="font-semibold text-base hover:text-[#7351a8] pt-2 leading-snug cursor-pointer">
                   {article.title}
                 </h3>
               </Link>
 
               {/* DESCRIPTION */}
-              <Link href={articleLink}>
+              <Link href={articleLink} title={`View ${article.title}`}>
                 <p className="text-sm text-gray-700 line-clamp-3 hover:text-gray-900 cursor-pointer">
                   {article.excerpt}
                 </p>
@@ -59,6 +59,7 @@ export default function TravelNewsRow({ travelNews, authors }) {
                 {author && (
                   <Link
                     href={`/author/${author.slug}`}
+                    title={`View author ${author.name}`}
                     className="italic hover:text-[#7351a8]"
                   >
                     {author.name}

@@ -180,6 +180,7 @@ export default async function ArticlePage({ params }) {
         <article className="lg:col-span-3">
           <Link
             href={`/category/${category}`}
+            title={`Back to ${category.toUpperCase()}`}
             className="text-sm text-[#7351a8] font-semibold"
           >
             ← Back to {category.toUpperCase()}
@@ -190,6 +191,7 @@ export default async function ArticlePage({ params }) {
           <div className="text-sm text-gray-500 mt-2 flex flex-wrap items-center gap-3">
             <Link
                   href={`/author/${author?.slug}`}
+                  title={`View author ${author?.name}`}
                   className="italic hover:text-[#7351a8]"
                 >
                   {author?.name}

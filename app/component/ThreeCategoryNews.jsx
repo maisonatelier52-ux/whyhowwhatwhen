@@ -32,7 +32,7 @@ export default function ThreeCategoryNews({
               >
                 {/* Text */}
                 <div className="flex-1">
-                  <Link href={articleLink}>
+                  <Link href={articleLink} title={`View ${article.title}`}>
                     <h4 className="text-sm font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
                       {article.title}
                     </h4>
@@ -44,7 +44,7 @@ export default function ThreeCategoryNews({
 
                 {/* Image */}
                 {article.image && (
-                  <Link href={articleLink}>
+                  <Link href={articleLink} title={`View ${article.title}`}>
                     <div className="relative group overflow-hidden w-24 h-24 cursor-pointer">
                       <Image
                         src={article.image}
@@ -99,7 +99,7 @@ export default function ThreeCategoryNews({
                 w-2/5 h-32 md:h-40
                 flex-shrink-0
               ">
-                <Link href={`/category/${article.category}/${article.slug}`}>
+                <Link href={`/category/${article.category}/${article.slug}`} title={`View ${article.title}`}>
                   <Image
                     src={article.image}
                     alt={article.title}
@@ -113,7 +113,7 @@ export default function ThreeCategoryNews({
 
             {/* Content */}
             <div className="border-t border-gray-300 pt-3 flex-1">
-              <Link href={`/category/${article.category}/${article.slug}`}>
+              <Link href={`/category/${article.category}/${article.slug}`} title={`View ${article.title}`}>
                 <h4 className="text-base md:text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
                   {article.title}
                 </h4>
@@ -122,6 +122,7 @@ export default function ThreeCategoryNews({
               <div className="text-xs md:text-sm text-gray-500 flex flex-wrap gap-2">
                 <Link
                   href={`/author/${authors.find(a => a.id === article.authorId)?.slug}`}
+                  title={`View author ${authors.find(a => a.id === article.authorId)?.name}`}
                   className="italic hover:text-[#7351a8]"
                 >
                   {authors.find(a => a.id === article.authorId)?.name}
@@ -135,7 +136,7 @@ export default function ThreeCategoryNews({
                 </span>
               </div>
 
-              <Link href={`/category/${article.category}/${article.slug}`}>
+              <Link href={`/category/${article.category}/${article.slug}`} title={`View ${article.title}`}>
                 <p className="text-xs md:text-sm text-gray-700 mt-2">
                   {article.excerpt}
                 </p>
@@ -160,7 +161,7 @@ export default function ThreeCategoryNews({
                 key={article.slug}
                 className="pb-2 border-b border-gray-300 last:border-b-0"
               >
-                <Link href={articleLink}>
+                <Link href={articleLink} title={`View ${article.title}`}>
                   <h4 className="font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
                     {article.title}
                   </h4>

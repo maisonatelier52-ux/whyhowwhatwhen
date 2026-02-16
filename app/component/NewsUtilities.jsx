@@ -1,6 +1,7 @@
 "use client";
 
 import { Facebook, Twitter, Youtube } from "lucide-react";
+import Link from "next/link";
 
 export default function NewsUtilities() {
   return (
@@ -59,8 +60,9 @@ export default function NewsUtilities() {
 
             <div className="flex justify-between">
                 {/* Facebook */}
-                <a
+                <Link
                 href="#"
+                title="View our Facebook page"
                 aria-label="Facebook"
                 className="group"
                 >
@@ -68,11 +70,12 @@ export default function NewsUtilities() {
                                     shadow-md group-hover:shadow-[0_0_12px_rgba(24,119,242,0.8)] hover:bg-black">
                         <Facebook size={24} />
                     </div>
-                </a>
+                </Link>
 
                 {/* Twitter */}
-                <a
+                <Link
                 href="#"
+                title="View our Twitter profile"
                 aria-label="Twitter"
                 className="group"
                 >
@@ -80,11 +83,12 @@ export default function NewsUtilities() {
                                     shadow-md group-hover:shadow-[0_0_12px_rgba(29,161,242,0.8)] hover:bg-black">
                         <Twitter size={24} />
                     </div>
-                </a>
+                </Link>
 
                 {/* YouTube */}
-                <a
+                <Link
                 href="#"
+                title="View our YouTube channel"
                 aria-label="YouTube"
                 className="group"
                 >
@@ -92,7 +96,7 @@ export default function NewsUtilities() {
                                     shadow-md group-hover:shadow-[0_0_12px_rgba(255,0,0,0.8)] hover:bg-black">
                         <Youtube size={24} />
                     </div>
-                </a>
+                </Link>
             </div>
         </div>
       </div>

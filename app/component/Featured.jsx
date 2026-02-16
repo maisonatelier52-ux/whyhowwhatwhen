@@ -28,14 +28,14 @@ export default function Featured({
           return (
             <div key={article.slug} className="space-y-3">
               {/* CATEGORY */}
-              <Link href={articleLink}>
+              <Link href={articleLink} title={`View ${article.title}`}>
                 <h2 className="inline-block bg-[#7351a8] text-white text-[8px] font-semibold tracking-wide px-1 py-0.5 cursor-pointer">
                   {article.category.toUpperCase()}
                 </h2>
               </Link>
 
               {/* TITLE */}
-              <Link href={articleLink}>
+              <Link href={articleLink} title={`View ${article.title}`}>
                 <h3 className="text-2xl font-semibold hover:text-[#7351a8] cursor-pointer">
                   {article.title}
                 </h3>
@@ -43,7 +43,7 @@ export default function Featured({
 
               {/* IMAGE */}
               {article.image && (
-                <Link href={articleLink}>
+                <Link href={articleLink} title={`View ${article.title}`}>
                   <div className="relative w-full h-auto">
                     <Image
                       src={article.image}
@@ -57,7 +57,7 @@ export default function Featured({
               )}
 
               {/* EXCERPT */}
-              <Link href={articleLink}>
+              <Link href={articleLink} title={`View ${article.title}`}>
                 <p className="pt-1 hover:text-gray-800 cursor-pointer pt-3">
                   {article.excerpt}
                 </p>
@@ -68,6 +68,7 @@ export default function Featured({
                 {author && (
                   <Link
                     href={`/author/${author.slug}`}
+                    title={`View author ${author.name}`}
                     className="italic hover:text-[#7351a8]"
                   >
                     {author.name}
@@ -92,7 +93,7 @@ export default function Featured({
           return (
             <div key={article.slug} className="w-full max-w-md">
               {/* IMAGE */}
-              <Link href={articleLink}>
+              <Link href={articleLink} title={`View ${article.title}`}>
                 <div className="relative group aspect-7/3 w-full overflow-hidden cursor-pointer">
                   {article.image && (
                     <Image
@@ -107,7 +108,7 @@ export default function Featured({
               </Link>
 
               {/* TITLE */}
-              <Link href={articleLink}>
+              <Link href={articleLink} title={`View ${article.title}`}>
                 <h4 className="font-semibold hover:text-[#7351a8] cursor-pointer mt-2">
                   {article.title}
                 </h4>
@@ -118,6 +119,7 @@ export default function Featured({
                 {author && (
                   <Link
                     href={`/author/${author.slug}`}
+                    title={`View author ${author.name}`}
                     className="italic hover:text-[#7351a8]"
                   >
                     {author.name}
@@ -137,7 +139,7 @@ export default function Featured({
           <h2 className="text-[#7351a8] font-bold text-xl">Editor Picks</h2>
 
           {otherNews.slice(0, 1).map((article) => (
-            <Link key={article.slug} href={`/category/${article.category}/${article.slug}`}>
+            <Link key={article.slug} href={`/category/${article.category}/${article.slug}`} title={`View ${article.title}`}>
             <div key={article.slug} className="flex items-center justify-between gap-4">
               {/* Left: Title + Date */}
               <div className="flex-1 space-y-1">

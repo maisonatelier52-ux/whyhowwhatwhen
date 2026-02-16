@@ -68,6 +68,7 @@ export default function Header() {
           >
             <Link
               href="/"
+              title="Go to homepage"
               className={`font-semibold tracking-wide ${
                 scrolled
                   ? "text-lg md:text-xl pt-0"
@@ -85,15 +86,16 @@ export default function Header() {
           {scrolled && (
             <nav className="hidden md:flex gap-6 text-sm font-bold tracking-wide">
               {categories.map((cat) => (
-                <a
+                <Link
                   key={cat.name}
+                  title={`View ${cat.name} category`}
                   href={cat.path}
                   className={`hover:text-[#7351a8] ${
                     pathname === cat.path ? "text-[#7351a8]" : ""
                   }`}
                 >
                   {cat.name}
-                </a>
+                </Link>
               ))}
             </nav>
           )}
@@ -103,15 +105,16 @@ export default function Header() {
         {!scrolled && (
           <nav className="hidden md:flex justify-center gap-10 border-t border-gray-300 py-3 text-md font-bold tracking-wide">
             {categories.map((cat) => (
-              <a
+              <Link
                 key={cat.name}
+                title={`View ${cat.name} category`}
                 href={cat.path}
                 className={`hover:text-[#7351a8] ${
                   pathname === cat.path ? "text-[#7351a8]" : ""
                 }`}
               >
                 {cat.name}
-              </a>
+              </Link>
             ))}
           </nav>
         )}
@@ -123,8 +126,9 @@ export default function Header() {
           }`}
         >
           {categories.map((cat) => (
-            <a
+            <Link
               key={cat.name}
+              title={`View ${cat.name} category`}
               href={cat.path}
               className={`block font-bold tracking-wide py-2 px-4 ${
                 pathname === cat.path ? "text-[#7351a8]" : "text-gray-800"
@@ -132,7 +136,7 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               {cat.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

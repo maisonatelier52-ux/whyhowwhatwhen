@@ -11,6 +11,7 @@ export default function MoreNews({ news }) {
       {news.map((item) => (
         <Link
           key={item.slug}
+          title={`View ${item.title}`}
           href={`/category/${item.category}/${item.slug}`}
           className="flex justify-between items-start gap-3 border-b border-gray-200 pb-3 last:border-none group"
         >

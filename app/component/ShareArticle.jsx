@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import {
   Check,
   Instagram,
-  Link,
+  LinkIcon,
   LucideRabbit,
   Share,
   Twitter,
@@ -19,25 +20,17 @@ export default function ShareArticle({ title, description }) {
   }, []);
 
   const encodedTitle = encodeURIComponent(title || "");
-  const encodedDesc = encodeURIComponent(description || "");
-
-  // Get current URL safely
-  useEffect(() => {
-    setShareUrl(encodeURIComponent(window.location.href));
-  }, []);
 
   const copyLink = async () => {
     await navigator.clipboard.writeText(window.location.href);
     setCopied(true);
-
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
     <>
       <section className="flex items-center justify-between border-t-2 border-b-2 border-dashed border-gray-300 dark:border-gray-800 py-4 px-3">
+        
         {/* LEFT */}
         <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 uppercase tracking-wide">
           <Share className="text-xl sm:text-2xl" />
@@ -46,11 +39,11 @@ export default function ShareArticle({ title, description }) {
 
         {/* RIGHT */}
         <div className="flex items-center gap-3 group">
+
           {/* REDDIT */}
-          <a
+          <Link
             href={`https://www.reddit.com/submit?url=${shareUrl}&title=${encodedTitle}`}
             target="_blank"
-            title="Share on Reddit"
             rel="noopener noreferrer"
             aria-label="Share on Reddit"
           >
@@ -59,13 +52,12 @@ export default function ShareArticle({ title, description }) {
                 <LucideRabbit />
               </IconBox>
             </IconWrap>
-          </a>
+          </Link>
 
           {/* X / TWITTER */}
-          <a
+          <Link
             href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${encodedTitle}`}
             target="_blank"
-            title="Share on X"
             rel="noopener noreferrer"
             aria-label="Share on X"
           >
@@ -74,7 +66,7 @@ export default function ShareArticle({ title, description }) {
                 <Twitter />
               </IconBox>
             </IconWrap>
-          </a>
+          </Link>
 
           {/* COPY LINK */}
           <button
@@ -84,32 +76,33 @@ export default function ShareArticle({ title, description }) {
           >
             <IconWrap label="Copy link">
               <IconBox className="bg-[#efab68] hover:bg-yellow-400 hover:shadow-[0_0_12px_rgba(250,204,21,0.9)]">
-                {copied ? <Check /> : <Link />}
+                {copied ? <Check /> : <LinkIcon />}
               </IconBox>
             </IconWrap>
           </button>
 
           {/* INSTAGRAM */}
-          <button
+          <Link
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Share on Instagram"
-            onClick={() => {
-              copyLink();
-              window.open("https://www.instagram.com/", "_blank");
-            }}
+            onClick={copyLink}
           >
             <IconWrap label="Instagram">
               <IconBox className="bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-400 hover:shadow-[0_0_12px_rgba(236,72,153,0.7)]">
                 <Instagram />
               </IconBox>
             </IconWrap>
-          </button>
+          </Link>
+
         </div>
       </section>
 
-      {/* 🔔 TOAST */}
+      {/* TOAST */}
       {copied && (
         <div className="fixed bottom-6 right-6 z-50 flex items-center gap-2 px-4 py-2 text-sm uppercase tracking-wide rounded-md shadow-lg bg-white text-green-600 border border-green-500 transition-all duration-300 ease-out">
-          <Link className="text-base" />
+          <LinkIcon className="text-base" />
           <span>Link copied</span>
         </div>
       )}

@@ -65,7 +65,7 @@ export default function Footer() {
                 title: "YouTube",
               },
             ].map(({ Icon, link, title }) => (
-              <a
+              <Link
                 key={link}
                 href={link}
                 title={title}
@@ -74,7 +74,7 @@ export default function Footer() {
                 className="text-gray-300 hover:text-[#7351a8] transition-transform duration-200 hover:scale-110"
               >
                 <Icon size={22} />
-              </a>
+              </Link>
             ))}
           </div>
         </div>

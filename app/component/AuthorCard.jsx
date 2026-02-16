@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Twitter, MessageCircle, Rabbit, BookOpen } from "lucide-react";
 
 export default function AuthorCard({ author }) {
@@ -29,41 +30,45 @@ export default function AuthorCard({ author }) {
 
       {/* SOCIAL ICONS */}
       <div className="flex gap-4 pt-2">
-        <a
+        <Link
           href={author.twitter || "#"}
           target="_blank"
+          title="View Twitter profile"
           className="hover:text-[#7351a8] transition"
           aria-label="Twitter"
         >
           <Twitter size={18} />
-        </a>
+        </Link>
 
-        <a
+        <Link
           href={author.quora || "#"}
           target="_blank"
+          title="View Quora profile"
           className="hover:text-[#7351a8] transition"
           aria-label="Quora"
         >
           <MessageCircle size={18} />
-        </a>
+        </Link>
 
-        <a
+        <Link
           href={author.reddit || "#"}
           target="_blank"
+          title="View Reddit profile"
           className="hover:text-[#7351a8] transition"
           aria-label="Reddit"
         >
           <Rabbit size={18} />
-        </a>
+        </Link>
 
-        <a
+        <Link
           href={author.medium || "#"}
           target="_blank"
+          title="View Medium profile"
           className="hover:text-[#7351a8] transition"
           aria-label="Medium"
         >
           <BookOpen size={18} />
-        </a>
+        </Link>
       </div>
     </div>
   );

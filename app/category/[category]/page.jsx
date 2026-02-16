@@ -172,6 +172,7 @@ export default async function CategoryPage({ params }) {
           {latestNews.map((article) => (
             <Link
               key={article.slug}
+              title={article.title}
               href={`/category/${category}/${article.slug}`}
               className="group flex gap-6"
             >
@@ -227,6 +228,7 @@ export default async function CategoryPage({ params }) {
             {moreNews.map((article) => (
               <Link
                 key={article.slug}
+                title={article.title}
                 href={`/category/${category}/${article.slug}`}
                 className="flex gap-3 pb-3 group"
               >

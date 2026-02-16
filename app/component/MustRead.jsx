@@ -38,7 +38,7 @@ export default function ClimateNews({ climateNews, authors }) {
               <div className="lg:col-span-2 -mt-20 relative z-10 space-y-4">
                 {/* IMAGE */}
                 {topNews.image && (
-                  <Link href={articleLink}>
+                  <Link href={articleLink} title={`View ${topNews.title}`}>
                     <div className="relative w-full h-[400px] overflow-hidden shadow-xl cursor-pointer">
                       <Image
                         src={topNews.image}
@@ -52,14 +52,14 @@ export default function ClimateNews({ climateNews, authors }) {
                 )}
 
                 {/* TITLE */}
-                <Link href={articleLink}>
+                <Link href={articleLink} title={`View ${topNews.title}`}>
                   <h3 className="text-3xl font-semibold hover:text-[#7351a8] cursor-pointer pt-3">
                     {topNews.title}
                   </h3>
                 </Link>
 
                 {/* DESCRIPTION */}
-                <Link href={articleLink}>
+                <Link href={articleLink} title={`View ${topNews.title}`}>
                   <p className="text-sm pt-3 text-gray-700 line-clamp-3 hover:text-gray-900 cursor-pointer">
                     {topNews.excerpt}
                   </p>
@@ -70,6 +70,7 @@ export default function ClimateNews({ climateNews, authors }) {
                   {author && (
                     <Link
                       href={`/author/${author.slug}`}
+                      title={`View author ${author.name}`}
                       className="italic hover:text-[#7351a8]"
                     >
                       {author.name}
@@ -91,7 +92,7 @@ export default function ClimateNews({ climateNews, authors }) {
               <div key={article.slug} className="space-y-2">
                 {/* IMAGE */}
                 {article.image && (
-                  <Link href={articleLink}>
+                  <Link href={articleLink} title={`View ${article.title}`}>
                     <div className="relative w-full h-40 overflow-hidden cursor-pointer">
                       <Image
                         src={article.image}
@@ -105,14 +106,14 @@ export default function ClimateNews({ climateNews, authors }) {
                 )}
 
                 {/* TITLE */}
-                <Link href={articleLink}>
+                <Link href={articleLink} title={`View ${article.title}`}>
                   <h4 className="text-sm font-semibold leading-snug hover:text-[#7351a8] pt-2 cursor-pointer">
                     {article.title}
                   </h4>
                 </Link>
 
                 {/* DESCRIPTION */}
-                <Link href={articleLink}>
+                <Link href={articleLink} title={`View ${article.title}`}>
                   <p className="text-sm text-gray-700 line-clamp-3 hover:text-gray-900 cursor-pointer">
                     {article.excerpt}
                   </p>
@@ -123,6 +124,7 @@ export default function ClimateNews({ climateNews, authors }) {
                   {author && (
                     <Link
                       href={`/author/${author.slug}`}
+                      title={`View author ${author.name}`}
                       className="italic hover:text-[#7351a8]"
                     >
                       {author.name}
