@@ -152,6 +152,30 @@ export default function Home() {
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageJsonLd).replace(/</g, '\\u003c') }}
       />
+      {/* ===== SEO INTRO ===== */}
+      <section className="sr-only px-4 py-6">
+        <h1 className="text-2xl font-bold mb-3">
+          Whyhowwhatwhen — Independent U.S. News, Business & Investigations
+        </h1>
+
+        <p className="text-gray-700 leading-relaxed">
+          Whyhowwhatwhen is an independent digital news platform delivering the latest
+          U.S. news with a strong focus on depth, accuracy, and responsible
+          reporting. Our newsroom covers national, politics, business, technology, health
+          and world, offering readers clear context behind every headline.
+        </p>
+        <h2 className="text-xl font-semibold mt-6">
+          Independent Journalism & Investigative Reporting You Can Trust
+        </h2>
+
+        <p className="text-gray-700 leading-relaxed mt-3">
+          At Whyhowwhatwhen, in-depth reporting goes beyond breaking news. We prioritize
+          verified facts, expert insights, and investigative journalism to help
+          readers understand not just what happened, but why it matters. From
+          market-moving developments to national issues shaping everyday life,
+          Whyhowwhatwhen provides news you can trust.
+        </p>
+      </section>
       <Featured
         latestBusiness={latestBusiness}
         otherNews={filteredOtherNews}
