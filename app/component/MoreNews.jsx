@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function MoreNews({ news }) {
   return (
     <div className="border border-gray-300 p-4 space-y-4">
-      <h2 className="text-sm font-bold uppercase text-[#7351a8]">
+      <div className="text-sm font-bold uppercase text-[#7351a8]">
         More News
-      </h2>
+      </div>
 
       {news.map((item) => (
         <Link
@@ -17,9 +17,9 @@ export default function MoreNews({ news }) {
         >
           {/* LEFT – TITLE + DATE */}
           <div className="flex-1">
-            <h3 className="text-sm font-medium leading-snug group-hover:text-[#7351a8]">
+            <div className="text-sm font-medium leading-snug group-hover:text-[#7351a8]">
               {item.title}
-            </h3>
+            </div>
 
             <p className="text-xs text-gray-500 mt-1">
               {new Date(item.date).toLocaleDateString("en-US", {
