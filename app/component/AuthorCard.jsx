@@ -21,7 +21,7 @@ export default function AuthorCard({ author }) {
       )}
 
       {/* NAME */}
-      <h3 className="font-semibold text-lg">{author.name}</h3>
+      <h2 className="font-semibold text-lg">{author.name}</h2>
 
       {/* BIO */}
       <p className="text-sm text-gray-600">
