@@ -79,6 +79,7 @@ export default function PrivacyPolicy() {
       />
       <div className="bg-white text-gray-900">
         <article className="prose max-w-4xl mx-auto py-16 px-6 md:px-10 leading-relaxed">
+
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
             Privacy Policy
           </h1>
@@ -87,16 +88,15 @@ export default function PrivacyPolicy() {
             Last updated: February 2026
           </p>
 
-          <h2 className="text-2xl font-bold mt-10">Introduction</h2>
+          <h2 className="text-2xl font-bold mt-10">1. Introduction</h2>
           <p>
             WhyHowWhatWhen collects, uses, distributes, and protects personal
             information on our U.S.–based digital news platform, including our
             website, mobile-accessible pages, and any service that links to this
-            Privacy Policy. By using our Services, you agree to this Privacy
-            Policy.
+            Privacy Policy. By using our Services, you agree to this Privacy Policy.
           </p>
 
-          <h2 className="text-2xl font-bold mt-10">1. Privacy Policy Scope</h2>
+          <h2 className="text-2xl font-bold mt-10">2. Privacy Policy Scope</h2>
           <p>This Privacy Policy covers any information gathered when you:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>Read articles or browse our website</li>
@@ -114,9 +114,7 @@ export default function PrivacyPolicy() {
             <li>Content governed by separate agreements</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-10">
-            2. Information We Collect
-          </h2>
+          <h2 className="text-2xl font-bold mt-10">3. Information We Collect</h2>
 
           <h3 className="text-xl font-semibold mt-6">
             A. Information You Provide
@@ -152,7 +150,7 @@ export default function PrivacyPolicy() {
           </ul>
 
           <h2 className="text-2xl font-bold mt-10">
-            3. How We Use Your Information
+            4. How We Use Your Information
           </h2>
           <p>We use your information to:</p>
           <ul className="list-disc pl-6 space-y-1">
@@ -167,7 +165,7 @@ export default function PrivacyPolicy() {
           </ul>
 
           <h2 className="text-2xl font-bold mt-10">
-            4. Sharing of Information
+            5. Sharing of Information
           </h2>
           <p>We do not sell personal information. We may share data with:</p>
           <ul className="list-disc pl-6 space-y-1">
@@ -180,7 +178,7 @@ export default function PrivacyPolicy() {
           </ul>
 
           <h2 className="text-2xl font-bold mt-10">
-            5. Cookies & Tracking Technologies
+            6. Cookies & Tracking Technologies
           </h2>
           <p>
             We use cookies to improve performance, measure analytics,
@@ -188,7 +186,7 @@ export default function PrivacyPolicy() {
             affect certain features of the site.
           </p>
 
-          <h2 className="text-2xl font-bold mt-10">6. Your Privacy Rights</h2>
+          <h2 className="text-2xl font-bold mt-10">7. Your Privacy Rights</h2>
           <p>Depending on your location, you may request:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>Access to the personal data we hold about you</li>
@@ -202,34 +200,34 @@ export default function PrivacyPolicy() {
             <strong>privacy@WhyHowWhatWhen.com</strong>.
           </p>
 
-          <h2 className="text-2xl font-bold mt-10">7. Data Security</h2>
+          <h2 className="text-2xl font-bold mt-10">8. Data Security</h2>
           <p>
             We use security measures such as encryption, firewalls, and access
             controls to protect your information. However, no system is
             completely secure, and data transmission carries inherent risks.
           </p>
 
-          <h2 className="text-2xl font-bold mt-10">8. External Links</h2>
+          <h2 className="text-2xl font-bold mt-10">9. External Links</h2>
           <p>
             Our platform may contain links to third-party websites or tools. We
             are not responsible for the privacy practices of these external
             sites.
           </p>
 
-          <h2 className="text-2xl font-bold mt-10">9. Children`s Privacy</h2>
+          <h2 className="text-2xl font-bold mt-10">10. Children’s Privacy</h2>
           <p>
             We do not knowingly collect personal information from children under
             13. If such data is discovered, we will delete it promptly.
           </p>
 
-          <h2 className="text-2xl font-bold mt-10">10. International Users</h2>
+          <h2 className="text-2xl font-bold mt-10">11. International Users</h2>
           <p>
             WhyHowWhatWhen operates from the United States. If you access our
             Services from outside the U.S., your data may be processed under
             U.S. laws.
           </p>
 
-          <h2 className="text-2xl font-bold mt-10">11. Data Retention</h2>
+          <h2 className="text-2xl font-bold mt-10">12. Data Retention</h2>
           <p>We retain personal data only as long as necessary to:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>Provide our services</li>
@@ -239,7 +237,7 @@ export default function PrivacyPolicy() {
           </ul>
 
           <h2 className="text-2xl font-bold mt-10">
-            12. Changes to This Privacy Policy
+            13. Changes to This Privacy Policy
           </h2>
           <p>
             We may update this Privacy Policy periodically. The “Last Updated”
@@ -247,11 +245,12 @@ export default function PrivacyPolicy() {
             Services constitutes acceptance of the updated policy.
           </p>
 
-          <h2 className="text-2xl font-bold mt-10">13. Contact Us</h2>
+          <h2 className="text-2xl font-bold mt-10">14. Contact Us</h2>
           <p>
             Email: <strong>privacy@WhyHowWhatWhen.com</strong>
           </p>
           <p>Address: U.S. Editorial Division of WhyHowWhatWhen News</p>
+
         </article>
       </div>
     </>

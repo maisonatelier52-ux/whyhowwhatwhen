@@ -93,24 +93,27 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <div className="min-h-screen bg-white text-gray-900  transition-colors duration-300">
+
+      <div className="min-h-screen bg-white text-gray-900 transition-colors duration-300">
+        
         {/* HERO */}
         <section className="relative w-full h-svh overflow-hidden shadow-md">
-          <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
             <h1 className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl">
-              Truthful reporting is the foundation
-              <br />
-              of an informed society.
+              About WhyHowWhatWhen – Independent Digital News & Journalism
             </h1>
+            <p className="mt-6 text-lg md:text-xl max-w-3xl">
+              Truthful reporting is the foundation of an informed society.
+            </p>
           </div>
         </section>
 
         {/* INTRO */}
         <section className="max-w-4xl mx-auto px-7 py-20 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            About WhyHowWhatWhen
+            Who We Are
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700 ">
+          <p className="text-lg leading-relaxed text-gray-700">
             <strong>WhyHowWhatWhen</strong> is an independent digital news
             publication dedicated to accurate, fair, and responsible journalism.
             We focus on the stories shaping the United States—providing clarity,
@@ -121,9 +124,9 @@ export default function AboutPage() {
         {/* MISSION */}
         <section className="max-w-6xl mx-auto px-7 py-20 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4">
               Our Mission
-            </h3>
+            </h2>
             <p className="text-lg leading-relaxed text-gray-700">
               Our mission is to inform the public with journalism rooted in
               facts, independence, and public interest. We aim to help readers
@@ -131,7 +134,7 @@ export default function AboutPage() {
               or political pressure.
             </p>
           </div>
-          {/* Image wrapper controls height */}
+
           <div className="relative w-full h-80">
             <Image
               src="/write.webp"
@@ -146,9 +149,9 @@ export default function AboutPage() {
         {/* VALUES */}
         <section className="bg-white py-20 px-7">
           <div className="max-w-6xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-semibold text-center mb-14">
+            <h2 className="text-2xl md:text-3xl font-semibold text-center mb-14">
               Our Editorial Values
-            </h3>
+            </h2>
 
             <div className="grid md:grid-cols-3 gap-10">
               {[
@@ -169,8 +172,12 @@ export default function AboutPage() {
                   key={item.title}
                   className="p-6 rounded-2xl bg-gray-50 shadow-sm"
                 >
-                  <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
-                  <p className="text-gray-700 leading-relaxed">{item.text}</p>
+                  <h3 className="text-xl font-semibold mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    {item.text}
+                  </p>
                 </div>
               ))}
             </div>
@@ -179,13 +186,14 @@ export default function AboutPage() {
 
         {/* COVERAGE */}
         <section className="max-w-6xl mx-auto px-7 py-20 text-center">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-8">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-8">
             What We Cover
-          </h3>
-          <p className="text-lg text-gray-700  leading-relaxed max-w-4xl mx-auto">
-            WhyHowWhatWhen delivers in-depth reporting across national affairs,
-            politics, business, technology, health, and world news—focusing on
-            stories that matter most to readers in the United States.
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            <span className="font-semibold">WhyHowWhatWhen</span> delivers in-depth reporting across national affairs,
+            politics, business, technology, health, climate, investigations, and
+            world news—focusing on stories that matter most to readers in the
+            United States.
           </p>
         </section>
 
@@ -195,7 +203,7 @@ export default function AboutPage() {
             Stay Ahead of the News
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-gray-300">
-            Follow WhyHowWhatWhen for timely, accurate, and insightful reporting
+            Follow <span className="font-semibold text-white">WhyHowWhatWhen</span> for timely, accurate, and insightful reporting
             that helps you understand what’s happening—and why it matters.
           </p>
         </section>
