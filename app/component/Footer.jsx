@@ -84,9 +84,9 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 md:gap-14 text-left">
             {/* Categories */}
             <div>
-              <h4 className="mb-2 text-md font-semibold tracking-wide underline">
+              <div className="mb-2 text-md font-semibold tracking-wide underline">
                 Categories
-              </h4>
+              </div>
               <ul className="uppercase space-y-1 leading-tight">
                 {categories.map((cat) => (
                   <li key={cat}>
@@ -104,9 +104,9 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="mb-2 text-md font-semibold tracking-wide underline">
+              <div className="mb-2 text-md font-semibold tracking-wide underline">
                 Quick Links
-              </h4>
+              </div>
               <ul className="uppercase space-y-1 leading-tight">
                 {quickLinks.map(({ label, href }) => (
                   <li key={href}>
