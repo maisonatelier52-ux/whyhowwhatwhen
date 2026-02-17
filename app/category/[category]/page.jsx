@@ -45,22 +45,22 @@ export async function generateMetadata({ params }) {
 
 const categoryDescriptions = {
   business:
-    "Latest business news covering global markets, major companies, finance, investments, economic trends, and industry analysis from around the world.",
+    "WhyHowWhatWhen Business News delivers the latest business news, global market updates, major company developments, finance insights, investment trends, and economic analysis from around the world.",
 
   politics:
-    "Breaking political news, public policy updates, elections, government decisions, and in-depth analysis of national and international governance.",
+    "WhyHowWhatWhen Politics News covers breaking political news, public policy updates, election developments, government decisions, and in-depth analysis of national and international governance.",
 
   sports:
-    "Comprehensive sports coverage including match results, player updates, team news, major tournaments, and highlights from global competitions.",
+    "WhyHowWhatWhen Sports News provides comprehensive coverage of match results, player updates, team news, major tournaments, and key moments from global competitions.",
 
   investigation:
-    "In-depth investigative reporting featuring exclusive findings, accountability journalism, legal developments, and detailed analysis of critical issues.",
+    "WhyHowWhatWhen Investigation News features in-depth reporting, exclusive findings, accountability journalism, legal developments, and detailed analysis of critical issues.",
 
   travel:
-    "Travel news and guides covering destinations, culture, tourism trends, travel tips, and global journeys for modern explorers.",
+    "WhyHowWhatWhen Travel News explores on destinations, culture, tourism trends, travel tips, and global journeys for modern explorers seeking meaningful experiences.",
 
   climate:
-    "Climate and environmental news covering climate change, sustainability initiatives, energy policy, environmental science, and global impact analysis.",
+    "WhyHowWhatWhen Climate News delivers environmental news, climate change updates, sustainability initiatives, energy policy coverage, and global impact analysis.",
 };
 
 export default async function CategoryPage({ params }) {    
