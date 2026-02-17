@@ -285,11 +285,16 @@ export default async function AuthorPage({ params }) {
             <h4 className="text-[10px] font-semibold text-gray-400 pb-1">
               - Advertisement -
             </h4>
-            <img
-              src="/ad-image.jpeg"
-              alt="Advertisement"
-              className="w-full h-full object-cover"
-            />
+
+            <div className="relative w-full aspect-9/16">
+              <Image
+                src="/ad-image.jpeg"
+                alt="Advertisement"
+                fill
+                sizes="(max-width: 1024px) 100vw, 25vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </aside>
       </div>

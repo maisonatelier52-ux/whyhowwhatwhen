@@ -50,7 +50,7 @@ export default function Featured({
                       alt={article.title}
                       width={800}
                       height={600}
-                      className="w-full h-auto object-cover"
+                      className="w-full aspect-[4/3] object-cover"
                     />
                   </div>
                 </Link>
@@ -157,11 +157,15 @@ export default function Featured({
 
               {/* Right: Circular Image */}
               {article.image && (
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
+                <div className="w-16 h-16 relative shrink-0">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    sizes="64px"
+                    className="rounded-full object-cover"
+                  />
+                </div>
               )}
             </div>
             </Link>
@@ -190,11 +194,15 @@ export default function Featured({
 
               {/* Right: Circular Image */}
               {article.image && (
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
+                <div className="relative w-16 h-16 shrink-0">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    sizes="64px"
+                    className="rounded-full object-cover"
+                  />
+                </div>
               )}
             </div>
           ))}

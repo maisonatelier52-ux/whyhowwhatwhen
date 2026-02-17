@@ -263,12 +263,19 @@ export default async function CategoryPage({ params }) {
           </div>
           {/* Advertisement */}
           <div className="flex flex-col items-center rounded-md">
-            <h4 className="text-[10px] font-semibold text-gray-400 pb-1">- Advertisement -</h4>
-            <img
+            <h4 className="text-[10px] font-semibold text-gray-400 pb-1">
+              - Advertisement -
+            </h4>
+
+            <div className="relative w-full aspect-[9/16] overflow-hidden">
+              <Image
                 src="/ad-image.jpeg"
                 alt="Advertisement"
-                className="w-full h-full object-cover"
-            />
+                fill
+                sizes="(max-width: 1024px) 100vw, 300px"
+                className="object-cover"
+              />
+            </div>
           </div>
         </aside>
       </div>
