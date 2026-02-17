@@ -44,12 +44,23 @@ export async function generateMetadata({ params }) {
 }
 
 const categoryDescriptions = {
-  business: "Markets, companies, money, and the global economy.",
-  politics: "Power, policy, elections, and governance.",
-  sports: "Scores, stories, and moments from the world of sports.",
-  investigation: "In-depth reporting and exclusive investigations.",
-  travel: "Destinations, culture, and journeys around the world.",
-  climate: "Environment, climate change, and sustainability.",
+  business:
+    "Latest business news covering global markets, major companies, finance, investments, economic trends, and industry analysis from around the world.",
+
+  politics:
+    "Breaking political news, public policy updates, elections, government decisions, and in-depth analysis of national and international governance.",
+
+  sports:
+    "Comprehensive sports coverage including match results, player updates, team news, major tournaments, and highlights from global competitions.",
+
+  investigation:
+    "In-depth investigative reporting featuring exclusive findings, accountability journalism, legal developments, and detailed analysis of critical issues.",
+
+  travel:
+    "Travel news and guides covering destinations, culture, tourism trends, travel tips, and global journeys for modern explorers.",
+
+  climate:
+    "Climate and environmental news covering climate change, sustainability initiatives, energy policy, environmental science, and global impact analysis.",
 };
 
 export default async function CategoryPage({ params }) {    
@@ -156,10 +167,10 @@ export default async function CategoryPage({ params }) {
         <p className="text-xs tracking-widest text-gray-500 uppercase">
           Category
         </p>
-        <h1 className="text-4xl font-bold uppercase text-[#7351a8] mt-1">
-          {category}
+        <h1 className="text-4xl font-bold text-[#7351a8] mt-1 uppercase">
+          {category} News — WhyHowWhatWhen
         </h1>
-        <p className="mt-3 text-sm text-gray-600 max-w-xl mx-auto">
+        <p className="mt-3 text-md font-semibold text-gray-600 max-w-2xl mx-auto">
           {categoryDescriptions[category.toLowerCase()] ||
             "Latest stories and updates from this category."}
         </p>
@@ -192,9 +203,9 @@ export default async function CategoryPage({ params }) {
             {/* Content */}
             <div className="border-t border-gray-300 pt-3">
               
-              <h4 className="text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
+              <h2 className="text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
                 {article.title}
-              </h4>
+              </h2>
 
               <div className="text-sm text-gray-500 pt-3 flex flex-wrap gap-2">
                 <div
@@ -220,9 +231,9 @@ export default async function CategoryPage({ params }) {
         {/* RIGHT — MORE NEWS (1/3) */}
         <aside className="space-y-6">
           <div className="border px-5 pt-4 border-gray-300">
-          <h3 className="text-lg font-bold uppercase text-[#7351a8]">
+          <h2 className="text-lg font-bold uppercase text-[#7351a8]">
             More News
-          </h3>
+          </h2>
 
           <div className="space-y-4">
             {moreNews.map((article) => (
@@ -234,9 +245,9 @@ export default async function CategoryPage({ params }) {
               >
                 {/* Text */}
                 <div className="flex-1">
-                  <h4 className="text-sm font-semibold leading-snug group-hover:text-[#7351a8]">
+                  <h3 className="text-sm font-semibold leading-snug group-hover:text-[#7351a8]">
                     {article.title}
-                  </h4>
+                  </h3>
                   <p className="text-xs text-gray-500 mt-1">
                     {new Date(article.date).toLocaleDateString("en-US", {
                       month: "long",
