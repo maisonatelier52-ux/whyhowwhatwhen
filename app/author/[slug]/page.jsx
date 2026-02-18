@@ -138,7 +138,7 @@ export default async function AuthorPage({ params }) {
   };
 
   return (
-    <section className="px-5 pt-5 pb-10 max-w-7xl mx-auto">
+    <section className="px-5 pt-5 pb-6 max-w-7xl mx-auto">
       {/* Structured Data */}
       <script
         id="author-person-jsonld"
@@ -151,8 +151,6 @@ export default async function AuthorPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-
-      <AdBanner />
 
       {/* AUTHOR HEADER */}
       <div className="text-center pt-5 mb-12">
@@ -185,7 +183,7 @@ export default async function AuthorPage({ params }) {
       </div>
 
       {/* CONTENT */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 pb-6">
         {/* LEFT — AUTHOR ARTICLES */}
         <div className="lg:col-span-2 space-y-10">
           {latestNews.map((article) => (
@@ -210,9 +208,9 @@ export default async function AuthorPage({ params }) {
 
               {/* Content */}
               <div className="border-t border-gray-300 pt-3">
-                <h4 className="text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
+                <h2 className="text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
                   {article.title}
-                </h4>
+                </h2>
 
                 <div className="text-sm text-gray-500 pt-3 flex flex-wrap gap-2">
                   <div className="italic hover:text-[#7351a8]">
@@ -298,6 +296,7 @@ export default async function AuthorPage({ params }) {
           </div>
         </aside>
       </div>
+      <AdBanner />
     </section>
   );
 }
