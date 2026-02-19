@@ -13,11 +13,7 @@ export const metadata = {
   title: "WhyHowWhatWhen",
   description: "Latest news and insights",
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.ico",
   },
 };
 
