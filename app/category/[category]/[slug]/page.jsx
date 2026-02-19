@@ -98,6 +98,15 @@ export default async function ArticlePage({ params }) {
         item.slug !== slug &&
         item.category.toLowerCase() === category.toLowerCase()
     )
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 4);
+
+  const latestNews = data.articles
+    .filter(
+      (item) =>
+        item.category.toLowerCase() !== category.toLowerCase()
+    )
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 4);
 
   const author = data.authors.find((a) => a.id === article.authorId);
@@ -266,7 +275,7 @@ export default async function ArticlePage({ params }) {
           </div>
         </article>
 
-        <NewsLatest news={moreNews} />
+        <NewsLatest news={latestNews} />
       </div>
     </div>
   );
