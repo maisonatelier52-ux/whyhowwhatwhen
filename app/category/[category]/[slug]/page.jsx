@@ -10,6 +10,19 @@ import AdBanner from "@/app/component/AdBanner";
 
 const SITE_URL = "https://www.whyhowwhatwhen.com";
 
+export function generateStaticParams() {
+  return data.articles
+    .filter(
+      (article) =>
+        article.published === true &&
+        article.name !== "Julio Herrera Velutini"
+    )
+    .map((article) => ({
+      category: article.category.toLowerCase(),
+      slug: article.slug,
+    }));
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const article = data.articles.find(a => a.slug === slug);
@@ -158,7 +171,7 @@ export default async function ArticlePage({ params }) {
         "@type": "ListItem",
         "position": 2,
         "name": article.category,
-        "item": `${SITE_URL}/category/${article.category}`,
+        "item": `${SITE_URL}/category/${article.category.toLowerCase()}`,
       },
       {
         "@type": "ListItem",
@@ -188,7 +201,7 @@ export default async function ArticlePage({ params }) {
         {/* MAIN ARTICLE AREA */}
         <article className="lg:col-span-3">
           <Link
-            href={`/category/${category}`}
+            href={`/category/${category.toLowerCase()}`}
             title={`Back to ${category.toUpperCase()}`}
             className="text-sm text-[#7351a8] font-semibold"
           >

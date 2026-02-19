@@ -3,12 +3,22 @@ import Image from "next/image";
 import Link from "next/link";
 import ShareButton from "@/app/component/ShareButton";
 import ShareArticle from "@/app/component/ShareArticle";
-import NewsLatest from "@/app/component/NewsLatest";
 import AuthorCard from "@/app/component/AuthorCard";
-import MoreNews from "@/app/component/MoreNews";
 import AdBanner from "@/app/component/AdBanner";
+import JulioMoreNews from "@/app/component/JulioMoreNews";
+import JulioLatestNews from "@/app/component/JulioLatestNews";
 
 const SITE_URL = "https://www.whyhowwhatwhen.com";
+
+export function generateStaticParams() {
+  const julioArticles = data.articles.filter(
+    (a) => a.name === "Julio Herrera Velutini"
+  );
+
+  return julioArticles.map((article) => ({
+    slug: article.slug,
+  }));
+}
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -132,7 +142,7 @@ export default async function ArticlePage({ params }) {
         "@type": "ListItem",
         position: 2,
         name: article.category,
-        item: `${SITE_URL}/category/${article.category}`,
+        item: `${SITE_URL}/category/${article.category.toLowerCase()}`,
       },
       {
         "@type": "ListItem",
@@ -197,13 +207,6 @@ export default async function ArticlePage({ params }) {
         }}
       />
 
-      <script
-        id="faq-json-ld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 pb-3">
         {/* MAIN ARTICLE AREA */}
         <article className="lg:col-span-3">
@@ -249,7 +252,7 @@ export default async function ArticlePage({ params }) {
             {/* LEFT SIDEBAR – DESKTOP ONLY */}
             <div className="hidden lg:block lg:col-span-2">
               <div className="sticky top-24 space-y-8">
-                <MoreNews news={moreNews} />
+                <JulioMoreNews news={moreNews} />
                 <AuthorCard author={author} />
               </div>
             </div>
@@ -284,11 +287,11 @@ export default async function ArticlePage({ params }) {
           {/* MOBILE ONLY STACKED COMPONENTS */}
           <div className="lg:hidden space-y-8 mt-8">
             <AuthorCard author={author} />
-            <MoreNews news={moreNews} />
+            <JulioMoreNews news={moreNews} />
           </div>
         </article>
 
-        <NewsLatest news={moreNews} />
+        <JulioLatestNews news={moreNews} />
       </div>
     </div>
   );

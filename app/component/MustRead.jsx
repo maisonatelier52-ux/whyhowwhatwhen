@@ -32,7 +32,7 @@ export default function ClimateNews({ climateNews, authors }) {
         {topNews &&
           (() => {
             const author = authors.find((a) => a.id === topNews.authorId);
-            const articleLink = `/category/${topNews.category}/${topNews.slug}`;
+            const articleLink = `/category/${topNews.category.toLowerCase()}/${topNews.slug}`;
 
             return (
               <div className="lg:col-span-2 -mt-20 relative z-10 space-y-4">
@@ -86,7 +86,7 @@ export default function ClimateNews({ climateNews, authors }) {
         <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {remaining.map((article) => {
             const author = authors.find((a) => a.id === article.authorId);
-            const articleLink = `/category/${article.category}/${article.slug}`;
+            const articleLink = `/category/${article.category.toLowerCase()}/${article.slug}`;
 
             return (
               <div key={article.slug} className="space-y-2">

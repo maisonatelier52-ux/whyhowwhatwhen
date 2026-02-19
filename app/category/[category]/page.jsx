@@ -6,6 +6,16 @@ import CategoryTag from "@/app/component/CategoryCard";
 
 const SITE_URL = "https://www.whyhowwhatwhen.com";
 
+export function generateStaticParams() {
+  const categories = [
+    ...new Set(data.articles.map(a => a.category.toLowerCase()))
+  ];
+
+  return categories.map(category => ({
+    category: category,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const { category } = await params;
   const categoryName = decodeURIComponent(category);
@@ -121,7 +131,7 @@ export default async function CategoryPage({ params }) {
     itemListElement: latestNews.map((article, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      url: `${SITE_URL}/category/${category}/${article.slug}`,
+      url: `${SITE_URL}/category/${article.category.toLowerCase()}/${article.slug}`,
       name: article.title,
     })),
   };
@@ -184,7 +194,7 @@ export default async function CategoryPage({ params }) {
             <Link
               key={article.slug}
               title={article.title}
-              href={`/category/${category}/${article.slug}`}
+              href={`/category/${article.category.toLowerCase()}/${article.slug}`}
               className="group flex gap-6"
             >
               {/* Image */}
@@ -240,7 +250,7 @@ export default async function CategoryPage({ params }) {
               <Link
                 key={article.slug}
                 title={article.title}
-                href={`/category/${category}/${article.slug}`}
+                href={`/category/${article.category.toLowerCase()}/${article.slug}`}
                 className="flex gap-3 pb-3 group"
               >
                 {/* Text */}

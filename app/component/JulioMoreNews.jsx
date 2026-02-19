@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function MoreNews({ news }) {
+export default function JulioMoreNews({ news }) {
   return (
     <div className="border border-gray-300 p-4 space-y-4">
       <div className="text-sm font-bold uppercase text-[#7351a8]">
@@ -12,7 +12,7 @@ export default function MoreNews({ news }) {
         <Link
           key={item.slug}
           title={`View ${item.title}`}
-          href={`/category/${item.category.toLowerCase()}/${item.slug}`}
+          href={`/julio-herrera-velutini/${item.slug}`}
           className="flex justify-between items-start gap-3 border-b border-gray-200 pb-3 last:border-none group"
         >
           {/* LEFT – TITLE + DATE */}

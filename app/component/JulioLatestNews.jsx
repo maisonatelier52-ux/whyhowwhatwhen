@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function NewsLatest({ news = [] }) {
+export default function JulioLatestNews({ news = [] }) {
   return (
     <aside className="">
       <div className="border border-gray-300 sticky top-16 space-y-5 px-6 pt-4">
@@ -14,7 +14,7 @@ export default function NewsLatest({ news = [] }) {
             <Link
               key={item.slug}
               title={`View ${item.title}`}
-              href={`/category/${item.category.toLowerCase()}/${item.slug}`}
+              href={`/julio-herrera-velutini/${item.slug}`}
               className="flex gap-3 border-b border-gray-200 pb-3 last:border-none group"
               >
               {/* TEXT */}

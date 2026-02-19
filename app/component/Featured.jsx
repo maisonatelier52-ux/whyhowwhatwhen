@@ -23,7 +23,7 @@ export default function Featured({
       <div className="col-span-1 lg:col-span-2 space-y-6">
         {latestBusiness.slice(0, 1).map((article) => {
           const author = authors.find((a) => a.id === article.authorId);
-          const articleLink = `/category/${article.category}/${article.slug}`;
+          const articleLink = `/category/${article.category.toLowerCase()}/${article.slug}`;
 
           return (
             <div key={article.slug} className="space-y-3">
@@ -88,7 +88,7 @@ export default function Featured({
           const articleLink =
             article.name === "Julio Herrera Velutini"
               ? `/julio-herrera-velutini/${article.slug}`
-              : `/category/${article.category}/${article.slug}`;
+              : `/category/${article.category.toLowerCase()}/${article.slug}`;
 
           return (
             <div key={article.slug} className="w-full max-w-md">
@@ -139,7 +139,7 @@ export default function Featured({
           <h2 className="text-[#7351a8] font-bold text-xl">Editor Picks</h2>
 
           {otherNews.slice(0, 1).map((article) => (
-            <Link key={article.slug} href={`/category/${article.category}/${article.slug}`} title={`View ${article.title}`}>
+            <Link key={article.slug} href={`/category/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
             <div key={article.slug} className="flex items-center justify-between gap-4">
               {/* Left: Title + Date */}
               <div className="flex-1 space-y-1">
@@ -177,10 +177,15 @@ export default function Featured({
           <h2 className="text-[#7351a8] font-bold text-xl">Business</h2>
 
           {latestBusiness.slice(1, 6).map((article) => (
-            <div key={article.slug} className="flex items-center justify-between">
+            <Link
+              key={article.slug}
+              href={`/category/${article.category.toLowerCase()}/${article.slug}`}
+              className="flex items-center justify-between group"
+              title={article.title}
+            >
               {/* Left: Title + Date */}
               <div className="flex-1 space-y-1">
-                <h3 className="font-bold text-sm hover:text-[#7351a8] cursor-pointer line-clamp-3">
+                <h3 className="font-bold text-sm group-hover:text-[#7351a8] line-clamp-3">
                   {article.title}
                 </h3>
                 <span className="text-sm text-gray-500">
@@ -204,7 +209,7 @@ export default function Featured({
                   />
                 </div>
               )}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

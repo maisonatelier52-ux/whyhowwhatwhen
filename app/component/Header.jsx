@@ -69,7 +69,7 @@ export default function Header() {
             <Link
               href="/"
               title="Go to homepage"
-              className={`font-semibold tracking-wide ${
+              className={`font-semibold tracking-wide text-[#7351a8] ${
                 scrolled
                   ? "text-lg md:text-xl pt-0"
                   : "text-3xl md:text-6xl pt-2"

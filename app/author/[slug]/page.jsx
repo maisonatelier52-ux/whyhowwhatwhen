@@ -6,6 +6,16 @@ import CategoryTag from "@/app/component/CategoryCard";
 
 const SITE_URL = "https://www.whyhowwhatwhen.com";
 
+export function generateStaticParams() {
+  const author = [
+    ...new Set(data.authors.map(a => a.slug.toLowerCase()))
+  ];
+
+  return author.map(slug => ({
+    slug: slug,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
 
@@ -190,7 +200,7 @@ export default async function AuthorPage({ params }) {
             <Link
               key={article.slug}
               title={article.title}
-              href={`/category/${article.category}/${article.slug}`}
+              href={`/category/${article.category.toLowerCase()}/${article.slug}`}
               className="group flex gap-6"
             >
               {/* Image */}
@@ -246,7 +256,7 @@ export default async function AuthorPage({ params }) {
                 <Link
                   key={article.slug}
                   title={article.title}
-                  href={`/category/${article.category}/${article.slug}`}
+                  href={`/category/${article.category.toLowerCase()}/${article.slug}`}
                   className="flex gap-3 pb-3 group"
                 >
                   <div className="flex-1">

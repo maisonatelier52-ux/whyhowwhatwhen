@@ -12,7 +12,7 @@ export default function TravelNewsRow({ travelNews, authors }) {
 
   return (
     <section className="mx-auto px-6 py-10">
-      <Link href="/category/Travel" title="View Travel category">
+      <Link href="/category/travel" title="View Travel category">
         <h2 className="text-[#7351a8] font-bold text-xl uppercase mb-6">
           Travel
         </h2>
@@ -21,7 +21,7 @@ export default function TravelNewsRow({ travelNews, authors }) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-gray-300 divide-y md:divide-y-0 md:divide-x divide-gray-300">
         {travelNews.slice(0, 4).map((article) => {
           const author = authors.find((a) => a.id === article.authorId);
-          const articleLink = `/category/${article.category}/${article.slug}`;
+          const articleLink = `/category/${article.category.toLowerCase()}/${article.slug}`;
 
           return (
             <div key={article.slug} className="p-4 space-y-3">

@@ -25,7 +25,7 @@ export default function Footer() {
   ].sort();
 
   return (
-    <footer className="relative bg-black text-white border-t border-gray-800 overflow-hidden">
+    <footer className="relative bg-[#49297e] text-white border-t border-gray-800 overflow-hidden">
       {/* Top section */}
       <div className="container mx-auto px-7 py-14 grid grid-cols-1 lg:grid-cols-4 gap-10">
         {/* LEFT SECTION */}
@@ -71,7 +71,7 @@ export default function Footer() {
                 title={title}
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-300 hover:text-[#7351a8] transition-transform duration-200 hover:scale-110"
+                className="text-gray-300 hover:text-white transition-transform duration-200 hover:scale-110"
               >
                 <Icon size={22} />
               </Link>
@@ -91,9 +91,9 @@ export default function Footer() {
                 {categories.map((cat) => (
                   <li key={cat}>
                     <Link
-                      href={`/category/${cat}`}
+                      href={`/category/${cat.toLowerCase()}`}
                       title={cat}
-                      className="text-[11px] text-gray-300 hover:text-[#7351a8]"
+                      className="text-[11px] text-gray-300 hover:text-white"
                     >
                       {cat}
                     </Link>
@@ -113,7 +113,7 @@ export default function Footer() {
                     <Link
                       href={href}
                       title={label}
-                      className="text-[11px] text-gray-300 hover:text-[#7351a8] transition-colors"
+                      className="text-[11px] text-gray-300 hover:text-white transition-colors"
                     >
                       {label}
                     </Link>
@@ -126,10 +126,10 @@ export default function Footer() {
       </div>
 
       {/* Divider */}
-      <span className="block h-px w-full bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
+      <span className="block h-px w-full bg-gradient-to-r from-transparent via-white to-transparent" />
 
       {/* Bottom */}
-      <div className="py-4 text-center text-sm text-gray-400">
+      <div className="py-4 text-center text-sm text-white">
         © {new Date().getFullYear()} WhyHowWhatWhen. All rights reserved.
       </div>
     </footer>
