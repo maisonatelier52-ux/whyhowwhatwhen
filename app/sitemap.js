@@ -2,7 +2,7 @@ export const dynamic = "force-static";
 
 import details from "../data/data.json";
 
-const SITE_URL = "https://whyhowwhatwhen.vercel.app";
+const SITE_URL = "https://www.whyhowwhatwhen.com";
 
 export default function sitemap() {
   const now = new Date();

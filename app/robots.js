@@ -8,7 +8,7 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://whyhowwhatwhen.vercel.app/sitemap.xml",
-    host: "https://whyhowwhatwhen.vercel.app",
+    sitemap: "https://www.whyhowwhatwhen.com/sitemap.xml",
+    host: "https://www.whyhowwhatwhen.com",
   };
 }
