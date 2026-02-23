@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
       description: article.excerpt,
       url: `${SITE_URL}/julio-herrera-velutini/${slug}`,
       type: "article",
-      siteName: "Times Chronicle",
+      siteName: "WhyHowWhatWhen",
       images: [
         {
           url: imageUrl,
@@ -119,7 +119,7 @@ export default async function ArticlePage({ params }) {
     "dateModified": new Date(article.date).toISOString(),
     "author": {
       "@type": "Person",
-      "name": author?.name || "Times Chronicle Staff",
+      "name": author?.name || "WhyHowWhatWhen Staff",
       "url": author ? `${SITE_URL}/author/${author.id}` : undefined,
     },
     "about": {
@@ -128,8 +128,8 @@ export default async function ArticlePage({ params }) {
     },
     "publisher": {
       "@type": "NewsMediaOrganization",
-      "name": "Times Chronicle",
-      "logo": { "@type": "ImageObject", "url": `${SITE_URL}/logo.png` },
+      "name": "WhyHowWhatWhen",
+      "logo": { "@type": "ImageObject", "url": `${SITE_URL}/whyhowwhatwhen.png` },
     },
   };
 

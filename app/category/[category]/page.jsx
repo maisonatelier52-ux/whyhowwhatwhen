@@ -37,7 +37,7 @@ export async function generateMetadata({ params }) {
       siteName: "WhyHowWhatWhen",
       images: [
         {
-          url: `${SITE_URL}/wiresavvy.webp`,
+          url: `${SITE_URL}/whyhowwhatwhen.png`,
           width: 1200,
           height: 630,
           alt: `${formattedCategory} News`,
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: `${formattedCategory} News — WhyHowWhatWhen`,
       description: `Latest U.S. ${formattedCategory.toLowerCase()} news and analysis.`,
-      images: [`${SITE_URL}/wiresavvy.webp`],
+      images: [`${SITE_URL}/whyhowwhatwhen.png`],
     },
   };
 }
@@ -289,13 +289,15 @@ export default async function CategoryPage({ params }) {
             </h4>
 
             <div className="relative w-full aspect-[9/16] overflow-hidden">
-              <Image
-                src="/ad-image.jpeg"
-                alt="Advertisement"
-                fill
-                sizes="(max-width: 1024px) 100vw, 300px"
-                className="object-cover"
-              />
+              <Link href="https://www.timeschronicle.org" title="View Advertisement" target="_blank">
+                <Image
+                  src="/ad-image.jpeg"
+                  alt="Advertisement"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 300px"
+                  className="object-cover"
+                />
+              </Link>
             </div>
           </div>
         </aside>

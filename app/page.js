@@ -29,7 +29,7 @@ export const metadata = {
     siteName: "Whyhowwhatwhen",
     images: [
       {
-        url: `${SITE_URL}/logo/Times-Chronicle-White-Text.png`,
+        url: `${SITE_URL}/whyhowwhatwhen.png`,
         width: 1200,
         height: 630,
         alt: "Whyhowwhatwhen U.S. News",
@@ -41,7 +41,7 @@ export const metadata = {
     title: "Whyhowwhatwhen — Latest U.S. News",
     description:
       "Fast, factual U.S. news with in-depth reporting and investigations.",
-    images: [`${SITE_URL}/logo/Times-Chronicle-White-Text.png`],
+    images: [`${SITE_URL}/whyhowwhatwhen.png`],
   },
 };
 
@@ -98,14 +98,14 @@ export default function Home() {
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Times Chronicle",
+    "name": "WhyHowWhatWhen",
     "url": SITE_URL,
     "publisher": {
       "@type": "NewsMediaOrganization",
-      "name": "Times Chronicle",
+      "name": "WhyHowWhatWhen",
       "logo": {
         "@type": "ImageObject",
-        "url": `${SITE_URL}/logo.png`,
+        "url": `${SITE_URL}/whyhowwhatwhen.png`,
       },
     },
     "potentialAction": {
@@ -120,20 +120,20 @@ export default function Home() {
     "@type": "WebPage",
     "@id": `${SITE_URL}/#homepage`,
     "url": SITE_URL,
-    "name": "Times Chronicle — Independent U.S. News, Business & Politics",
+    "name": "WhyHowWhatWhen — Independent U.S. News, Business & Politics",
     "description":
       "Independent U.S. news covering politics, business, technology, health, and world affairs.",
     "isPartOf": {
       "@type": "WebSite",
       "url": SITE_URL,
-      "name": "Times Chronicle",
+      "name": "WhyHowWhatWhen",
     },
     "publisher": {
       "@type": "NewsMediaOrganization",
-      "name": "Times Chronicle",
+      "name": "WhyHowWhatWhen",
       "logo": {
         "@type": "ImageObject",
-        "url": `${SITE_URL}/logo/Times-Chronicle-White-Text.png`,
+        "url": `${SITE_URL}/whyhowwhatwhen.png`,
       },
     },
   };

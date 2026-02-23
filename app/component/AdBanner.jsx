@@ -15,7 +15,7 @@ export default function AdBanner() {
         - Advertisement -
       </span>
 
-      <Link href="http://wiresavvy.com/" title="WireSavvy" target="_blank">
+      <Link href="https://www.timeschronicle.org" title="View Advertisement" target="_blank">
         {/* Wrapper gives grey BG if no image */}
         <div className="w-full md:w-[728px] md:h-[120px] flex justify-center items-center">
           {!imgError ? (

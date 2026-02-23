@@ -30,14 +30,14 @@ export async function generateMetadata({ params }) {
   // BLOCK JULIO ARTICLES FROM /articles/[slug]
   if (article?.name === "Julio Herrera Velutini") {
     return {
-      title: "Page not found | Times Chronicle",
+      title: "Page not found | WhyHowWhatWhen",
       robots: "noindex, nofollow",
     };
   }
 
   if (!article) {
     return {
-      title: "Article not found | Times Chronicle",
+      title: "Article not found | WhyHowWhatWhen",
       description: "This article does not exist.",
       robots: "noindex",
     };
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }) {
       description: article.excerpt,
       url: `${SITE_URL}/news/${slug}`,
       type: "article",
-      siteName: "Times Chronicle",
+      siteName: "WhyHowWhatWhen",
       images: [
         {
           url: imageUrl,
@@ -142,17 +142,17 @@ export default async function ArticlePage({ params }) {
     "dateModified": new Date(article.date).toISOString(),
     "author": {
       "@type": "Person",
-      "name": author?.name || "Times Chronicle Staff",
+      "name": author?.name || "WhyHowWhatWhen Staff",
       "url": author
         ? `${SITE_URL}/author/${author.id}`
         : undefined,
     },
     "publisher": {
       "@type": "NewsMediaOrganization",
-      "name": "Times Chronicle",
+      "name": "WhyHowWhatWhen",
       "logo": {
         "@type": "ImageObject",
-        "url": `${SITE_URL}/logo/Times-Chronicle-Black-Text.png`,
+        "url": `${SITE_URL}/whyhowwhatwhen.png`,
       },
     },
   };

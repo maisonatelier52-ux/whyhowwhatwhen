@@ -67,13 +67,15 @@ export default function ThreeCategoryNews({
           </h4>
 
           <div className="relative w-full aspect-[9/16] overflow-hidden">
-            <Image
-              src="/ad-image.jpeg"
-              alt="Advertisement"
-              fill
-              sizes="(max-width: 1024px) 100vw, 300px"
-              className="object-cover"
-            />
+            <Link href="https://www.timeschronicle.org" title="View Advertisement" target="_blank">
+              <Image
+                src="/ad-image.jpeg"
+                alt="Advertisement"
+                fill
+                sizes="(max-width: 1024px) 100vw, 300px"
+                className="object-cover"
+              />
+            </Link>
           </div>
         </div>
       </aside>
