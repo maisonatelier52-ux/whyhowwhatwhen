@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import {
-  Facebook,
   Twitter,
-  Instagram,
-  Youtube,
+  LucideRabbit,
+  MSquare,
+  MessageSquareQuote,
 } from "lucide-react";
 import data from "@/data/data.json";
 
@@ -45,25 +45,25 @@ export default function Footer() {
           <div className="flex gap-5 pt-2">
             {[
               {
-                Icon: Facebook,
-                link: "https://facebook.com",
-                title: "Facebook",
+                Icon: LucideRabbit,
+                link: "https://www.reddit.com/user/why_how_what_when/",
+                title: "Reddit",
               },
               {
                 Icon: Twitter,
-                link: "https://twitter.com",
+                link: "https://x.com/why_Howwhatwhen",
                 title: "Twitter",
               },
               {
-                Icon: Instagram,
-                link: "https://instagram.com",
-                title: "Instagram",
+                Icon: MSquare,
+                link: "https://medium.com/@whyhowwhatwhen",
+                title: "Medium",
               },
               {
-                Icon: Youtube,
-                link: "https://youtube.com",
-                title: "YouTube",
-              },
+                Icon: MessageSquareQuote,
+                link: "https://www.quora.com/profile/WhyHowWhatWhen",
+                title: "Quora",
+              }
             ].map(({ Icon, link, title }) => (
               <Link
                 key={link}

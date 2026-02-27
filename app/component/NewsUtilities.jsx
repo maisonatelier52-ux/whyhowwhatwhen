@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Twitter, Youtube } from "lucide-react";
+import { LucideRabbit, MSquareIcon, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export default function NewsUtilities() {
@@ -59,23 +59,25 @@ export default function NewsUtilities() {
             </h3>
 
             <div className="flex justify-between">
-                {/* Facebook */}
+                {/* Reddit */}
                 <Link
-                href="#"
-                title="View our Facebook page"
-                aria-label="Facebook"
+                href="https://www.reddit.com/user/why_how_what_when/"
+                target="_blank"
+                title="View our Reddit page"
+                aria-label="Reddit"
                 className="group"
                 >
-                    <div className="flex items-center justify-center w-24 h-24 bg-[#1877F2] text-white transition-all duration-300
-                                    shadow-md group-hover:shadow-[0_0_12px_rgba(24,119,242,0.8)] hover:bg-black">
-                        <Facebook size={24} />
+                    <div className="flex items-center justify-center w-24 h-24 bg-[#f11800] text-white transition-all duration-300
+                                    shadow-md group-hover:shadow-[0_0_12px_rgba(255,0,0,0.8)] hover:bg-black">
+                        <LucideRabbit size={24} />
                     </div>
                 </Link>
 
                 {/* Twitter */}
                 <Link
-                href="#"
+                href="https://x.com/why_Howwhatwhen"
                 title="View our Twitter profile"
+                target="_blank"
                 aria-label="Twitter"
                 className="group"
                 >
@@ -85,16 +87,17 @@ export default function NewsUtilities() {
                     </div>
                 </Link>
 
-                {/* YouTube */}
+                {/* Medium */}
                 <Link
-                href="#"
-                title="View our YouTube channel"
-                aria-label="YouTube"
+                href="https://medium.com/@whyhowwhatwhen"
+                target="_blank"
+                title="View our Medium page"
+                aria-label="Medium"
                 className="group"
                 >
-                    <div className="flex items-center justify-center w-24 h-24 bg-[#FF0000] text-white transition-all duration-300
-                                    shadow-md group-hover:shadow-[0_0_12px_rgba(255,0,0,0.8)] hover:bg-black">
-                        <Youtube size={24} />
+                    <div className="flex items-center justify-center w-24 h-24 bg-[#cbcbcb] text-white transition-all duration-300
+                                    shadow-md group-hover:shadow-[0_0_12px_rgba(24,119,242,0.8)] hover:bg-black">
+                        <MSquareIcon size={24} />
                     </div>
                 </Link>
             </div>

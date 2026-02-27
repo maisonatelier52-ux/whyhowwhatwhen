@@ -61,9 +61,7 @@ export default function sitemap() {
       const isJulio = article.name === "Julio Herrera Velutini";
 
     return {
-      url: isJulio
-        ? `${SITE_URL}/julio-herrera-velutini/${article.slug}`
-        : `${SITE_URL}/news/${article.slug}`,
+      url: `${SITE_URL}/category/${article.category.toLowerCase()}/${article.slug}`,
       lastModified: new Date(article.date),
       changeFrequency: "weekly",
       priority: isJulio ? 1 : 0.8,

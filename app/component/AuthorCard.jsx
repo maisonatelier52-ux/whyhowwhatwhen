@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Twitter, MessageCircle, Rabbit, BookOpen } from "lucide-react";
+import { Twitter, MessageCircle, Rabbit, MSquare } from "lucide-react";
 
 export default function AuthorCard({ author }) {
   if (!author) return null;
@@ -10,18 +10,24 @@ export default function AuthorCard({ author }) {
       
       {/* AUTHOR IMAGE */}
       {author.photo && (
-        <div className="w-20 h-20 relative">
-          <Image
-            src={author.photo}
-            alt={author.name}
-            fill
-            className="object-cover rounded-full"
-          />
-        </div>
+        <Link href={`/author/${author.slug}`}>
+          <div className="w-20 h-20 relative cursor-pointer">
+            <Image
+              src={author.photo}
+              alt={author.name}
+              fill
+              className="object-cover rounded-full"
+            />
+          </div>
+        </Link>
       )}
 
       {/* NAME */}
-      <div className="font-semibold text-lg">{author.name}</div>
+      <Link href={`/author/${author.slug}`}>
+        <div className="font-semibold text-lg cursor-pointer hover:underline">
+          {author.name}
+        </div>
+      </Link>
 
       {/* BIO */}
       <p className="text-sm text-gray-600">
@@ -67,7 +73,7 @@ export default function AuthorCard({ author }) {
           className="hover:text-[#7351a8] transition"
           aria-label="Medium"
         >
-          <BookOpen size={18} />
+          <MSquare size={18} />
         </Link>
       </div>
     </div>
