@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
     title: `${formattedCategory} News — WhyHowWhatWhen`,
     description: `Read the latest ${formattedCategory.toLowerCase()} news, analysis and investigative stories from across the United States. Updated daily by WhyHowWhatWhen reporters.`,
     alternates: {
-      canonical: `${SITE_URL}/categories/${categoryName}`,
+      canonical: `${SITE_URL}/category/${categoryName}`,
     },
     openGraph: {
       title: `${formattedCategory} News — WhyHowWhatWhen`,
