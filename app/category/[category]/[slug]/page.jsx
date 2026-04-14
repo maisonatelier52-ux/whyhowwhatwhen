@@ -271,6 +271,10 @@ export default async function ArticlePage({ params }) {
 
                   [&_ul]:list-disc [&_ul]:pl-6
                   [&_ol]:list-decimal [&_ol]:pl-6
+
+                  [&_a]:text-blue-600
+                  [&_a]:underline
+                  [&_a:hover]:text-blue-800
                 "
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
