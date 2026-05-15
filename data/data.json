@@ -314,7 +314,7 @@
       ],
       "date": "2026-05-12",
       "image": "/netflix-texas-lawsuit.webp",
-      "authorId": "1",
+      "authorId": 1,
       "published": true
     },
     {
@@ -999,6 +999,31 @@
       "date": "2026-03-12",
       "image": "/government-shutdown-airport-delays.webp",
       "authorId": 5,
+      "published": true
+    },
+    {
+      "slug": "long-island-expressway-sinkhole-melville",
+      "title": "Long Island Expressway Sinkhole Swallows Vehicle and Shuts Down Lanes in Suffolk County",
+      "excerpt": "A massive sinkhole opened on the Long Island Expressway in Melville, partially swallowing a vehicle and causing major traffic disruptions during rush hour.",
+      "content": "<p>A massive sinkhole suddenly opened on the westbound side of the Long Island Expressway in Melville, Suffolk County, causing major traffic disruptions and partially swallowing a vehicle during the afternoon rush hour. Authorities said the sinkhole developed shortly after 1 p.m. near Exit 49N by Route 110.</p><p>Officials described the hole as approximately 10 feet wide and 8 feet deep. Video footage from NewsCopter 7 and Chopper 4 showed the front end of a silver Honda Accord trapped nose-first inside the crater after the pavement suddenly collapsed beneath it.</p><p>Suffolk County police immediately shut down the right and center westbound lanes of the Long Island Expressway while emergency crews responded to the scene. Drivers were urged to avoid the area as heavy backups stretched for miles across Suffolk County during the evening commute.</p><p>Authorities said no serious injuries were reported despite the dramatic collapse. One driver, Jeffrey Jimenez, said he initially thought the roadway appeared wet before realizing it was a large hole moments before impact. He said both tires on his vehicle exploded after striking the damaged roadway.</p><p>Witnesses reported that several vehicles hit the damaged section of pavement before crews fully closed the lanes. One large truck was also seen bouncing violently after crossing the sinkhole area.</p><p>Police and transportation officials said lane closures were expected to remain in place for at least 24 hours while engineers evaluated the roadway and crews worked overnight to stabilize and repair the damaged section of highway.</p><h2>Traffic Chaos and Emergency Repairs Snarl Long Island Commute</h2><p>The sinkhole quickly created severe traffic congestion along one of Long Island’s busiest commuter routes. Westbound traffic on the Long Island Expressway backed up for miles as only limited lanes remained open near Exit 49 in Melville.</p><p>Transportation officials closed the right and center lanes while leaving only the left lane and HOV lane partially accessible during the emergency response. Authorities repeatedly advised motorists to seek alternate routes because of the major delays.</p><p>Crews from the New York State Department of Transportation worked through the evening conducting emergency pavement repairs and inspecting nearby drainage systems. Officials hoped to reopen all lanes sometime Friday afternoon, although they warned repairs could take longer depending on structural conditions beneath the roadway.</p><p>The timing of the collapse created additional concerns because Long Island commuters were already preparing for possible disruptions tied to a potential Long Island Rail Road strike later in the week. Traffic experts warned that additional roadway problems could worsen regional transportation issues if rail service is interrupted.</p><p>Video from the scene showed crews using heavy equipment to remove damaged pavement and inspect the hole while emergency responders directed traffic around the site. Several damaged vehicles had to be towed from the roadway after striking the collapse area.</p><p>Drivers described chaotic conditions as vehicles suddenly swerved to avoid the sinkhole. Some motorists said they did not immediately realize the roadway had collapsed until they were directly on top of it.</p><p>Authorities continued urging drivers Thursday night to avoid the westbound Long Island Expressway near Melville until repairs are completed and structural inspections are finished.</p><h2>Officials Investigate Cause of Sudden Roadway Collapse</h2><p>Transportation officials began investigating what caused the roadway beneath the Long Island Expressway to suddenly collapse and form the large sinkhole. Initial findings suggested nearby construction activity may have contributed to the failure beneath the highway surface.</p><p>According to the New York State Department of Transportation, the sinkhole may have been connected to a contractor working on a municipal sewage infrastructure project near the expressway. Officials said investigators were examining whether underground work weakened the pavement structure underneath the highway lanes.</p><p>Crews were also seen inspecting nearby storm drains and underground utility systems to determine if water erosion or drainage failures played a role in the collapse. Officials had not yet confirmed whether the sinkhole was directly connected to drainage infrastructure problems.</p><p>Transportation experts say sinkholes can develop when underground voids form under pavement from leaking water pipes, deteriorating sewer systems, erosion or construction disturbances. Once the support under the roadway weakens enough, the pavement can suddenly collapse under the weight of traffic.</p><p>The dramatic images of a vehicle partially swallowed by the hole quickly spread across social media and local television broadcasts throughout the New York metropolitan area. Many drivers expressed shock that such a major collapse could occur on one of the region’s busiest highways during daytime traffic.</p><p>Officials emphasized that despite the dangerous situation, the outcome could have been far worse. Police said no life-threatening injuries occurred even though multiple vehicles struck the damaged roadway before emergency closures were fully established.</p><p>Investigators are expected to continue examining the site over the coming days while engineers determine whether additional repairs or structural reinforcements will be required beneath the Long Island Expressway.</p><h2>Sources</h2><ul><li><a href=\"https://abc7ny.com/post/large-sinkhole-closes-lanes-long-island-expressway-melville-suffolk-county/19100856/\" target=\"_blank\" rel=\"noopener noreferrer\">ABC7 New York</a></li><li><a href=\"https://www.nbcnewyork.com/long-island/sinkhole-long-island-expressway/6501888/\" target=\"_blank\" rel=\"noopener noreferrer\">NBC New York</a></li><li><a href=\"https://www.newsday.com/long-island/lie-sinkhole-closed-exit-49-i6ln3buf\" target=\"_blank\" rel=\"noopener noreferrer\">Newsday</a></li></ul>",
+      "category": "Travel",
+      "keywords": [
+        "Long Island Expressway",
+        "sinkhole",
+        "Melville",
+        "Suffolk County",
+        "New York traffic",
+        "LIE closure",
+        "road collapse",
+        "highway sinkhole",
+        "traffic disruption",
+        "New York DOT",
+        "Route 110",
+        "Long Island news"
+      ],
+      "date": "2026-05-15",
+      "image": "/long-island-expressway-sinkhole-melville.webp",
+      "authorId": 6,
       "published": true
     },
     {
