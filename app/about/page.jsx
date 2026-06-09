@@ -1,213 +1,212 @@
-import Image from "next/image";
-
-const SITE_URL = "https://www.whyhowwhatwhen.com";
-
 export const metadata = {
-  title: "About WhyHowWhatWhen — Independent US Digital News Platform",
+  title: "About Us | Why How What When",
   description:
-    "Learn about WhyHowWhatWhen, an independent US digital news platform delivering factual reporting across business, politics, sports, investigation, travel and climate news.",
+    "Learn about Why How What When, an independent digital publication covering business, climate, investigations, politics, sports, and travel with insightful journalism.",
   alternates: {
-    canonical: `${SITE_URL}/about`,
+    canonical: "https://www.whyhowwhatwhen.com/about",
   },
-  keywords: [
-    "truthful reporting",
-    "foundation of an informed society",
-    "independent journalism",
-    "factual reporting",
-    "WhyHowWhatWhen",
-    "US digital news platform"
-  ],
   openGraph: {
-    title: "About WhyHowWhatWhen — Independent US Digital News Platform",
+    title: "About Us | Why How What When",
     description:
-      "Discover the mission and vision behind WhyHowWhatWhen — an independent US digital news platform.",
-    url: `${SITE_URL}/about`,
+      "Discover our mission to explain the stories behind today's biggest events across business, climate, politics, investigations, sports, and travel.",
+    url: "https://www.whyhowwhatwhen.com/about",
+    siteName: "Why How What When",
     type: "website",
-    siteName: "WhyHowWhatWhen",
-    images: [
-      {
-        url: `${SITE_URL}/logo/Times-Chronicle-White-Text.png`,
-        width: 1200,
-        height: 630,
-        alt: "About WhyHowWhatWhen",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About WhyHowWhatWhen — Independent US Digital News Platform",
-    description:
-      "Learn who we are and what drives our mission to deliver factual US news.",
-    images: [`${SITE_URL}/logo/Times-Chronicle-White-Text.png`],
   },
 };
 
 export default function AboutPage() {
-
-  const webPageJsonLd = {
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${SITE_URL}/about#webpage`,
-    "url": `${SITE_URL}/about`,
-    "name": "About WhatHowWhatWhen — Independent US Digital News Platform",
-    "description": metadata.description,
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "WhyHowWhatWhen",
-      "url": SITE_URL
+    "@type": "AboutPage",
+    name: "About Why How What When",
+    url: "https://www.whyhowwhatwhen.com/about",
+    description:
+      "Independent news and analysis covering business, climate, investigations, politics, sports, and travel.",
+    publisher: {
+      "@type": "Organization",
+      name: "Why How What When",
+      url: "https://www.whyhowwhatwhen.com",
     },
-    "about": {
-      "@type": "NewsMediaOrganization",
-      "name": "WhyHowWhatWhen"
-    }
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": SITE_URL
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "About",
-        "item": `${SITE_URL}/about`
-      }
-    ]
   };
 
   return (
     <>
-      {/* JSON-LD STRUCTURED DATA */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <main className="bg-white text-black">
+        <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+          <div className="max-w-4xl mx-auto space-y-16">
 
-      <div className="min-h-screen bg-white text-gray-900 transition-colors duration-300">
-        
-        {/* HERO */}
-        <section className="relative w-full h-svh overflow-hidden shadow-md">
-          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <h1 className="text-3xl md:text-6xl font-bold leading-tight max-w-4xl">
-              About WhyHowWhatWhen – Independent Digital News & Journalism
-            </h1>
-            <p className="mt-6 text-lg md:text-xl max-w-3xl">
-              Truthful reporting is the foundation of an informed society.
-            </p>
-          </div>
-        </section>
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-[#7351a8] mb-6">
+                About Us
+              </h1>
+              <p className="text-xl leading-8 text-gray-700">
+                Understanding today's world starts with asking the right
+                questions—and finding answers that matter.
+              </p>
+            </div>
 
-        {/* INTRO */}
-        <section className="max-w-4xl mx-auto px-7 py-20 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Who We Are
-          </h2>
-          <p className="text-lg leading-relaxed text-gray-700">
-            <strong>WhyHowWhatWhen</strong> is an independent digital news
-            publication dedicated to accurate, fair, and responsible journalism.
-            We focus on the stories shaping the United States—providing clarity,
-            context, and accountability in a fast-moving news environment.
-          </p>
-        </section>
+            <section>
+              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+                Beyond the Headlines
+              </h2>
 
-        {/* MISSION */}
-        <section className="max-w-6xl mx-auto px-7 py-20 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-              Our Mission
-            </h2>
-            <p className="text-lg leading-relaxed text-gray-700">
-              Our mission is to inform the public with journalism rooted in
-              facts, independence, and public interest. We aim to help readers
-              understand complex national issues without bias, sensationalism,
-              or political pressure.
-            </p>
-          </div>
+              <div className="space-y-5 text-lg leading-8 text-gray-700">
+                <p>
+                  News moves quickly, but understanding takes time.
+                </p>
 
-          <div className="relative w-full h-80">
-            <Image
-              src="/write.webp"
-              alt="WhyHowWhatWhen editorial mission"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="rounded-2xl shadow-lg object-cover"
-            />
-          </div>
-        </section>
+                <p>
+                  At <strong>Why How What When</strong>, we believe every major
+                  story deserves context, clarity, and thoughtful analysis. We
+                  don't just report what happened—we explore why it happened,
+                  how it impacts people, what it means for the future, and when
+                  the next developments may unfold.
+                </p>
 
-        {/* VALUES */}
-        <section className="bg-white py-20 px-7">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-semibold text-center mb-14">
-              Our Editorial Values
-            </h2>
+                <p>
+                  Our goal is to help readers move beyond breaking news and gain
+                  a deeper understanding of the events shaping the world around
+                  them.
+                </p>
+              </div>
+            </section>
 
-            <div className="grid md:grid-cols-3 gap-10">
-              {[
-                {
-                  title: "Accuracy",
-                  text: "Every story is carefully researched, verified, and reviewed to ensure factual correctness.",
-                },
-                {
-                  title: "Independence",
-                  text: "We operate free from political parties, corporate influence, and ideological agendas.",
-                },
-                {
-                  title: "Accountability",
-                  text: "We believe journalism should hold institutions and power to account in the public interest.",
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="p-6 rounded-2xl bg-gray-50 shadow-sm"
-                >
-                  <h3 className="text-xl font-semibold mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    {item.text}
+            <section>
+              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+                Looking Deeper
+              </h2>
+
+              <div className="space-y-5 text-lg leading-8 text-gray-700">
+                <p>
+                  Every headline has a larger story behind it.
+                </p>
+
+                <p>
+                  Economic decisions affect businesses and households.
+                  Environmental changes reshape communities across the globe.
+                  Political developments influence policy, society, and
+                  international relations. Sporting events become cultural
+                  moments, while travel reveals the people and places that
+                  connect our world.
+                </p>
+
+                <p>
+                  We focus on explaining these connections through reliable
+                  reporting, informed perspectives, and meaningful storytelling.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-3xl font-bold text-[#7351a8] mb-8">
+                What We Cover
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-6">
+
+                <div className="border rounded-xl p-6">
+                  <h3 className="font-bold text-xl mb-2">Business</h3>
+                  <p className="text-gray-600">
+                    Markets, companies, innovation, startups, and the global
+                    economy.
                   </p>
                 </div>
-              ))}
-            </div>
+
+                <div className="border rounded-xl p-6">
+                  <h3 className="font-bold text-xl mb-2">Climate</h3>
+                  <p className="text-gray-600">
+                    Environmental challenges, sustainability, science, and
+                    climate policy.
+                  </p>
+                </div>
+
+                <div className="border rounded-xl p-6">
+                  <h3 className="font-bold text-xl mb-2">Investigations</h3>
+                  <p className="text-gray-600">
+                    In-depth reporting that uncovers facts and provides
+                    accountability.
+                  </p>
+                </div>
+
+                <div className="border rounded-xl p-6">
+                  <h3 className="font-bold text-xl mb-2">Politics</h3>
+                  <p className="text-gray-600">
+                    Government, elections, policy decisions, and global affairs.
+                  </p>
+                </div>
+
+                <div className="border rounded-xl p-6">
+                  <h3 className="font-bold text-xl mb-2">Sports</h3>
+                  <p className="text-gray-600">
+                    Major competitions, athlete stories, analysis, and sporting
+                    culture.
+                  </p>
+                </div>
+
+                <div className="border rounded-xl p-6">
+                  <h3 className="font-bold text-xl mb-2">Travel</h3>
+                  <p className="text-gray-600">
+                    Destinations, experiences, culture, and stories from around
+                    the world.
+                  </p>
+                </div>
+
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+                Journalism for Curious Minds
+              </h2>
+
+              <div className="space-y-5 text-lg leading-8 text-gray-700">
+                <p>
+                  Whether you're following financial markets, understanding
+                  political developments, exploring climate issues, or planning
+                  your next journey, knowledge becomes more valuable when it's
+                  presented with accuracy and context.
+                </p>
+
+                <p>
+                  Our content is designed for readers who want more than quick
+                  updates—they want insight, explanation, and perspective.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+                Why We Exist
+              </h2>
+
+              <div className="space-y-5 text-lg leading-8 text-gray-700">
+                <p>
+                  The world is interconnected, and understanding one story often
+                  means understanding many others.
+                </p>
+
+                <p>
+                  Why How What When was created to make complex topics easier to
+                  understand through clear reporting, thoughtful analysis, and
+                  engaging storytelling.
+                </p>
+
+                <p>
+                  We believe informed readers make better decisions, ask better
+                  questions, and contribute to better conversations.
+                </p>
+              </div>
+            </section>
+
           </div>
         </section>
-
-        {/* COVERAGE */}
-        <section className="max-w-6xl mx-auto px-7 py-20 text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-8">
-            What We Cover
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-            <span className="font-semibold">WhyHowWhatWhen</span> delivers in-depth reporting across national affairs,
-            politics, business, technology, health, climate, investigations, and
-            world news—focusing on stories that matter most to readers in the
-            United States.
-          </p>
-        </section>
-
-        {/* CTA */}
-        <section className="bg-gray-900 text-white py-28 px-7 text-center rounded-t-3xl">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
-            Stay Ahead of the News
-          </h2>
-          <p className="text-lg max-w-2xl mx-auto text-gray-300">
-            Follow <span className="font-semibold text-white">WhyHowWhatWhen</span> for timely, accurate, and insightful reporting
-            that helps you understand what’s happening—and why it matters.
-          </p>
-        </section>
-      </div>
+      </main>
     </>
   );
 }

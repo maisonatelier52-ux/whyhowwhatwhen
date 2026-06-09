@@ -7,22 +7,26 @@ import {
   MSquare,
   MessageSquareQuote,
 } from "lucide-react";
-import data from "@/data/data.json";
 
-const quickLinks = [
+const newsRoom = [
   { label: "About Us", href: "/about" },
-  { label: "Terms of Use", href: "/terms-of-use" },
+  { label: "Our Team", href: "/our-team" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Editorial Policy", href: "/editorial-policy" },
+  { label: "Corrections Policy", href: "/corrections-policy" },
+  { label: "Source Methodology", href: "/source-methodology" },
+];
+
+const standards = [
+  { label: "Ownership & Funding", href: "/ownership-and-funding" },
+  { label: "Advertising Policy", href: "/advertising-policy" },
+  { label: "Right of Reply", href: "/right-of-reply" },
+  { label: "Legal", href: "/legal" },
   { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
 ];
 
 export default function Footer() {
-  const categories = [
-    ...new Set(
-      data.articles
-        .filter((article) => article.published && article.category)
-        .map((article) => article.category.toLowerCase())
-    ),
-  ].sort();
 
   return (
     <footer className="relative bg-[#49297e] text-white border-t border-gray-800 overflow-hidden">
@@ -82,33 +86,33 @@ export default function Footer() {
         {/* RIGHT SECTION */}
         <div className="lg:col-span-2">
           <div className="grid grid-cols-2 gap-8 md:gap-14 text-left">
-            {/* Categories */}
+            {/* News Room */}
             <div>
               <div className="mb-2 text-md font-semibold tracking-wide underline">
-                Categories
+                News Room
               </div>
               <ul className="uppercase space-y-1 leading-tight">
-                {categories.map((cat) => (
-                  <li key={cat}>
+                {newsRoom.map((item) => (
+                  <li key={item.href}>
                     <Link
-                      href={`/category/${cat.toLowerCase()}`}
-                      title={cat}
+                      href={item.href}
+                      title={item.label}
                       className="text-[11px] text-gray-300 hover:text-white"
                     >
-                      {cat}
+                      {item.label}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Quick Links */}
+            {/* Standards */}
             <div>
               <div className="mb-2 text-md font-semibold tracking-wide underline">
-                Quick Links
+                Standards
               </div>
               <ul className="uppercase space-y-1 leading-tight">
-                {quickLinks.map(({ label, href }) => (
+                {standards.map(({ label, href }) => (
                   <li key={href}>
                     <Link
                       href={href}
