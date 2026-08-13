@@ -188,7 +188,7 @@ export default function BanvelcaCanticleOfPeacePage() {
                 </Link>
               </p>
               <p className="text-gray-500 flex items-center gap-1.5">
-                <time dateTime="2026-07-30">July 30, 2026</time>
+                <time dateTime="2026-08-13">August 13, 2026</time>
                 <span className="text-gray-300">&middot;</span>
                 <Clock size={12} /> 6 min read
               </p>
