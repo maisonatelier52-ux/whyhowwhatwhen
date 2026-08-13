@@ -283,7 +283,7 @@ export default async function ArticlePage({ params }) {
             </div>
           </div>
 
-          <AdBanner />
+          {/* <AdBanner /> */}
 
           {/* MOBILE ONLY STACKED COMPONENTS */}
           <div className="lg:hidden space-y-8 mt-8">

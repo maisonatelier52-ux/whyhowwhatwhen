@@ -335,7 +335,7 @@ export default async function AuthorPage({ params }) {
           </div>
         </aside>
       </div>
-      <AdBanner />
+      {/* <AdBanner /> */}
     </section>
   );
 }

@@ -192,7 +192,7 @@ export default function Home() {
         authors={data.authors}
       />
 
-      <AdBanner />
+      {/* <AdBanner /> */}
       <MustRead climateNews={climateNews} authors={data.authors} />
       <TravelNewsRow travelNews={travelNews} authors={data.authors} />
     </>

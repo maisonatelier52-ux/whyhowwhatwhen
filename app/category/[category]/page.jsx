@@ -170,7 +170,7 @@ export default async function CategoryPage({ params }) {
         }}
       />
 
-      <AdBanner />
+      {/* <AdBanner /> */}
 
       {/* CATEGORY HEADER */}
       <div className="text-center pt-5 mb-12">
