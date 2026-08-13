@@ -18,7 +18,7 @@ export default function ClimateNews({ climateNews, authors }) {
   return (
     <section className="px-5 pb-5">
       {/* HEADER */}
-      <div className="relative bg-[#7351a8] text-white p-6 pb-16 mb-8">
+      <div className="relative bg-[#0f1f45] text-white p-6 pb-16 mb-8">
         <h2 className="text-4xl font-extrabold">Climate</h2>
         <p className="mt-2">
           Latest updates and in-depth coverage on climate and environmental
@@ -53,7 +53,7 @@ export default function ClimateNews({ climateNews, authors }) {
 
                 {/* TITLE */}
                 <Link href={articleLink} title={`View ${topNews.title}`}>
-                  <h3 className="text-3xl font-semibold hover:text-[#7351a8] cursor-pointer pt-3">
+                  <h3 className="text-3xl font-semibold hover:text-[#0f1f45] cursor-pointer pt-3">
                     {topNews.title}
                   </h3>
                 </Link>
@@ -71,7 +71,7 @@ export default function ClimateNews({ climateNews, authors }) {
                     <Link
                       href={`/author/${author.slug}`}
                       title={`View author ${author.name}`}
-                      className="italic hover:text-[#7351a8]"
+                      className="italic hover:text-[#0f1f45]"
                     >
                       {author.name}
                     </Link>
@@ -107,7 +107,7 @@ export default function ClimateNews({ climateNews, authors }) {
 
                 {/* TITLE */}
                 <Link href={articleLink} title={`View ${article.title}`}>
-                  <h4 className="text-sm font-semibold leading-snug hover:text-[#7351a8] pt-2 cursor-pointer">
+                  <h4 className="text-sm font-semibold leading-snug hover:text-[#0f1f45] pt-2 cursor-pointer">
                     {article.title}
                   </h4>
                 </Link>
@@ -125,7 +125,7 @@ export default function ClimateNews({ climateNews, authors }) {
                     <Link
                       href={`/author/${author.slug}`}
                       title={`View author ${author.name}`}
-                      className="italic hover:text-[#7351a8]"
+                      className="italic hover:text-[#0f1f45]"
                     >
                       {author.name}
                     </Link>

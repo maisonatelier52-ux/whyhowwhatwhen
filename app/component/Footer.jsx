@@ -27,26 +27,28 @@ const standards = [
 ];
 
 export default function Footer() {
-
   return (
-    <footer className="relative bg-[#49297e] text-white border-t border-gray-800 overflow-hidden">
+    <footer className="relative bg-[#0f1f45] text-white overflow-hidden">
+      {/* Top accent rule, echoes the header */}
+      <div className="h-[3px] w-full bg-gradient-to-r from-[#0f1f45] via-[#b8862b] to-[#0f1f45]" />
+
       {/* Top section */}
-      <div className="container mx-auto px-7 py-14 grid grid-cols-1 lg:grid-cols-4 gap-10">
+      <div className="container mx-auto px-7 py-16 grid grid-cols-1 lg:grid-cols-4 gap-10">
         {/* LEFT SECTION */}
-        <div className="space-y-4 text-left lg:col-span-2">
+        <div className="space-y-5 text-left lg:col-span-2">
           <Link href="/" title="Home" className="block">
-            <span className="text-4xl tracking-wide">
+            <span className="font-serif font-bold text-4xl tracking-tight text-white">
               WhyHowWhatWhen
             </span>
           </Link>
 
-          <p className="text-sm max-w-md text-gray-300">
+          <p className="text-sm max-w-md text-white/60 leading-relaxed">
             WhyHowWhatWhen brings you the latest news from around the world.
             Stay updated with real-time headlines and exclusive insights.
           </p>
 
           {/* Social Media Icons */}
-          <div className="flex gap-5 pt-2">
+          <div className="flex gap-5 pt-1">
             {[
               {
                 Icon: LucideRabbit,
@@ -67,7 +69,7 @@ export default function Footer() {
                 Icon: MessageSquareQuote,
                 link: "https://www.quora.com/profile/WhyHowWhatWhen",
                 title: "Quora",
-              }
+              },
             ].map(({ Icon, link, title }) => (
               <Link
                 key={link}
@@ -75,9 +77,9 @@ export default function Footer() {
                 title={title}
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-300 hover:text-white transition-transform duration-200 hover:scale-110"
+                className="flex items-center justify-center w-9 h-9 rounded-full border border-white/15 text-white/60 hover:text-[#0f1f45] hover:bg-[#b8862b] hover:border-[#b8862b] transition-all duration-200"
               >
-                <Icon size={22} />
+                <Icon size={16} />
               </Link>
             ))}
           </div>
@@ -88,16 +90,16 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 md:gap-14 text-left">
             {/* News Room */}
             <div>
-              <div className="mb-2 text-md font-semibold tracking-wide underline">
+              <div className="mb-4 text-[12px] font-bold tracking-[0.2em] uppercase text-[#b8862b] after:block after:mt-2 after:h-[2px] after:w-8 after:bg-[#b8862b]">
                 News Room
               </div>
-              <ul className="uppercase space-y-1 leading-tight">
+              <ul className="space-y-2.5 leading-tight">
                 {newsRoom.map((item) => (
                   <li key={item.href}>
                     <Link
                       href={item.href}
                       title={item.label}
-                      className="text-[11px] text-gray-300 hover:text-white"
+                      className="text-[12px] tracking-wide uppercase text-white/55 hover:text-white transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -108,16 +110,16 @@ export default function Footer() {
 
             {/* Standards */}
             <div>
-              <div className="mb-2 text-md font-semibold tracking-wide underline">
+              <div className="mb-4 text-[12px] font-bold tracking-[0.2em] uppercase text-[#b8862b] after:block after:mt-2 after:h-[2px] after:w-8 after:bg-[#b8862b]">
                 Standards
               </div>
-              <ul className="uppercase space-y-1 leading-tight">
+              <ul className="space-y-2.5 leading-tight">
                 {standards.map(({ label, href }) => (
                   <li key={href}>
                     <Link
                       href={href}
                       title={label}
-                      className="text-[11px] text-gray-300 hover:text-white transition-colors"
+                      className="text-[12px] tracking-wide uppercase text-white/55 hover:text-white transition-colors"
                     >
                       {label}
                     </Link>
@@ -130,11 +132,16 @@ export default function Footer() {
       </div>
 
       {/* Divider */}
-      <span className="block h-px w-full bg-gradient-to-r from-transparent via-white to-transparent" />
+      <span className="block h-px w-full bg-white/10" />
 
       {/* Bottom */}
-      <div className="py-4 text-center text-sm text-white">
-        © {new Date().getFullYear()} WhyHowWhatWhen. All rights reserved.
+      <div className="py-5 flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 container mx-auto px-7 text-center text-[12px] tracking-wide text-white/50">
+        <span>
+          © {new Date().getFullYear()} WhyHowWhatWhen. All rights reserved.
+        </span>
+        <span className="uppercase tracking-[0.15em] text-white/30">
+          Independent Journalism, Every Day
+        </span>
       </div>
     </footer>
   );

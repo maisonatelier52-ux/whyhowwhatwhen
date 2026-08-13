@@ -28,7 +28,7 @@ export async function generateMetadata() {
 function Section({ title, children }) {
   return (
     <section className="mb-10">
-      <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#7351a8] mb-3 pb-2 border-b border-stone-200">
+      <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#0f1f45] mb-3 pb-2 border-b border-stone-200">
         {title}
       </h2>
 
@@ -70,7 +70,7 @@ export default function OwnershipFunding() {
         <div className="border-b-4 border-stone-900">
           <div className="max-w-3xl mx-auto px-6 py-16 text-center">
 
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#7351a8] font-sans mb-4">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#0f1f45] font-sans mb-4">
               Transparency
             </p>
 
@@ -82,7 +82,7 @@ export default function OwnershipFunding() {
               </span>
             </h1>
 
-            <div className="w-16 h-px bg-[#7351a8] mx-auto mt-6" />
+            <div className="w-16 h-px bg-[#0f1f45] mx-auto mt-6" />
           </div>
         </div>
 
@@ -157,7 +157,7 @@ export default function OwnershipFunding() {
                 trustworthy journalism created with integrity.
               </p>
 
-              <blockquote className="mt-4 pl-4 border-l-2 border-[#7351a8] italic text-stone-500 text-sm">
+              <blockquote className="mt-4 pl-4 border-l-2 border-[#0f1f45] italic text-stone-500 text-sm">
                 "The trust of our audience will always come first."
               </blockquote>
             </Section>
@@ -174,7 +174,7 @@ export default function OwnershipFunding() {
               Questions about our ownership or funding?{" "}
               <a
                 href="/contact"
-                className="text-[#7351a8] underline underline-offset-2 hover:opacity-80 transition"
+                className="text-[#0f1f45] underline underline-offset-2 hover:opacity-80 transition"
               >
                 Contact us
               </a>

@@ -20,7 +20,7 @@ export default function ThreeCategoryNews({
       {/* ================= RIGHT COLUMN – SPORTS ================= */}
       <aside className="lg:col-span-3 space-y-4">
         <div className="border border-gray-300 px-5 pt-5">
-          <h3 className="text-xl text-[#7351a8] font-bold uppercase">Sports</h3>
+          <h3 className="text-xl text-[#0f1f45] font-bold uppercase">Sports</h3>
 
           {sportsNews.slice(0, 4).map((article) => {
             const articleLink = `/category/${article.category.toLowerCase()}/${article.slug}`;
@@ -33,7 +33,7 @@ export default function ThreeCategoryNews({
                 {/* Text */}
                 <div className="flex-1">
                   <Link href={articleLink} title={`View ${article.title}`}>
-                    <h4 className="text-sm font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
+                    <h4 className="text-sm font-semibold leading-snug hover:text-[#0f1f45] cursor-pointer">
                       {article.title}
                     </h4>
                   </Link>
@@ -89,7 +89,7 @@ export default function ThreeCategoryNews({
           </span>
 
           {/* Foreground heading */}
-          <h3 className="relative text-xl pt-5 pb-1 font-bold text-[#7351a8]">
+          <h3 className="relative text-xl pt-5 pb-1 font-bold text-[#0f1f45]">
             POLITICS
           </h3>
         </div>
@@ -121,7 +121,7 @@ export default function ThreeCategoryNews({
             {/* Content */}
             <div className="border-t border-gray-300 pt-3 flex-1">
               <Link href={`/category/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
-                <h4 className="text-base md:text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
+                <h4 className="text-base md:text-xl font-semibold leading-snug hover:text-[#0f1f45] cursor-pointer">
                   {article.title}
                 </h4>
               </Link>
@@ -130,7 +130,7 @@ export default function ThreeCategoryNews({
                 <Link
                   href={`/author/${authors.find(a => a.id === article.authorId)?.slug}`}
                   title={`View author ${authors.find(a => a.id === article.authorId)?.name}`}
-                  className="italic hover:text-[#7351a8]"
+                  className="italic hover:text-[#0f1f45]"
                 >
                   {authors.find(a => a.id === article.authorId)?.name}
                 </Link>
@@ -155,7 +155,7 @@ export default function ThreeCategoryNews({
 
       {/* ================= RIGHT COLUMN – INVESTIGATION ================= */}
       <div className="lg:col-span-3 sticky top-20 self-start mr-5 p-6 border border-gray-300">
-        <h3 className="text-xl font-bold uppercase text-[#7351a8] mb-4">
+        <h3 className="text-xl font-bold uppercase text-[#0f1f45] mb-4">
           Investigation
         </h3>
 
@@ -169,7 +169,7 @@ export default function ThreeCategoryNews({
                 className="pb-2 border-b border-gray-300 last:border-b-0"
               >
                 <Link href={articleLink} title={`View ${article.title}`}>
-                  <h4 className="font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
+                  <h4 className="font-semibold leading-snug hover:text-[#0f1f45] cursor-pointer">
                     {article.title}
                   </h4>
                 </Link>

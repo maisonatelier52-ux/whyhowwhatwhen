@@ -42,7 +42,7 @@ export default function SourceMethodologyPage() {
           <div className="max-w-4xl mx-auto space-y-16">
 
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-[#7351a8] mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-[#0f1f45] mb-6">
                 Source Methodology
               </h1>
 
@@ -54,7 +54,7 @@ export default function SourceMethodologyPage() {
             </div>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Research Is the Foundation
               </h2>
 
@@ -78,7 +78,7 @@ export default function SourceMethodologyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Sources We Use
               </h2>
 
@@ -135,7 +135,7 @@ export default function SourceMethodologyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Fact-Checking Process
               </h2>
 
@@ -159,7 +159,7 @@ export default function SourceMethodologyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Anonymous Sources
               </h2>
 
@@ -184,7 +184,7 @@ export default function SourceMethodologyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Social Media Verification
               </h2>
 
@@ -208,7 +208,7 @@ export default function SourceMethodologyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Developing Stories
               </h2>
 
@@ -228,7 +228,7 @@ export default function SourceMethodologyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 How We Evaluate Sources
               </h2>
 
@@ -270,7 +270,7 @@ export default function SourceMethodologyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Our Commitment to Readers
               </h2>
 

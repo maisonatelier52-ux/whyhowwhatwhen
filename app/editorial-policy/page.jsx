@@ -42,7 +42,7 @@ export default function EditorialPolicyPage() {
           <div className="max-w-4xl mx-auto space-y-16">
 
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-[#7351a8] mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-[#0f1f45] mb-6">
                 Editorial Policy
               </h1>
 
@@ -53,7 +53,7 @@ export default function EditorialPolicyPage() {
             </div>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Our Editorial Standards
               </h2>
 
@@ -74,7 +74,7 @@ export default function EditorialPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 How We Report
               </h2>
 
@@ -99,7 +99,7 @@ export default function EditorialPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Accuracy First
               </h2>
 
@@ -123,7 +123,7 @@ export default function EditorialPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Editorial Independence
               </h2>
 
@@ -147,7 +147,7 @@ export default function EditorialPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Research and Sources
               </h2>
 
@@ -166,7 +166,7 @@ export default function EditorialPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Fairness and Balance
               </h2>
 
@@ -185,7 +185,7 @@ export default function EditorialPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Reviews and Recommendations
               </h2>
 
@@ -205,7 +205,7 @@ export default function EditorialPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Corrections and Updates
               </h2>
 
@@ -228,7 +228,7 @@ export default function EditorialPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Our Commitment
               </h2>
 

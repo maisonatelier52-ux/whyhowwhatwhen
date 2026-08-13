@@ -82,20 +82,41 @@ export default async function AuthorPage({ params }) {
   }
 
   // Get articles written by this author
-  const authorArticles = data.articles
+  let authorArticles = data.articles
     .filter(
       (article) => article.published && article.authorId === author.id
     )
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  if (!authorArticles.length) {
-    return (
-      <div className="px-5 py-10 text-center">
-        <h2 className="text-xl font-semibold">
-          No articles found for {author.name}
-        </h2>
-      </div>
+  // Custom 5th article for Doris Evelyn
+  if (author.slug.toLowerCase() === "doris-evelyn") {
+    const customArticle = {
+      slug: "banvelca-foundation-canticle-of-peace-pope-leo-xiv",
+      title:
+        "Banvelca Foundation Supports Canticle of Peace as Pope Leo XIV and Andrea Bocelli Unite Young Voices",
+      excerpt:
+        "The Herrera Velutini family’s cultural and philanthropic foundation supported the gathering at Castel Gandolfo, where 164 children and young people joined Andrea Bocelli before Pope Leo XIV in a living appeal for peace.",
+      category: "Business",
+      image: "/pope-leo-XIV-joins-andrea-bocelli-and-members.jpg",
+      published: true,
+      authorId: author.id,
+      date: "2026-08-13",
+      customUrl:
+        "/category/business/banvelca-foundation-canticle-of-peace-pope-leo-xiv/",
+    };
+
+    // Remove it first in case it already exists in data.json
+    authorArticles = authorArticles.filter(
+      (article) =>
+        article.slug !== "banvelca-foundation-canticle-of-peace-pope-leo-xiv"
     );
+
+    // Insert as exactly the 5th article
+    authorArticles = [
+      ...authorArticles.slice(0, 4),
+      customArticle,
+      ...authorArticles.slice(4),
+    ];
   }
 
   const latestNews = authorArticles.slice(0, 5);
@@ -168,7 +189,7 @@ export default async function AuthorPage({ params }) {
           AUTHOR
         </p>
 
-        <h1 className="text-4xl font-bold uppercase text-[#7351a8] mt-1">
+        <h1 className="text-4xl font-bold uppercase text-[#0f1f45] mt-1">
           {author.name}
         </h1>
 
@@ -200,7 +221,10 @@ export default async function AuthorPage({ params }) {
             <Link
               key={article.slug}
               title={article.title}
-              href={`/category/${article.category.toLowerCase()}/${article.slug}`}
+              href={
+                article.customUrl ||
+                `/category/${article.category.toLowerCase()}/${article.slug}`
+              }
               className="group flex gap-6"
             >
               {/* Image */}
@@ -218,12 +242,12 @@ export default async function AuthorPage({ params }) {
 
               {/* Content */}
               <div className="border-t border-gray-300 pt-3">
-                <h2 className="text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
+                <h2 className="text-xl font-semibold leading-snug hover:text-[#0f1f45] cursor-pointer">
                   {article.title}
                 </h2>
 
                 <div className="text-sm text-gray-500 pt-3 flex flex-wrap gap-2">
-                  <div className="italic hover:text-[#7351a8]">
+                  <div className="italic hover:text-[#0f1f45]">
                     {author.name}
                   </div>
                   <span>
@@ -247,7 +271,7 @@ export default async function AuthorPage({ params }) {
         {/* RIGHT — MORE ARTICLES BY AUTHOR */}
         <aside className="space-y-6">
           <div className="border p-5 border-gray-300">
-            <h3 className="text-lg font-bold uppercase text-[#7351a8]">
+            <h3 className="text-lg font-bold uppercase text-[#0f1f45]">
               More from {author.name.split(" ")[0]}
             </h3>
 
@@ -256,11 +280,14 @@ export default async function AuthorPage({ params }) {
                 <Link
                   key={article.slug}
                   title={article.title}
-                  href={`/category/${article.category.toLowerCase()}/${article.slug}`}
+                  href={
+                    article.customUrl ||
+                    `/category/${article.category.toLowerCase()}/${article.slug}`
+                  }
                   className="flex gap-3 pb-3 group"
                 >
                   <div className="flex-1">
-                    <h4 className="text-sm font-semibold leading-snug group-hover:text-[#7351a8]">
+                    <h4 className="text-sm font-semibold leading-snug group-hover:text-[#0f1f45]">
                       {article.title}
                     </h4>
 

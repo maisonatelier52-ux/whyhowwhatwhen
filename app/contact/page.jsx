@@ -42,7 +42,7 @@ export default function ContactPage() {
           <div className="max-w-5xl mx-auto space-y-16">
 
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-[#7351a8] mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-[#0f1f45] mb-6">
                 Contact Us
               </h1>
 
@@ -56,8 +56,8 @@ export default function ContactPage() {
 
             <div className="grid md:grid-cols-2 gap-8">
 
-              <div className="border border-[#7351a8] p-8">
-                <h2 className="text-2xl font-bold text-[#7351a8] mb-4">
+              <div className="border border-[#0f1f45] p-8">
+                <h2 className="text-2xl font-bold text-[#0f1f45] mb-4">
                   General Inquiries
                 </h2>
 
@@ -68,8 +68,8 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="border border-[#7351a8] p-8">
-                <h2 className="text-2xl font-bold text-[#7351a8] mb-4">
+              <div className="border border-[#0f1f45] p-8">
+                <h2 className="text-2xl font-bold text-[#0f1f45] mb-4">
                   Editorial & News Tips
                 </h2>
 
@@ -84,8 +84,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="border border-[#7351a8] p-8">
-                <h2 className="text-2xl font-bold text-[#7351a8] mb-4">
+              <div className="border border-[#0f1f45] p-8">
+                <h2 className="text-2xl font-bold text-[#0f1f45] mb-4">
                   Corrections & Updates
                 </h2>
 
@@ -101,8 +101,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="border border-[#7351a8] p-8">
-                <h2 className="text-2xl font-bold text-[#7351a8] mb-4">
+              <div className="border border-[#0f1f45] p-8">
+                <h2 className="text-2xl font-bold text-[#0f1f45] mb-4">
                   Advertising & Partnerships
                 </h2>
 
@@ -114,8 +114,8 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="border border-[#7351a8] p-8">
-                <h2 className="text-2xl font-bold text-[#7351a8] mb-4">
+              <div className="border border-[#0f1f45] p-8">
+                <h2 className="text-2xl font-bold text-[#0f1f45] mb-4">
                   Media & Press Requests
                 </h2>
 
@@ -127,8 +127,8 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="border border-[#7351a8] p-8">
-                <h2 className="text-2xl font-bold text-[#7351a8] mb-4">
+              <div className="border border-[#0f1f45] p-8">
+                <h2 className="text-2xl font-bold text-[#0f1f45] mb-4">
                   Careers & Contributors
                 </h2>
 
@@ -143,7 +143,7 @@ export default function ContactPage() {
             </div>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Our Editorial Commitment
               </h2>
 
@@ -162,8 +162,8 @@ export default function ContactPage() {
               </div>
             </section>
 
-            <section className="bg-gray-50 p-10 text-center border border-[#7351a8]">
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+            <section className="bg-gray-50 p-10 text-center border border-[#0f1f45]">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 We'd Love to Hear From You
               </h2>
 

@@ -100,17 +100,17 @@ export default function TermsConditionsPage() {
 
         <section className="relative overflow-hidden border-b border-gray-200">
 
-          <div className="absolute inset-0 bg-gradient-to-br from-[#7351a8]/10 via-white to-[#7351a8]/5"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0f1f45]/10 via-white to-[#0f1f45]/5"></div>
 
           <div className="relative max-w-7xl mx-auto px-6 py-24">
 
             <div className="text-center">
 
-              <span className="inline-flex items-center rounded-full border border-[#7351a8]/20 bg-[#7351a8]/5 px-6 py-2 text-sm font-medium text-[#7351a8]">
+              <span className="inline-flex items-center rounded-full border border-[#0f1f45]/20 bg-[#0f1f45]/5 px-6 py-2 text-sm font-medium text-[#0f1f45]">
                 Legal Agreement
               </span>
 
-              <h1 className="mt-8 text-5xl md:text-6xl font-bold text-[#7351a8] tracking-tight">
+              <h1 className="mt-8 text-5xl md:text-6xl font-bold text-[#0f1f45] tracking-tight">
                 Terms & Conditions
               </h1>
 
@@ -136,17 +136,17 @@ export default function TermsConditionsPage() {
             {sections.map((item, index) => (
               <div
                 key={index}
-                className="border border-gray-200 bg-white p-10 shadow-sm hover:shadow-2xl hover:border-[#7351a8]/30 transition-all duration-300"
+                className="border border-gray-200 bg-white p-10 shadow-sm hover:shadow-2xl hover:border-[#0f1f45]/30 transition-all duration-300"
               >
                 <div className="flex gap-6">
 
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#7351a8]/10 font-bold text-[#7351a8]">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#0f1f45]/10 font-bold text-[#0f1f45]">
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
                   <div>
 
-                    <h2 className="text-3xl font-semibold text-[#7351a8] mb-5">
+                    <h2 className="text-3xl font-semibold text-[#0f1f45] mb-5">
                       {item.title}
                     </h2>
 
@@ -172,11 +172,11 @@ export default function TermsConditionsPage() {
 
           {/* Final Note */}
 
-          <div className="mt-20 bg-gradient-to-r from-[#7351a8] via-[#8160b6] to-[#7351a8] p-[1px]">
+          <div className="mt-20 bg-gradient-to-r from-[#0f1f45] via-[#8160b6] to-[#0f1f45] p-[1px]">
 
             <div className="bg-white px-10 py-14 text-center">
 
-              <h2 className="text-4xl font-bold text-[#7351a8] mb-8">
+              <h2 className="text-4xl font-bold text-[#0f1f45] mb-8">
                 Our Commitment
               </h2>
 

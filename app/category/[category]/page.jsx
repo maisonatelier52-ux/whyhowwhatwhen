@@ -177,7 +177,7 @@ export default async function CategoryPage({ params }) {
         <p className="text-xs tracking-widest text-gray-500 uppercase">
           Category
         </p>
-        <h1 className="text-4xl font-bold text-[#7351a8] mt-1 uppercase">
+        <h1 className="text-4xl font-bold text-[#0f1f45] mt-1 uppercase">
           {category} News — WhyHowWhatWhen
         </h1>
         <p className="mt-3 text-md font-semibold text-gray-600 max-w-2xl mx-auto">
@@ -213,13 +213,13 @@ export default async function CategoryPage({ params }) {
             {/* Content */}
             <div className="border-t border-gray-300 pt-3">
               
-              <h2 className="text-xl font-semibold leading-snug hover:text-[#7351a8] cursor-pointer">
+              <h2 className="text-xl font-semibold leading-snug hover:text-[#0f1f45] cursor-pointer">
                 {article.title}
               </h2>
 
               <div className="text-sm text-gray-500 pt-3 flex flex-wrap gap-2">
                 <div
-                  className="italic hover:text-[#7351a8]"
+                  className="italic hover:text-[#0f1f45]"
                 >
                   {data.authors.find(a => a.id === article.authorId)?.name}
                 </div>
@@ -241,7 +241,7 @@ export default async function CategoryPage({ params }) {
         {/* RIGHT — MORE NEWS (1/3) */}
         <aside className="space-y-6">
           <div className="border px-5 pt-4 border-gray-300">
-          <h2 className="text-lg font-bold uppercase text-[#7351a8]">
+          <h2 className="text-lg font-bold uppercase text-[#0f1f45]">
             More News
           </h2>
 
@@ -255,7 +255,7 @@ export default async function CategoryPage({ params }) {
               >
                 {/* Text */}
                 <div className="flex-1">
-                  <h3 className="text-sm font-semibold leading-snug group-hover:text-[#7351a8]">
+                  <h3 className="text-sm font-semibold leading-snug group-hover:text-[#0f1f45]">
                     {article.title}
                   </h3>
                   <p className="text-xs text-gray-500 mt-1">

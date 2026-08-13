@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function MoreNews({ news }) {
   return (
     <div className="border border-gray-300 p-4 space-y-4">
-      <div className="text-sm font-bold uppercase text-[#7351a8]">
+      <div className="text-sm font-bold uppercase text-[#0f1f45]">
         More News
       </div>
 
@@ -17,7 +17,7 @@ export default function MoreNews({ news }) {
         >
           {/* LEFT – TITLE + DATE */}
           <div className="flex-1">
-            <div className="text-sm font-medium leading-snug group-hover:text-[#7351a8]">
+            <div className="text-sm font-medium leading-snug group-hover:text-[#0f1f45]">
               {item.title}
             </div>
 

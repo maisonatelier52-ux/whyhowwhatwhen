@@ -9,7 +9,7 @@ export default function NewsUtilities() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-7 items-start">
         {/* LEFT — PODCAST */}
         <div className="space-y-4 p-5 h-full bg-[#f3f3f3]">
-          <h3 className="text-lg font-bold uppercase text-[#7351a8]">
+          <h3 className="text-lg font-bold uppercase text-[#0f1f45]">
             News Podcast
           </h3>
 
@@ -29,7 +29,7 @@ export default function NewsUtilities() {
 
         {/* MIDDLE — NEWSLETTER */}
         <div className="space-y-4 p-5 bg-[#f3f3f3]">
-          <h3 className="text-lg font-bold uppercase text-[#7351a8]">
+          <h3 className="text-lg font-bold uppercase text-[#0f1f45]">
             Subscribe to our newsletter
           </h3>
 
@@ -41,11 +41,11 @@ export default function NewsUtilities() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 border border-gray-300 px-3 py-2 text-sm bg-white focus:outline-none focus:border-[#7351a8]"
+              className="flex-1 border border-gray-300 px-3 py-2 text-sm bg-white focus:outline-none focus:border-[#0f1f45]"
             />
             <button
               type="submit"
-              className="bg-[#7351a8] text-white px-4 py-2 text-sm font-semibold hover:opacity-90"
+              className="bg-[#0f1f45] text-white px-4 py-2 text-sm font-semibold hover:opacity-90"
             >
               Subscribe
             </button>
@@ -54,7 +54,7 @@ export default function NewsUtilities() {
 
         {/* RIGHT — SOCIAL */}
         <div className="space-y-4 px-7 pt-5 h-full bg-[#f3f3f3]">
-            <h3 className="text-lg font-bold uppercase text-[#7351a8]">
+            <h3 className="text-lg font-bold uppercase text-[#0f1f45]">
                 Stay Connected
             </h3>
 

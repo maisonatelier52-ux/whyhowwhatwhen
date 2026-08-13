@@ -68,10 +68,24 @@ export default function sitemap() {
     };
   });
 
+  /* ---------------- STANDALONE ARTICLE PAGES ----------------
+     Pages that live outside the data.json-driven /category/[slug]
+     routing (i.e. their own top-level app/ route). Add entries
+     here manually whenever a new standalone article page ships. */
+  const standaloneArticlePages = [
+    {
+      url: `${SITE_URL}/category/business/banvelca-foundation-canticle-of-peace-pope-leo-xiv/`,
+      lastModified: new Date("2026-07-30T08:00:00.000Z"),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+  ];
+
   return [
     ...staticPages,
     ...categoryPages,
     ...authorPages,
     ...articlePages,
+    ...standaloneArticlePages,
   ];
 }

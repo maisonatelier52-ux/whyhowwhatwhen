@@ -5,7 +5,7 @@ export default function NewsLatest({ news = [] }) {
   return (
     <aside className="">
       <div className="border border-gray-300 sticky top-16 space-y-5 px-6 pt-4">
-        <h3 className="text-lg font-bold uppercase text-[#7351a8]">
+        <h3 className="text-lg font-bold uppercase text-[#0f1f45]">
           Latest News
         </h3>
 
@@ -19,7 +19,7 @@ export default function NewsLatest({ news = [] }) {
               >
               {/* TEXT */}
               <div className="flex-1">
-                <h4 className="text-sm font-semibold leading-snug group-hover:text-[#7351a8]">
+                <h4 className="text-sm font-semibold leading-snug group-hover:text-[#0f1f45]">
                   {item.title}
                 </h4>
 

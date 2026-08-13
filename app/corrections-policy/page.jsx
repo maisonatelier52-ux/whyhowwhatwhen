@@ -44,7 +44,7 @@ export default function CorrectionsPolicyPage() {
         <div className="max-w-5xl mx-auto px-6 py-16">
 
           <div className="text-center mb-14">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#7351a8] mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#0f1f45] mb-4">
               Corrections Policy
             </h1>
 
@@ -58,7 +58,7 @@ export default function CorrectionsPolicyPage() {
           <div className="space-y-10">
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Our Commitment to Accuracy
               </h2>
 
@@ -78,7 +78,7 @@ export default function CorrectionsPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 How We Handle Corrections
               </h2>
 
@@ -102,7 +102,7 @@ export default function CorrectionsPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Article Updates
               </h2>
 
@@ -121,7 +121,7 @@ export default function CorrectionsPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Reader Feedback
               </h2>
 
@@ -139,7 +139,7 @@ export default function CorrectionsPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Transparency in Corrections
               </h2>
 
@@ -156,7 +156,7 @@ export default function CorrectionsPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Our Editorial Review Process
               </h2>
 
@@ -175,7 +175,7 @@ export default function CorrectionsPolicyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Our Promise to Readers
               </h2>
 

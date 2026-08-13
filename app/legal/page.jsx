@@ -94,15 +94,15 @@ export default function LegalPage() {
 
         <section className="relative overflow-hidden border-b border-gray-200">
 
-          <div className="absolute inset-0 bg-gradient-to-br from-[#7351a8]/5 via-white to-[#7351a8]/10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0f1f45]/5 via-white to-[#0f1f45]/10" />
 
           <div className="relative max-w-7xl mx-auto px-6 py-24 text-center">
 
-            <span className="inline-block px-5 py-2 rounded-full border border-[#7351a8]/20 bg-[#7351a8]/5 text-[#7351a8] font-medium mb-6">
+            <span className="inline-block px-5 py-2 rounded-full border border-[#0f1f45]/20 bg-[#0f1f45]/5 text-[#0f1f45] font-medium mb-6">
               Legal Information
             </span>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-[#7351a8] tracking-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#0f1f45] tracking-tight">
               Transparency & Trust
             </h1>
 
@@ -124,16 +124,16 @@ export default function LegalPage() {
             {sections.map((section, index) => (
               <div
                 key={index}
-                className="group bg-white border border-gray-200 hover:border-[#7351a8]/30 hover:shadow-2xl transition-all duration-300 p-10"
+                className="group bg-white border border-gray-200 hover:border-[#0f1f45]/30 hover:shadow-2xl transition-all duration-300 p-10"
               >
                 <div className="flex items-start gap-6">
 
-                  <div className="h-12 w-12 rounded-full bg-[#7351a8]/10 flex items-center justify-center text-[#7351a8] font-bold text-lg shrink-0">
+                  <div className="h-12 w-12 rounded-full bg-[#0f1f45]/10 flex items-center justify-center text-[#0f1f45] font-bold text-lg shrink-0">
                     {index + 1}
                   </div>
 
                   <div>
-                    <h2 className="text-3xl font-semibold text-[#7351a8] mb-5">
+                    <h2 className="text-3xl font-semibold text-[#0f1f45] mb-5">
                       {section.title}
                     </h2>
 
@@ -150,11 +150,11 @@ export default function LegalPage() {
 
           {/* Commitment Section */}
 
-          <div className="mt-20 bg-gradient-to-r from-[#7351a8] to-[#8d6ac2] p-[1px]">
+          <div className="mt-20 bg-gradient-to-r from-[#0f1f45] to-[#8d6ac2] p-[1px]">
 
             <div className="bg-white p-12">
 
-              <h2 className="text-4xl font-bold text-[#7351a8] mb-8 text-center">
+              <h2 className="text-4xl font-bold text-[#0f1f45] mb-8 text-center">
                 Our Commitment
               </h2>
 

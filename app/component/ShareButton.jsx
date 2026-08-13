@@ -19,7 +19,7 @@ export default function ShareButton() {
   return (
     <button
       onClick={handleShare}
-      className="flex items-center border border-gray-300 pr-3 text-[#7351a8] hover:text-[#5d3f8c] transition"
+      className="flex items-center border border-gray-300 pr-3 text-[#0f1f45] hover:text-[#5d3f8c] transition"
       aria-label="Share this article"
     >
       {copied ? (

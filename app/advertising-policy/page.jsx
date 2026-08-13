@@ -28,12 +28,12 @@ export async function generateMetadata() {
 function Section({ number, title, children }) {
   return (
     <section className="flex gap-5 py-8 border-b border-stone-200 last:border-0">
-      <span className="text-3xl font-bold text-[#7351a8]/40 leading-none mt-1 w-8 shrink-0">
+      <span className="text-3xl font-bold text-[#0f1f45]/40 leading-none mt-1 w-8 shrink-0">
         {String(number).padStart(2, "0")}
       </span>
 
       <div>
-        <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#7351a8] mb-3">
+        <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#0f1f45] mb-3">
           {title}
         </h2>
 
@@ -77,7 +77,7 @@ export default function AdvertisingPolicy() {
         <div className="border-b-4 border-stone-900">
           <div className="max-w-3xl mx-auto px-6 py-16 text-center">
 
-            <p className="text-[11px] uppercase tracking-[0.3em] text-[#7351a8] font-sans mb-4">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-[#0f1f45] font-sans mb-4">
               Transparency & Trust
             </p>
 
@@ -89,7 +89,7 @@ export default function AdvertisingPolicy() {
               </span>
             </h1>
 
-            <div className="w-16 h-px bg-[#7351a8] mx-auto my-6" />
+            <div className="w-16 h-px bg-[#0f1f45] mx-auto my-6" />
 
             <p className="text-stone-600 text-[16px] leading-relaxed max-w-xl mx-auto">
               Advertising helps support Why How What When and enables us to
@@ -189,10 +189,10 @@ export default function AdvertisingPolicy() {
 
         {/* Promise */}
 
-        <div className="bg-stone-900 text-white border-t-4 border-[#7351a8]">
+        <div className="bg-stone-900 text-white border-t-4 border-[#0f1f45]">
           <div className="max-w-3xl mx-auto px-6 py-14 text-center">
 
-            <p className="text-xs uppercase tracking-[0.3em] text-[#7351a8] font-sans mb-5">
+            <p className="text-xs uppercase tracking-[0.3em] text-[#0f1f45] font-sans mb-5">
               Our Promise
             </p>
 
@@ -215,7 +215,7 @@ export default function AdvertisingPolicy() {
               Questions about advertising or partnerships?{" "}
               <a
                 href="/contact"
-                className="text-[#7351a8] underline underline-offset-2 hover:opacity-80 transition"
+                className="text-[#0f1f45] underline underline-offset-2 hover:opacity-80 transition"
               >
                 Contact us
               </a>

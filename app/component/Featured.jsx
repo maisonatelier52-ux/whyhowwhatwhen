@@ -29,14 +29,14 @@ export default function Featured({
             <div key={article.slug} className="space-y-3">
               {/* CATEGORY */}
               <Link href={articleLink} title={`View ${article.title}`}>
-                <h2 className="inline-block bg-[#7351a8] text-white text-[8px] font-semibold tracking-wide px-1 py-0.5 cursor-pointer">
+                <h2 className="inline-block bg-[#0f1f45] text-white text-[8px] font-semibold tracking-wide px-1 py-0.5 cursor-pointer">
                   {article.category.toUpperCase()}
                 </h2>
               </Link>
 
               {/* TITLE */}
               <Link href={articleLink} title={`View ${article.title}`}>
-                <h3 className="text-2xl font-semibold hover:text-[#7351a8] cursor-pointer">
+                <h3 className="text-2xl font-semibold hover:text-[#0f1f45] cursor-pointer">
                   {article.title}
                 </h3>
               </Link>
@@ -69,7 +69,7 @@ export default function Featured({
                   <Link
                     href={`/author/${author.slug}`}
                     title={`View author ${author.name}`}
-                    className="italic hover:text-[#7351a8]"
+                    className="italic hover:text-[#0f1f45]"
                   >
                     {author.name}
                   </Link>
@@ -109,7 +109,7 @@ export default function Featured({
 
               {/* TITLE */}
               <Link href={articleLink} title={`View ${article.title}`}>
-                <h4 className="font-semibold hover:text-[#7351a8] cursor-pointer mt-2">
+                <h4 className="font-semibold hover:text-[#0f1f45] cursor-pointer mt-2">
                   {article.title}
                 </h4>
               </Link>
@@ -120,7 +120,7 @@ export default function Featured({
                   <Link
                     href={`/author/${author.slug}`}
                     title={`View author ${author.name}`}
-                    className="italic hover:text-[#7351a8]"
+                    className="italic hover:text-[#0f1f45]"
                   >
                     {author.name}
                   </Link>
@@ -136,14 +136,14 @@ export default function Featured({
       <div className="col-span-1 space-y-3">
         {/* EDITOR PICKS */}
         <div className="space-y-4 border-b pb-3 border-gray-300">
-          <h2 className="text-[#7351a8] font-bold text-xl">Editor Picks</h2>
+          <h2 className="text-[#0f1f45] font-bold text-xl">Editor Picks</h2>
 
           {otherNews.slice(0, 1).map((article) => (
             <Link key={article.slug} href={`/category/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
             <div key={article.slug} className="flex items-center justify-between gap-4">
               {/* Left: Title + Date */}
               <div className="flex-1 space-y-1">
-                <h3 className="font-semibold text-sm hover:text-[#7351a8] cursor-pointer">
+                <h3 className="font-semibold text-sm hover:text-[#0f1f45] cursor-pointer">
                   {article.title}
                 </h3>
                 <span className="text-sm text-gray-500">
@@ -174,7 +174,7 @@ export default function Featured({
 
         {/* BUSINESS SECTION */}
         <div className="space-y-3">
-          <h2 className="text-[#7351a8] font-bold text-xl">Business</h2>
+          <h2 className="text-[#0f1f45] font-bold text-xl">Business</h2>
 
           {latestBusiness.slice(1, 6).map((article) => (
             <Link
@@ -185,7 +185,7 @@ export default function Featured({
             >
               {/* Left: Title + Date */}
               <div className="flex-1 space-y-1">
-                <h3 className="font-bold text-sm group-hover:text-[#7351a8] line-clamp-3">
+                <h3 className="font-bold text-sm group-hover:text-[#0f1f45] line-clamp-3">
                   {article.title}
                 </h3>
                 <span className="text-sm text-gray-500">

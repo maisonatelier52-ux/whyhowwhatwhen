@@ -42,7 +42,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto space-y-16">
 
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-[#7351a8] mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-[#0f1f45] mb-6">
                 About Us
               </h1>
               <p className="text-xl leading-8 text-gray-700">
@@ -52,7 +52,7 @@ export default function AboutPage() {
             </div>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Beyond the Headlines
               </h2>
 
@@ -78,7 +78,7 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Looking Deeper
               </h2>
 
@@ -104,7 +104,7 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-8">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-8">
                 What We Cover
               </h2>
 
@@ -161,7 +161,7 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Journalism for Curious Minds
               </h2>
 
@@ -181,7 +181,7 @@ export default function AboutPage() {
             </section>
 
             <section>
-              <h2 className="text-3xl font-bold text-[#7351a8] mb-6">
+              <h2 className="text-3xl font-bold text-[#0f1f45] mb-6">
                 Why We Exist
               </h2>
 

@@ -71,8 +71,8 @@
 //                 href={cat.href}
 //                 className={`transition-colors ${
 //                   pathname === cat.href
-//                     ? "text-[#7351a8]"
-//                     : "hover:text-[#7351a8]"
+//                     ? "text-[#0f1f45]"
+//                     : "hover:text-[#0f1f45]"
 //                 }`}
 //               >
 //                 {cat.name}
@@ -103,8 +103,8 @@
 //                 href={cat.href}
 //                 className={`transition-colors ${
 //                   pathname === cat.href
-//                     ? "text-[#7351a8]"
-//                     : "hover:text-[#7351a8]"
+//                     ? "text-[#0f1f45]"
+//                     : "hover:text-[#0f1f45]"
 //                 }`}
 //               >
 //                 {cat.name}

@@ -13,7 +13,7 @@ export default function TravelNewsRow({ travelNews, authors }) {
   return (
     <section className="mx-auto px-6 py-10">
       <Link href="/category/travel" title="View Travel category">
-        <h2 className="text-[#7351a8] font-bold text-xl uppercase mb-6">
+        <h2 className="text-[#0f1f45] font-bold text-xl uppercase mb-6">
           Travel
         </h2>
       </Link>
@@ -42,7 +42,7 @@ export default function TravelNewsRow({ travelNews, authors }) {
 
               {/* TITLE */}
               <Link href={articleLink} title={`View ${article.title}`}>
-                <h3 className="font-semibold text-base hover:text-[#7351a8] pt-2 leading-snug cursor-pointer">
+                <h3 className="font-semibold text-base hover:text-[#0f1f45] pt-2 leading-snug cursor-pointer">
                   {article.title}
                 </h3>
               </Link>
@@ -60,7 +60,7 @@ export default function TravelNewsRow({ travelNews, authors }) {
                   <Link
                     href={`/author/${author.slug}`}
                     title={`View author ${author.name}`}
-                    className="italic hover:text-[#7351a8]"
+                    className="italic hover:text-[#0f1f45]"
                   >
                     {author.name}
                   </Link>

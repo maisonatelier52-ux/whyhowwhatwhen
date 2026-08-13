@@ -40,7 +40,7 @@ export default function AuthorCard({ author }) {
           href={author.twitter || "#"}
           target="_blank"
           title="View Twitter profile"
-          className="hover:text-[#7351a8] transition"
+          className="hover:text-[#0f1f45] transition"
           aria-label="Twitter"
         >
           <Twitter size={18} />
@@ -50,7 +50,7 @@ export default function AuthorCard({ author }) {
           href={author.quora || "#"}
           target="_blank"
           title="View Quora profile"
-          className="hover:text-[#7351a8] transition"
+          className="hover:text-[#0f1f45] transition"
           aria-label="Quora"
         >
           <MessageCircle size={18} />
@@ -60,7 +60,7 @@ export default function AuthorCard({ author }) {
           href={author.reddit || "#"}
           target="_blank"
           title="View Reddit profile"
-          className="hover:text-[#7351a8] transition"
+          className="hover:text-[#0f1f45] transition"
           aria-label="Reddit"
         >
           <Rabbit size={18} />
@@ -70,7 +70,7 @@ export default function AuthorCard({ author }) {
           href={author.medium || "#"}
           target="_blank"
           title="View Medium profile"
-          className="hover:text-[#7351a8] transition"
+          className="hover:text-[#0f1f45] transition"
           aria-label="Medium"
         >
           <MSquare size={18} />

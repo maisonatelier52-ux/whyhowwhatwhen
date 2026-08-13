@@ -44,7 +44,7 @@ export default function RightOfReplyPage() {
         <div className="max-w-5xl mx-auto px-6 py-16">
 
           <div className="text-center mb-14">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#7351a8] mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#0f1f45] mb-4">
               Right of Reply
             </h1>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-8">
@@ -57,7 +57,7 @@ export default function RightOfReplyPage() {
           <div className="space-y-10">
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Our Commitment to Fairness
               </h2>
 
@@ -77,7 +77,7 @@ export default function RightOfReplyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Our Editorial Practice
               </h2>
 
@@ -96,7 +96,7 @@ export default function RightOfReplyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Requesting a Right of Reply
               </h2>
 
@@ -115,7 +115,7 @@ export default function RightOfReplyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Responses After Publication
               </h2>
 
@@ -133,7 +133,7 @@ export default function RightOfReplyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Information to Include
               </h2>
 
@@ -153,7 +153,7 @@ export default function RightOfReplyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Editorial Independence
               </h2>
 
@@ -171,7 +171,7 @@ export default function RightOfReplyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-[#7351a8] mb-4">
+              <h2 className="text-2xl font-semibold text-[#0f1f45] mb-4">
                 Building Trust Through Dialogue
               </h2>
 

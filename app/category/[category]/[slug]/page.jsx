@@ -203,7 +203,7 @@ export default async function ArticlePage({ params }) {
           <Link
             href={`/category/${category.toLowerCase()}`}
             title={`Back to ${category.toUpperCase()}`}
-            className="text-sm text-[#7351a8] font-semibold"
+            className="text-sm text-[#0f1f45] font-semibold"
           >
             ← Back to {category.toUpperCase()}
           </Link>
@@ -214,7 +214,7 @@ export default async function ArticlePage({ params }) {
             <Link
                   href={`/author/${author?.slug}`}
                   title={`View author ${author?.name}`}
-                  className="italic hover:text-[#7351a8]"
+                  className="italic hover:text-[#0f1f45]"
                 >
                   {author?.name}
             </Link>
