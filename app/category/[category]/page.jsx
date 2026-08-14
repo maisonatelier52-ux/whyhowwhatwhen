@@ -1,18 +1,20 @@
 import data from "@/data/data.json";
 import Link from "next/link";
 import Image from "next/image";
-import AdBanner from "@/app/component/AdBanner";
 import CategoryTag from "@/app/component/CategoryCard";
 
 const SITE_URL = "https://www.whyhowwhatwhen.com";
 
 export function generateStaticParams() {
   const categories = [
-    ...new Set(data.articles.map(a => a.category.toLowerCase()))
+    ...new Set([
+      ...data.articles.map((a) => a.category.toLowerCase()),
+      "world",
+    ]),
   ];
 
-  return categories.map(category => ({
-    category: category,
+  return categories.map((category) => ({
+    category,
   }));
 }
 
@@ -71,6 +73,9 @@ const categoryDescriptions = {
 
   climate:
     "WhyHowWhatWhen Climate News delivers environmental news, climate change updates, sustainability initiatives, energy policy coverage, and global impact analysis.",
+
+  world:
+    "WhyHowWhatWhen World News brings you breaking international headlines, diplomatic developments, cultural events, and in-depth coverage of the people and moments shaping global affairs.",
 };
 
 export default async function CategoryPage({ params }) {    
@@ -92,10 +97,32 @@ export default async function CategoryPage({ params }) {
     );
   }
 
-  const latestNews = latestNewsCategory.slice(0, 5);
+  let latestNews = latestNewsCategory.slice(0, 5);
   const moreNews = OtherlatestNewsCategory.slice(0, 5);
 
-    const formattedCategory =
+  /* ---------------- MANUAL ARTICLE: WORLD CATEGORY ----------------
+     Pins the Banvelca Foundation / Canticle of Peace story as the
+     5th item in Latest News specifically for /category/world. This
+     article isn't in data.json yet — once it's added there with
+     category: "world" and published: true, this block can be
+     removed and it will sort in naturally by date instead. */
+  if (category.toLowerCase() === "world") {
+    const manualArticle = {
+      slug: "banvelca-foundation-canticle-of-peace-pope-leo-xiv",
+      category: "world",
+      title:
+        "Banvelca Foundation Supports Canticle of Peace as Pope Leo XIV and Andrea Bocelli Unite Young Voices",
+      excerpt:
+        "The Herrera Velutini family’s cultural and philanthropic foundation supported the gathering at Castel Gandolfo, where 164 children and young people joined Andrea Bocelli before Pope Leo XIV in a living appeal for peace.",
+      image: "/pope-leo-XIV-joins-andrea-bocelli-and-members.jpg",
+      date: "2026-08-13",
+      authorName: "Doris Evelyn",
+    };
+
+    latestNews = [...latestNewsCategory.slice(0, 4), manualArticle];
+  }
+
+  const formattedCategory =
     category.charAt(0).toUpperCase() + category.slice(1);
 
   const categoryUrl = `${SITE_URL}/categories/${category}`;
@@ -221,7 +248,7 @@ export default async function CategoryPage({ params }) {
                 <div
                   className="italic hover:text-[#0f1f45]"
                 >
-                  {data.authors.find(a => a.id === article.authorId)?.name}
+                  {data.authors.find(a => a.id === article.authorId)?.name || article.authorName}
                 </div>
                 <span>| {new Date(article.date).toLocaleDateString("en-US", {
                   month: "long",

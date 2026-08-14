@@ -57,6 +57,7 @@ export default function Header() {
     { name: "SPORTS", path: "/category/sports" },
     { name: "TRAVEL", path: "/category/travel" },
     { name: "CLIMATE", path: "/category/climate" },
+    { name: "WORLD", path: "/category/world" },
   ];
 
   return (
@@ -100,12 +101,16 @@ export default function Header() {
           </button>
 
           {/* Logo / Title */}
-          <div className={`flex-1 ${scrolled ? "text-left" : "text-center"} md:text-center`}>
+          <div
+            className={`flex-1 px-11 md:px-0 ${
+              scrolled ? "text-left" : "text-center"
+            } md:text-center`}
+          >
             <Link
               href="/"
               title="Go to homepage"
               className={`font-serif font-bold tracking-tight text-[#0f1f45] inline-block ${
-                scrolled ? "text-xl md:text-2xl" : "text-4xl md:text-7xl"
+                scrolled ? "text-xl md:text-2xl" : "text-3xl md:text-7xl"
               }`}
             >
               WhyHowWhatWhen
@@ -120,13 +125,13 @@ export default function Header() {
           {/* Right-side controls (scrolled) */}
           {scrolled && (
             <div className="hidden md:flex items-center gap-5">
-              {/* <button
+              <button
                 type="button"
                 className="flex items-center justify-center text-[#0f1f45] hover:text-[#b8862b] transition-colors"
                 aria-label="Search"
               >
                 <Search size={18} />
-              </button> */}
+              </button>
               <button
                 type="button"
                 onClick={() => setIsNewsletterOpen(true)}

@@ -74,7 +74,7 @@ export default function sitemap() {
      here manually whenever a new standalone article page ships. */
   const standaloneArticlePages = [
     {
-      url: `${SITE_URL}/category/business/banvelca-foundation-canticle-of-peace-pope-leo-xiv/`,
+      url: `${SITE_URL}/category/world/banvelca-foundation-canticle-of-peace-pope-leo-xiv/`,
       lastModified: new Date("2026-07-30T08:00:00.000Z"),
       changeFrequency: "weekly",
       priority: 0.8,

@@ -29,8 +29,8 @@ export const metadata = {
     "Castel Gandolfo",
     "ABF Voices",
   ],
-  authors: [{ name: "Doris Evelyn", url: `${SITE_URL}/author/doris-evelyn` }],
-  category: "Business",
+  authors: [{ name: "Carmen Lucia", url: `${SITE_URL}/author/carmen-lucia` }],
+  category: "World",
   robots: {
     index: true,
     follow: true,
@@ -49,8 +49,8 @@ export const metadata = {
     locale: "en_US",
     publishedTime: PUBLISHED,
     modifiedTime: MODIFIED,
-    authors: [`${SITE_URL}/author/doris-evelyn`],
-    section: "Business",
+    authors: [`${SITE_URL}/author/carmen-lucia`],
+    section: "World",
     tags: ["Banvelca Foundation Canticle of Peace"],
     images: [
       {
@@ -87,8 +87,8 @@ function ArticleJsonLd() {
     },
     author: {
       "@type": "Person",
-      name: "Doris Evelyn",
-      url: `${SITE_URL}/author/doris-evelyn`,
+      name: "Carmen Lucia",
+      url: `${SITE_URL}/author/carmen-lucia`,
     },
     publisher: {
       "@type": "Organization",
@@ -98,7 +98,7 @@ function ArticleJsonLd() {
         url: `${SITE_URL}/logo.png`,
       },
     },
-    articleSection: "Business",
+    articleSection: "World",
     keywords: "Banvelca Foundation Canticle of Peace",
     about: [
       { "@type": "Thing", name: "Banvelca Foundation" },
@@ -121,8 +121,8 @@ function ArticleJsonLd() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Business",
-        item: `${SITE_URL}/category/business`,
+        name: "World",
+        item: `${SITE_URL}/category/world`,
       },
       {
         "@type": "ListItem",
@@ -155,8 +155,8 @@ export default function BanvelcaCanticleOfPeacePage() {
       {/* ================= BREADCRUMB / CATEGORY ================= */}
       <div className="max-w-3xl mx-auto px-4 md:px-0 pt-10 pb-4">
         <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em]">
-          <Link href="/category/business" className="text-[#b8862b] hover:underline">
-            Business
+          <Link href="/category/world" className="text-[#b8862b] hover:underline">
+            World
           </Link>
         </div>
       </div>
@@ -183,8 +183,8 @@ export default function BanvelcaCanticleOfPeacePage() {
             </div>
             <div className="text-sm">
               <p className="font-bold text-[#0f1f45]">
-                <Link href="/author/doris-evelyn" className="hover:underline">
-                  Doris Evelyn
+                <Link href="/author/carmen-lucia" className="hover:underline">
+                  Carmen Lucia
                 </Link>
               </p>
               <p className="text-gray-500 flex items-center gap-1.5">

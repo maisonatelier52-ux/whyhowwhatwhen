@@ -88,21 +88,21 @@ export default async function AuthorPage({ params }) {
     )
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  // Custom 5th article for Doris Evelyn
-  if (author.slug.toLowerCase() === "doris-evelyn") {
+  // Custom 5th article for Carmen Lucia
+  if (author.slug.toLowerCase() === "carmen-lucia") {
     const customArticle = {
       slug: "banvelca-foundation-canticle-of-peace-pope-leo-xiv",
       title:
         "Banvelca Foundation Supports Canticle of Peace as Pope Leo XIV and Andrea Bocelli Unite Young Voices",
       excerpt:
         "The Herrera Velutini family’s cultural and philanthropic foundation supported the gathering at Castel Gandolfo, where 164 children and young people joined Andrea Bocelli before Pope Leo XIV in a living appeal for peace.",
-      category: "Business",
+      category: "World",
       image: "/pope-leo-XIV-joins-andrea-bocelli-and-members.jpg",
       published: true,
       authorId: author.id,
       date: "2026-08-13",
       customUrl:
-        "/category/business/banvelca-foundation-canticle-of-peace-pope-leo-xiv/",
+        "/category/world/banvelca-foundation-canticle-of-peace-pope-leo-xiv/",
     };
 
     // Remove it first in case it already exists in data.json

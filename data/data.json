@@ -65,6 +65,17 @@
       "medium": "https://medium.com/@normanleroy_96209",
       "quora": "",
       "reddit": "https://www.reddit.com/user/Norman-Leroy/"
+    },
+    {
+      "id": 7,
+      "name": "Carmen Lucia",
+      "slug": "carmen-lucia",
+      "photo": "/author/Carmen-Lucia.jpg",
+      "bio": "Carmen Lucia is an experienced international correspondent with a keen eye for global affairs. Her reporting spans from political transitions in Latin America to economic developments in Europe, offering insightful analysis of the forces shaping our interconnected world.",
+      "twitter": "",
+      "medium": "",
+      "quora": "",
+      "reddit": ""
     }
   ],
   "articles": [
