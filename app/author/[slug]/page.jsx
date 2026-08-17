@@ -102,7 +102,7 @@ export default async function AuthorPage({ params }) {
       authorId: author.id,
       date: "2026-08-13",
       customUrl:
-        "/category/world/banvelca-foundation-canticle-of-peace-pope-leo-xiv/",
+        "/world/banvelca-foundation-canticle-of-peace-pope-leo-xiv/",
     };
 
     // Remove it first in case it already exists in data.json
@@ -223,7 +223,7 @@ export default async function AuthorPage({ params }) {
               title={article.title}
               href={
                 article.customUrl ||
-                `/category/${article.category.toLowerCase()}/${article.slug}`
+                `/${article.category.toLowerCase()}/${article.slug}`
               }
               className="group flex gap-6"
             >
@@ -282,7 +282,7 @@ export default async function AuthorPage({ params }) {
                   title={article.title}
                   href={
                     article.customUrl ||
-                    `/category/${article.category.toLowerCase()}/${article.slug}`
+                    `/${article.category.toLowerCase()}/${article.slug}`
                   }
                   className="flex gap-3 pb-3 group"
                 >

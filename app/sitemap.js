@@ -38,7 +38,7 @@ export default function sitemap() {
   /* ---------------- CATEGORY PAGES ---------------- */
   const categoryPages = [...new Set(details.articles.map(a => a.category))]
     .map(category => ({
-      url: `${SITE_URL}/category/${encodeURIComponent(
+      url: `${SITE_URL}/${encodeURIComponent(
         category.toLowerCase()
       )}`,
       lastModified: now,
@@ -61,7 +61,7 @@ export default function sitemap() {
       const isJulio = article.name === "Julio Herrera Velutini";
 
     return {
-      url: `${SITE_URL}/category/${article.category.toLowerCase()}/${article.slug}`,
+      url: `${SITE_URL}/${article.category.toLowerCase()}/${article.slug}`,
       lastModified: new Date(article.date),
       changeFrequency: "weekly",
       priority: isJulio ? 1 : 0.8,
@@ -69,12 +69,12 @@ export default function sitemap() {
   });
 
   /* ---------------- STANDALONE ARTICLE PAGES ----------------
-     Pages that live outside the data.json-driven /category/[slug]
+     Pages that live outside the data.json-driven /[slug]
      routing (i.e. their own top-level app/ route). Add entries
      here manually whenever a new standalone article page ships. */
   const standaloneArticlePages = [
     {
-      url: `${SITE_URL}/category/world/banvelca-foundation-canticle-of-peace-pope-leo-xiv/`,
+      url: `${SITE_URL}/world/banvelca-foundation-canticle-of-peace-pope-leo-xiv/`,
       lastModified: new Date("2026-07-30T08:00:00.000Z"),
       changeFrequency: "weekly",
       priority: 0.8,

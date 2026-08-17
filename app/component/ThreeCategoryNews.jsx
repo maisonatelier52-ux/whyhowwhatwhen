@@ -23,7 +23,7 @@ export default function ThreeCategoryNews({
           <h3 className="text-xl text-[#0f1f45] font-bold uppercase">Sports</h3>
 
           {sportsNews.slice(0, 4).map((article) => {
-            const articleLink = `/category/${article.category.toLowerCase()}/${article.slug}`;
+            const articleLink = `/${article.category.toLowerCase()}/${article.slug}`;
 
             return (
               <div
@@ -106,7 +106,7 @@ export default function ThreeCategoryNews({
                 w-2/5 h-32 md:h-40
                 flex-shrink-0
               ">
-                <Link href={`/category/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
+                <Link href={`/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
                   <Image
                     src={article.image}
                     alt={article.title}
@@ -120,7 +120,7 @@ export default function ThreeCategoryNews({
 
             {/* Content */}
             <div className="border-t border-gray-300 pt-3 flex-1">
-              <Link href={`/category/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
+              <Link href={`/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
                 <h4 className="text-base md:text-xl font-semibold leading-snug hover:text-[#0f1f45] cursor-pointer">
                   {article.title}
                 </h4>
@@ -143,7 +143,7 @@ export default function ThreeCategoryNews({
                 </span>
               </div>
 
-              <Link href={`/category/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
+              <Link href={`/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
                 <p className="text-xs md:text-sm text-gray-700 mt-2">
                   {article.excerpt}
                 </p>
@@ -161,7 +161,7 @@ export default function ThreeCategoryNews({
 
         <div className="space-y-4">
           {investigationNews.slice(0, 4).map((article) => {
-            const articleLink = `/category/${article.category.toLowerCase()}/${article.slug}`;
+            const articleLink = `/${article.category.toLowerCase()}/${article.slug}`;
 
             return (
               <div

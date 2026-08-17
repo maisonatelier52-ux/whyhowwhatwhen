@@ -51,13 +51,13 @@ export default function Header() {
 
   const categories = [
     { name: "HOME", path: "/" },
-    { name: "BUSINESS", path: "/category/business" },
-    { name: "POLITICS", path: "/category/politics" },
-    { name: "INVESTIGATION", path: "/category/investigation" },
-    { name: "SPORTS", path: "/category/sports" },
-    { name: "TRAVEL", path: "/category/travel" },
-    { name: "CLIMATE", path: "/category/climate" },
-    { name: "WORLD", path: "/category/world" },
+    { name: "BUSINESS", path: "/business" },
+    { name: "POLITICS", path: "/politics" },
+    { name: "INVESTIGATION", path: "/investigation" },
+    { name: "SPORTS", path: "/sports" },
+    { name: "TRAVEL", path: "/travel" },
+    { name: "CLIMATE", path: "/climate" },
+    { name: "WORLD", path: "/world" },
   ];
 
   return (

@@ -23,7 +23,7 @@ export default function Featured({
       <div className="col-span-1 lg:col-span-2 space-y-6">
         {latestBusiness.slice(0, 1).map((article) => {
           const author = authors.find((a) => a.id === article.authorId);
-          const articleLink = `/category/${article.category.toLowerCase()}/${article.slug}`;
+          const articleLink = `/${article.category.toLowerCase()}/${article.slug}`;
 
           return (
             <div key={article.slug} className="space-y-3">
@@ -88,7 +88,7 @@ export default function Featured({
           const articleLink =
             article.name === "Julio Herrera Velutini"
               ? `/julio-herrera-velutini/${article.slug}`
-              : `/category/${article.category.toLowerCase()}/${article.slug}`;
+              : `/${article.category.toLowerCase()}/${article.slug}`;
 
           return (
             <div key={article.slug} className="w-full max-w-md">
@@ -139,7 +139,7 @@ export default function Featured({
           <h2 className="text-[#0f1f45] font-bold text-xl">Editor Picks</h2>
 
           {otherNews.slice(0, 1).map((article) => (
-            <Link key={article.slug} href={`/category/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
+            <Link key={article.slug} href={`/${article.category.toLowerCase()}/${article.slug}`} title={`View ${article.title}`}>
             <div key={article.slug} className="flex items-center justify-between gap-4">
               {/* Left: Title + Date */}
               <div className="flex-1 space-y-1">
@@ -179,7 +179,7 @@ export default function Featured({
           {latestBusiness.slice(1, 6).map((article) => (
             <Link
               key={article.slug}
-              href={`/category/${article.category.toLowerCase()}/${article.slug}`}
+              href={`/${article.category.toLowerCase()}/${article.slug}`}
               className="flex items-center justify-between group"
               title={article.title}
             >

@@ -122,7 +122,7 @@ function ArticleJsonLd() {
         "@type": "ListItem",
         position: 2,
         name: "World",
-        item: `${SITE_URL}/category/world`,
+        item: `${SITE_URL}/world`,
       },
       {
         "@type": "ListItem",
@@ -155,7 +155,7 @@ export default function BanvelcaCanticleOfPeacePage() {
       {/* ================= BREADCRUMB / CATEGORY ================= */}
       <div className="max-w-3xl mx-auto px-4 md:px-0 pt-10 pb-4">
         <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em]">
-          <Link href="/category/world" className="text-[#b8862b] hover:underline">
+          <Link href="/world" className="text-[#b8862b] hover:underline">
             World
           </Link>
         </div>

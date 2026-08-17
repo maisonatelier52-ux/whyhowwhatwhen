@@ -171,7 +171,7 @@ export default async function ArticlePage({ params }) {
         "@type": "ListItem",
         "position": 2,
         "name": article.category,
-        "item": `${SITE_URL}/category/${article.category.toLowerCase()}`,
+        "item": `${SITE_URL}/${article.category.toLowerCase()}`,
       },
       {
         "@type": "ListItem",
@@ -201,7 +201,7 @@ export default async function ArticlePage({ params }) {
         {/* MAIN ARTICLE AREA */}
         <article className="lg:col-span-3">
           <Link
-            href={`/category/${category.toLowerCase()}`}
+            href={`/${category.toLowerCase()}`}
             title={`Back to ${category.toUpperCase()}`}
             className="text-sm text-[#0f1f45] font-semibold"
           >

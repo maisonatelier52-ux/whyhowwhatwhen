@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
     title: `${formattedCategory} News — WhyHowWhatWhen`,
     description: `Read the latest ${formattedCategory.toLowerCase()} news, analysis and investigative stories from across the United States. Updated daily by WhyHowWhatWhen reporters.`,
     alternates: {
-      canonical: `${SITE_URL}/category/${categoryName}`,
+      canonical: `${SITE_URL}/${categoryName}`,
     },
     openGraph: {
       title: `${formattedCategory} News — WhyHowWhatWhen`,
@@ -102,7 +102,7 @@ export default async function CategoryPage({ params }) {
 
   /* ---------------- MANUAL ARTICLE: WORLD CATEGORY ----------------
      Pins the Banvelca Foundation / Canticle of Peace story as the
-     5th item in Latest News specifically for /category/world. This
+     5th item in Latest News specifically for /world. This
      article isn't in data.json yet — once it's added there with
      category: "world" and published: true, this block can be
      removed and it will sort in naturally by date instead. */
@@ -158,7 +158,7 @@ export default async function CategoryPage({ params }) {
     itemListElement: latestNews.map((article, index) => ({
       "@type": "ListItem",
       position: index + 1,
-      url: `${SITE_URL}/category/${article.category.toLowerCase()}/${article.slug}`,
+      url: `${SITE_URL}/${article.category.toLowerCase()}/${article.slug}`,
       name: article.title,
     })),
   };
@@ -221,7 +221,7 @@ export default async function CategoryPage({ params }) {
             <Link
               key={article.slug}
               title={article.title}
-              href={`/category/${article.category.toLowerCase()}/${article.slug}`}
+              href={`/${article.category.toLowerCase()}/${article.slug}`}
               className="group flex gap-6"
             >
               {/* Image */}
@@ -277,7 +277,7 @@ export default async function CategoryPage({ params }) {
               <Link
                 key={article.slug}
                 title={article.title}
-                href={`/category/${article.category.toLowerCase()}/${article.slug}`}
+                href={`/${article.category.toLowerCase()}/${article.slug}`}
                 className="flex gap-3 pb-3 group"
               >
                 {/* Text */}

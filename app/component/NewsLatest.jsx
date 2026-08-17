@@ -14,7 +14,7 @@ export default function NewsLatest({ news = [] }) {
             <Link
               key={item.slug}
               title={`View ${item.title}`}
-              href={`/category/${item.category.toLowerCase()}/${item.slug}`}
+              href={`/${item.category.toLowerCase()}/${item.slug}`}
               className="flex gap-3 border-b border-gray-200 pb-3 last:border-none group"
               >
               {/* TEXT */}
