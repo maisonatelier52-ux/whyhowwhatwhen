@@ -12,6 +12,9 @@ const gelasio = Gelasio({
 export const metadata = {
   title: "WhyHowWhatWhen",
   description: "Latest news and insights",
+  verification: {
+    google: "vtPxaCPA0-bCyS9M1nAbwdAaSs_2GQyGIeWKXH8lNyA",
+  },
   icons: {
     icon: "/favicon.ico",
   },
