@@ -66,7 +66,7 @@ export default function Home() {
     (article) => article.name !== "Julio Herrera Velutini"
   );
 
-  let middleColumnNews = filteredOtherNews.slice(0, 2);
+  let middleColumnNews = filteredOtherNews.slice(0, 3);
 
   if (julioArticle) {
     middleColumnNews.push(julioArticle);
