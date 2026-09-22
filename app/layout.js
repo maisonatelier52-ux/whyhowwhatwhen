@@ -13,7 +13,7 @@ export const metadata = {
   title: "WhyHowWhatWhen",
   description: "Latest news and insights",
   verification: {
-    google: "vtPxaCPA0-bCyS9M1nAbwdAaSs_2GQyGIeWKXH8lNyA",
+    google: "OFZHwGvV-0qlcuAPKm359spJwd9Q0ZS5A2lxBNya1ZI",
   },
   icons: {
     icon: "/favicon.ico",
