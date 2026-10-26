@@ -1,4 +1,3 @@
-import AdBanner from "./component/AdBanner";
 import Featured from "./component/Featured";
 import MustRead from "./component/MustRead";
 import NewsUtilities from "./component/NewsUtilities";
@@ -192,7 +191,6 @@ export default function Home() {
         authors={data.authors}
       />
 
-      {/* <AdBanner /> */}
       <MustRead climateNews={climateNews} authors={data.authors} />
       <TravelNewsRow travelNews={travelNews} authors={data.authors} />
     </>

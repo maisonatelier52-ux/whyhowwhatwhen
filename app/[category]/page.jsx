@@ -78,6 +78,23 @@ const categoryDescriptions = {
     "WhyHowWhatWhen World News brings you breaking international headlines, diplomatic developments, cultural events, and in-depth coverage of the people and moments shaping global affairs.",
 };
 
+
+const quotes = [
+  {
+    text: "Our Republic and its press will rise or fall together.",
+    author: "Joseph Pulitzer",
+  },
+  {
+    text: "The way to right wrongs is to turn the light of truth upon them.",
+    author: "Ida B. Wells",
+  },
+  {
+    text: "Sunlight is said to be the best of disinfectants.",
+    author: "Louis D. Brandeis",
+  },
+];
+
+
 export default async function CategoryPage({ params }) {    
   const { category } = await params;
 
@@ -197,8 +214,6 @@ export default async function CategoryPage({ params }) {
         }}
       />
 
-      {/* <AdBanner /> */}
-
       {/* CATEGORY HEADER */}
       <div className="text-center pt-5 mb-12">
         <p className="text-xs tracking-widest text-gray-500 uppercase">
@@ -309,22 +324,26 @@ export default async function CategoryPage({ params }) {
             ))}
           </div>
           </div>
-          {/* Advertisement */}
-          <div className="flex flex-col items-center rounded-md">
-            <h4 className="text-[10px] font-semibold text-gray-400 pb-1">
-              - Advertisement -
-            </h4>
+          {/* Quotes */}
+          <div className="border px-5 pt-4 pb-2 border-gray-300 sticky top-30">
+            <h2 className="text-lg font-bold uppercase text-[#0f1f45]">
+              Quotes
+            </h2>
 
-            <div className="relative w-full aspect-[9/16] overflow-hidden">
-              <Link href="https://www.timeschronicle.org" title="View Advertisement" target="_blank">
-                <Image
-                  src="/ad-image.jpeg"
-                  alt="Advertisement"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 300px"
-                  className="object-cover"
-                />
-              </Link>
+            <div className="mt-4 space-y-5">
+              {quotes.map((quote) => (
+                <blockquote
+                  key={quote.author}
+                  className="border-l-4 border-[#0f1f45] pl-4 pb-1"
+                >
+                  <p className="text-sm italic leading-relaxed text-gray-700">
+                    “{quote.text}”
+                  </p>
+                  <footer className="mt-2 text-xs font-semibold text-gray-500">
+                    — {quote.author}
+                  </footer>
+                </blockquote>
+              ))}
             </div>
           </div>
         </aside>

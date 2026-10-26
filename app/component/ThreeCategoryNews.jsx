@@ -19,7 +19,7 @@ export default function ThreeCategoryNews({
     <section className="grid grid-cols-1 lg:grid-cols-12 px-5 pb-6">
       {/* ================= RIGHT COLUMN – SPORTS ================= */}
       <aside className="lg:col-span-3 space-y-4">
-        <div className="border border-gray-300 px-5 pt-5">
+        <div className="border border-gray-300 px-5 pt-5 sticky top-30 self-start">
           <h3 className="text-xl text-[#0f1f45] font-bold uppercase">Sports</h3>
 
           {sportsNews.slice(0, 4).map((article) => {
@@ -61,7 +61,7 @@ export default function ThreeCategoryNews({
         </div>
 
         {/* Advertisement */}
-        <div className="flex flex-col items-center rounded-md">
+        {/* <div className="flex flex-col items-center rounded-md">
           <h4 className="text-[10px] font-semibold text-gray-400 pb-1">
             - Advertisement -
           </h4>
@@ -77,7 +77,7 @@ export default function ThreeCategoryNews({
               />
             </Link>
           </div>
-        </div>
+        </div> */}
       </aside>
 
         {/* ================= MIDDLE COLUMN – POLITICS ================= */}
@@ -154,7 +154,7 @@ export default function ThreeCategoryNews({
       </div>
 
       {/* ================= RIGHT COLUMN – INVESTIGATION ================= */}
-      <div className="lg:col-span-3 sticky top-20 self-start mr-5 p-6 border border-gray-300">
+      <div className="lg:col-span-3 sticky top-30 self-start mr-5 p-6 border border-gray-300">
         <h3 className="text-xl font-bold uppercase text-[#0f1f45] mb-4">
           Investigation
         </h3>

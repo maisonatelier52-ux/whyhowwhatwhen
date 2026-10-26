@@ -1,7 +1,6 @@
 import data from "@/data/data.json";
 import Link from "next/link";
 import Image from "next/image";
-import AdBanner from "@/app/component/AdBanner";
 import CategoryTag from "@/app/component/CategoryCard";
 
 const SITE_URL = "https://www.whyhowwhatwhen.com";
@@ -64,6 +63,14 @@ export async function generateMetadata({ params }) {
     },
   };
 }
+
+
+const quoteCard = {
+  text: "The way to right wrongs is to turn the light of truth upon them.",
+  author: "Ida B. Wells",
+  role: "Journalist & Civil Rights Leader",
+};
+
 
 export default async function AuthorPage({ params }) {
   const { slug } = await params;
@@ -315,27 +322,44 @@ export default async function AuthorPage({ params }) {
             </div>
           </div>
 
-          {/* Advertisement */}
-          <div className="flex flex-col items-center rounded-md">
-            <h4 className="text-[10px] font-semibold text-gray-400 pb-1">
-              - Advertisement -
-            </h4>
+          {/* Quote Card */}
+          <div className="relative w-full aspect-[9/16] overflow-hidden bg-gradient-to-b from-[#0f1f45] via-[#16306b] to-[#0a1530] text-white">
+            {/* Decorative circles */}
+            <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-white/5" />
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-white/5" />
 
-            <div className="relative w-full aspect-9/16">
-              <Link href="https://www.timeschronicle.org" title="View Advertisement" target="_blank">
-                <Image
-                  src="/ad-image.jpeg"
-                  alt="Advertisement"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 25vw"
-                  className="object-cover"
-                />
-              </Link>
+            <div className="relative h-full flex flex-col justify-between p-8">
+              {/* Top: label */}
+              <p className="text-[10px] tracking-[0.3em] uppercase text-white/60">
+                Quote of the Day
+              </p>
+
+              {/* Middle: quote */}
+              <div>
+                <span
+                  aria-hidden="true"
+                  className="block text-8xl leading-none font-serif text-white/30"
+                >
+                  “
+                </span>
+                <blockquote className="-mt-4 text-2xl font-serif italic leading-snug">
+                  {quoteCard.text}
+                </blockquote>
+                <div className="mt-6 w-12 h-0.5 bg-white/60" />
+                <p className="mt-4 text-sm font-semibold tracking-wide uppercase">
+                  {quoteCard.author}
+                </p>
+                <p className="text-xs text-white/60 mt-1">{quoteCard.role}</p>
+              </div>
+
+              {/* Bottom: branding */}
+              <p className="text-xs font-bold tracking-widest uppercase text-white/70">
+                WhyHowWhatWhen
+              </p>
             </div>
           </div>
         </aside>
       </div>
-      {/* <AdBanner /> */}
     </section>
   );
 }

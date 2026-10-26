@@ -6,7 +6,6 @@ import ShareArticle from "@/app/component/ShareArticle";
 import NewsLatest from "@/app/component/NewsLatest";
 import AuthorCard from "@/app/component/AuthorCard";
 import MoreNews from "@/app/component/MoreNews";
-import AdBanner from "@/app/component/AdBanner";
 
 const SITE_URL = "https://www.whyhowwhatwhen.com";
 
@@ -282,8 +281,6 @@ export default async function ArticlePage({ params }) {
               <ShareArticle />
             </div>
           </div>
-
-          {/* <AdBanner /> */}
 
           {/* MOBILE ONLY STACKED COMPONENTS */}
           <div className="lg:hidden space-y-8 mt-8">
